@@ -75,7 +75,7 @@ body {
 	font-size: 8px;
 	text-align: unset;
 	/* color: white; */
-	display: none;
+	/* display: none; */
 }
 .show {
 	display: block;

@@ -366,15 +366,45 @@ innerPage.appendChild(newFinalDiv)
 function updateFinal (final) {
   newFinalDivPre.innerHTML = 'Total Price: ' + final
   newFinalDivHST.innerHTML = 'Total Price (Including HST): ' + (final * 1.13)
+  print(final)
+}
+
+var newFinalOutputContainer = document.createElement('div')
+$(newFinalOutputContainer).addClass('cs-wrap-final')
+$(newFinalOutputContainer).addClass('smallFont')
+var customerName = document.getElementById('cs-customer-name')
+var customerAdd = document.getElementById('cs-customer-address')
+var customerNum = document.getElementById('cs-customer-lead')
+setInterval(
+  function custInfo () {
+    customerName = document.getElementById('cs-customer-name')
+    customerAdd = document.getElementById('cs-customer-address')
+    customerNum = document.getElementById('cs-customer-lead')
+  }, 5000)
+
+function print (final) {
+  newFinalOutputContainer.innerHTML = `Name: ${customerName.value} Address: ${customerAdd.value} Lead #: ${customerNum.value} `
+  var count = 0
+  for (let i = 0; i < listOfLists.length; i++) {
+
+    for (let j = 0; j < listOfLists[i].length; j++) {
+      var newFinalOutput = document.createElement('div')
+      newFinalOutput.innerHTML += `${listOfLists[i][j]} : quantity: ${quantityList[count]} at $${value[count]} `
+      document.createElement('br')
+      count++
+      newFinalOutputContainer.appendChild(newFinalOutput)
+    }
+  }
+  newFinalOutputContainer.innerHTML += `Total: ${final} w/ HST: ${(final * 1.13)}`
+
+  innerPage.appendChild(newFinalOutputContainer)
 }
 
 var quantityList = []
+var value = []
 var csInput = document.getElementsByName('cs-input')
 quantityList.length = multiplierList.length
 quantityList.fill(0)
-console.log(quantityList)
-console.log('ml')
-console.log(multiplierList)
 
 function doAddition (zValue) {
   if (parseFloat(csInput[zValue].value)) {
@@ -386,8 +416,8 @@ function doAddition (zValue) {
   var tempNum = 0
 
   for (let x = 0; x < multiplierList.length; x++) {
-    var value = (quantityList[x] * multiplierList[x])
-    tempNum += parseFloat(value)
+    value[x] = (quantityList[x] * multiplierList[x])
+    tempNum += parseFloat(value[x])
   }
   condoFeesNum = (tempNum * 0.1) * quantityList[quantityList.length - 1]
   finalNum = tempNum + condoFeesNum

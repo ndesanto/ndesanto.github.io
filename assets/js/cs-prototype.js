@@ -1,6 +1,6 @@
 
 var kitchenList1 = [
-  'Kitchen demolition including cabinets,tile floor,baseboards,backsplash ,countertop,sink,faucet',
+  'Kitchen demolition including cabinets, tile floor, baseboards, backsplash, countertop, sink, faucet',
   'FULL GUT OF KITCHEN DRYWALL WALL',
   'PLASTER FULL GUT WALLS - includes STRAPPING AND INSULATION',
   'REMOVE BULKHEADS AND INSTALL NEW DRYWALL',
@@ -9,7 +9,7 @@ var kitchenList1 = [
   'SCRAPE STUCCO CEILING / PATCH / PRIME - PER SQ.FT'
 ]
 
-var kitchenList1Num = [2700, 1000, 2000, 1050, 3, 4, 9]
+var kitchenList1Num = [2700, 1000, 2000, 1050, 2.5, 4, 8.5]
 var kitchenList1Title = 'Kitchen'
 
 var kitchenList2 = [
@@ -18,7 +18,7 @@ var kitchenList2 = [
   'REMOVE & DISPOSE OF CARPET  - PER SQ.FT',
   'REMOVE & DISPOSE OF VINYL  - PER SQ.FT'
 ]
-var kitchenList2Num = [2,4,2,1]
+var kitchenList2Num = [2.15,3.5,1.9,1.3]
 var kitchenList2Title = ''
 
 var kitchenList3 = [
@@ -30,12 +30,12 @@ var kitchenList3 = [
   'DISPOSAL OF HARDWOOD / PARQUET OUTSIDE OF KITCHEN DEMO'
 ]
 var kitchenList3Num =
-[2,
-4,
-2,
-1,
-2,
-4]
+[2.15,
+3.5,
+1.9,
+1.3,
+2.15,
+3.5]
 var kitchenList3Title = 'Disposal'
 
 var kitchenList4 = [
@@ -182,18 +182,18 @@ var hvacList2 = [
   'WALLPAPER REMOVAL - QUOTE ONLY'
 ]
 var hvacList2Num = 
-[9,
-16,
-4,
+[8.5,
+15.5,
+4.2,
 600,
 1100,
 900,
-6]
+6,
+0]
 var hvacList2Title = ''
 
 var flooringList = [
-  'SUPPLY & INSTALL CERAMIC TILE UP TO 12 X 24 TILE ( ALLOWANCE OF $ 3.00 SQ.FT )',
-  '(includes supply & install of 1/4\" or 1/2\" cement board as required - OVER 12 X 24 QUOTE ONLY )',
+  'SUPPLY & INSTALL CERAMIC TILE UP TO 12 X 24 TILE ( ALLOWANCE OF $ 3.00 SQ.FT )(includes supply & install of 1/4\" or 1/2\" cement board as required - OVER 12 X 24 QUOTE ONLY )',
   'SUPPLY & INSTALL POLISHED PORELAIN OR STONE UP TO 12 X 24  ( ALLOWANCE UP TO $ 6.00 SQ.FT )',
   'SUPPLY & INSTALL SOUND PROOF UNDERLAY FOR TILE - PER SQ.FT ( EASY MAT )',
   'SUPPLY & INSTALL HARDWOOD FLOORING  PER SQ.FT( ALLOWANCE OF $4.00 SQ.FT )',
@@ -215,25 +215,25 @@ var flooringList = [
 ]
 
 var flooringListNum = [
-19,
-25,
-56,
-10,
-4,
-7,
+18.75,
+24.5,
+56.1,
+10.25,
+3.9,
+6.9,
 2,
 3,
-3,
-7,
+3.25,
+6.75,
 6,
-9,
-13,
+9.4,
+12.9,
 7,
 15,
 290,
 220,
 1250,
-21
+20.5
 ]
 var flooringListTitle = 'Flooring'
 
@@ -275,7 +275,7 @@ var backSplashListNum = [
 1400,
 1700,
 2150,
-13,
+12.5,
 25
 ]
 var backSplashListTitle = 'Backsplash'
@@ -305,14 +305,16 @@ var applianceListNum = [
 var applianceListTitle = 'Appliances'
 
 var condoFees = ['10% OF BASE LABOUR AND MATERIALS WILL BE APPLIED (EXCEPT ELECTRICAL)']
-var condoFeesNum = [7010]
+var condoFeesNum = [0]
 var condoFeesTitle = 'Condo Fees'
 
 var listOfLists = [kitchenList1, kitchenList2, kitchenList3, kitchenList4, kitchenList5, plumbingList, electricalList, hvacList1, hvacList2, flooringList, basicPremKitchen, stairsList, backSplashList, applianceList, condoFees]
 var listOfListsNum = [kitchenList1Num, kitchenList2Num, kitchenList3Num, kitchenList4Num, kitchenList5Num, plumbingListNum, electricalListNum, hvacList1Num, hvacList2Num, flooringListNum, basicPremKitchenNum, stairsListNum, backSplashListNum, applianceListNum, condoFeesNum]
 var listOfListsTitle = [kitchenList1Title, kitchenList2Title, kitchenList3Title, kitchenList4Title, kitchenList5Title, plumbingListTitle, electricalListTitle, hvacList1Title, hvacList2Title, flooringListTitle, basicPremKitchenTitle, stairsListTitle, backSplashListTitle, applianceListTitle, condoFeesTitle]
 
-var innerPage = document.getElementById("cs-inner-page")
+var multiplierList = []
+var multiplierCount = 0
+var innerPage = document.getElementById('cs-inner-page')
 
 function kitchenSheetPage () {
   for (let i = 0; i < listOfLists.length; i++) {
@@ -330,62 +332,73 @@ function kitchenSheetPage () {
       $(newDiv2).addClass('capitalize')
       $(newDiv2).addClass('grid-col')
       var newInput = document.createElement('input')
+      newInput.setAttribute('name', 'cs-input')
+
       $(newInput).addClass('grid-col')
+
       var hRule = document.createElement('hr')
 
       newDivContainer.appendChild(newDiv2)
       newDivContainer.appendChild(newInput)
       newDiv.appendChild(newDivContainer)
       newDiv.appendChild(hRule)
-
+      multiplierList[multiplierCount] = parseFloat(listOfListsNum[i][j])
+      multiplierCount++
     }
     innerPage.appendChild(newTitle)
     innerPage.appendChild(newDiv)
   }
 }
 kitchenSheetPage()
-// var elementCount = 0;
 
+var newFinalDiv = document.createElement('div')
+var newFinalDivPre = document.createElement('div')
+var newFinalDivHST = document.createElement('div')
 
-// function sec4ReplaceList (arr) {
-//   var sec4RemoveList = []
+$(newFinalDiv).addClass('cs-wrap-final')
+newFinalDivPre.innerHTML = 'Total Price: ' + 0
+newFinalDivHST.innerHTML = 'Total Price (Including HST): ' + 0
+newFinalDiv.appendChild(newFinalDivPre)
+newFinalDiv.appendChild(newFinalDivHST)
 
-//   for (let i = 0; i < sec4UnorderedList.children.length; i++) {
-//     if (sec4UnorderedList.children[i].tagName == 'LI') { 
-//       sec4RemoveList.push(i)
-//     }
-//   }
-//   for (let i = 0; i < sec4RemoveList.length; i++) {
-//     sec4UnorderedList.children[sec4RemoveList[sec4RemoveList.length - i - 1]].remove()
-//   }
-//   for (let i = 0; i < arr.length; i++) {
-//     sec4UnorderedList.children[0].after(arr[i][0][3])
-//   }
-// }
-// $(sec3edit).bind('click', function (e) { 
-//   if (sec3edit.innerHTML === 'EDIT' && elementCount < 4) {
-//       elementCount++
-//       startEditEis(sec3edit)
-//       var newP = document.createElement("p"); 
-//       var newContent = document.createTextNode(""); 
-//       newP.appendChild(newContent);
-//       $(newP).addClass('product-sec-3-text-special-subname')
-//       $(newP).addClass('product-sec-3-space')
-//       var currentP = document.getElementById("product-sec-3-text-addition"); 
-//       var parentNode = document.getElementById("product-sec-3-parent");
-//       parentNode.insertBefore(newP, currentP); 
-//       newP.contentEditable = 'true'
-//       newP.setAttribute('id','product-sec-3-p' + elementCount)
-//       newP.focus()
-//       $(newP).keydown(function(e){ 
-//         if (e.keyCode == 13){ 
-//           document.getElementById("product-sec-3-p" + elementCount).contentEditable = 'false'
-//           doneEditEis(sec3edit)
-//           e.preventDefault(); 
-//       } 
-//     })
-//   } else if (elementCount < 5){
-//       document.getElementById("product-sec-3-p" + elementCount).contentEditable = 'false'
-//       doneEditEis()
-//   }
-// })
+innerPage.appendChild(newFinalDiv)
+
+function updateFinal (final) {
+  newFinalDivPre.innerHTML = 'Total Price: ' + final
+  newFinalDivHST.innerHTML = 'Total Price (Including HST): ' + (final * 1.13)
+}
+
+var quantityList = []
+var csInput = document.getElementsByName('cs-input')
+quantityList.length = multiplierList.length
+quantityList.fill(0)
+console.log(quantityList)
+console.log('ml')
+console.log(multiplierList)
+
+function doAddition (zValue) {
+  if (parseFloat(csInput[zValue].value)) {
+    quantityList[zValue] = parseFloat(csInput[zValue].value)
+  } else {
+    return null
+  }
+  var finalNum = 0
+  var tempNum = 0
+
+  for (let x = 0; x < multiplierList.length; x++) {
+    var value = (quantityList[x] * multiplierList[x])
+    tempNum += parseFloat(value)
+  }
+  condoFeesNum = (tempNum * 0.1) * quantityList[quantityList.length - 1]
+  finalNum = tempNum + condoFeesNum
+  updateFinal(finalNum)
+}
+
+setTimeout(function () {
+  setInterval(
+    function addValues () {
+      for (let z = 0; z < csInput.length; z++) {
+        csInput[z].addEventListener('change', doAddition(z))
+      }
+    }, 5000)
+}, 400)

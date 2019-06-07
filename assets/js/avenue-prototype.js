@@ -171,3 +171,13 @@ var additionalItems = [
 ]
 
 const sectionsList = [preConstruction, demolition, livingRoom, kitchen, bedrooms, bathrooms, additionalItems]
+
+
+
+for (var i = 0; i < sectionsList.length; i++) {
+    for (var j = 0; j < sectionList[i].length; j++) {
+        for (var z = 0; z < sectionList[i][j].length; z++) {
+        console.log(sectionsList[i][j][z])
+        }
+    }
+}

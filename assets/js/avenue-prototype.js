@@ -1,5 +1,6 @@
-var rowObject = [ 'Words', Quantity, Price, Size, Variant, variable]
-
+// var rowObject = [ 'Words', Quantity, Price, Size, Variant, variable]
+var qty = 0
+var vrb = true
 var preConstruction = [
     'Pre Construction Prep',
     ['Protect Flooring With RAM board', qty,600, null, null, false],

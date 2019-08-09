@@ -13,8 +13,8 @@ var preConstruction = [
 var demolition = [
   'Demolition',
   ['Classic Suite Demolition', qty, 1200, null, null, false],
-  ['Semi-Premium Demolition', qty, 1800, null, null, false],
-  ['Premium Suite Demolition', qty, 2300, null, null, false]
+  ['Semi-Premium Demolition', qty, 1400, null, null, false],
+  ['Premium Suite Demolition', qty, 1800, null, null, false]
 ]
 
 var livingRoom = [
@@ -25,25 +25,32 @@ var livingRoom = [
   ['Replace Ceiling Fan', qty, 140, null, null, false],
   ['Replace Crown Molding', qty, 14, null, null, false],
   ['Flooring', qty, [2.1, 'custom'], null, null, vrb],
+  ['T-Mouldings required throughout unit', qty, 0, null, null, false],
   ['Replace Light Fixture', qty, 42, null, null, false],
   ['Replace Stairs', qty, 140, null, null, false],
   ['Replace Smoke Alarm or CO2 Alarm', qty, 84, null, null, false],
   ['Replace Baseboard', qty, 4.2, null, null, false],
+  ['Replace Quarter Round', qty, 4.2, null, null, false],
   ['Replace Door Trim', qty, 4.2, null, null, false],
   ['Replace Receptacles', qty, 35, null, null, false],
   ['Replace Switches', qty, 35, null, null, false],
+  ['Decore 2 Gang Switch', qty, 35, null, null, false],
+  ['Decora 3 Gang Switch', qty, 35, null, null, false],
   ['Walls', qty, [35, 8.4], null, null, vrb],
   ['Replace Window Screens', qty, 28, null, null, false],
   ['Screw Down Flooring', qty, 0.8, null, null, false],
+  ['Install Drywall - Tape, Sand, and Primer, Complete', qty, 5.5, null, null, false],
   ['Paint Doors', qty, 100, null, null, false],
-  ['S Paint Walls (SQFT)', qty, 3.5, null, null, false],
+  ['Paint Walls (SQFT)', qty, 3.5, null, null, false],
   ['Paint Crown Molding (LNFT)', qty, 4.2, null, null, false],
   ['Paint Baseboard or Trim', qty, 2.1, null, null, false],
-  ['Paint Ceiling - ENTIRE UNIT', qty, 1, null, null, false],
-  ['Paint Ceiling - PER ROOM', qty, 1000, null, null, false],
-  ['Patch and Replace Stucco Ceiling', qty, [1000, 400], null, null, vrb],
+  ['Paint Ceiling', qty, 1000, ['Entire Unit', 'Per Room'], null, false],
+  ['Patch and Replace Stucco Ceiling', qty, [1000, 400], ['Entire Unit', 'Per Room'], null, vrb],
   ['Replace Door', qty, 200, ['16"', '32"', '30"', '28"', '24"'], ['Left Handed', 'Right Handed'], false],
-  ['Replace Bi-fold Door', qty, 150, ['24"', '30"', '36"'], null, false]
+  ['Build Down Bulkhead to Install Bi-Fold Door', qty, 450, null, null, false],
+  ['Replace Bi-Fold Door', qty, 150, ['24"', '30"', '36"'], null, false],
+  ['Replace Closet Rod/Rack', qty, 105, null, null, false],
+  ['Replace Closet Shelves', qty, 75, null, null, false]
 ]
 
 var kitchen = [
@@ -52,7 +59,7 @@ var kitchen = [
   ['Boiler Pan', qty, 'custom', null, null, vrb],
   ['Cabinets and Drawer Pulls', qty, [20, 'custom'], null, null, vrb],
   ['Replace Cabinet Door Hinges', qty, 350, null, null, false],
-  ['Replace Cabinets and Drawers', qty, [1400, 1800, 2100], ['Small', 'Medium', 'Large'], null, false],
+  ['Replace Cabinets and Drawers', qty, [1400, 1600, 1800], ['Small', 'Medium', 'Large'], null, false],
   ['Paint Cabinets and Drawers', qty, 980, null, null, false],
   ['Paint Crown Molding (LNFT)', qty, 4.2, null, null, false],
   ['Paint Baseboard (LNFT)', qty, 2.1, null, null, false],
@@ -60,22 +67,22 @@ var kitchen = [
   ['Paint Walls (SQFT)', qty, 3.5, null, null, false],
   ['Paint Doors', qty, 100, null, null, false],
   ['Install Countertop', qty, 420, ['10\'', '8\'', '6\'', '4\''], null, false],
+  ['Countertop Endcaps Needed', qty, 0, null, null, false],
   ['Miter Kitchen Countertop', qty, 220, null, null, false],
-  ['Replace Faucet', qty, 70, null, null, false],
+  ['Replace Faucet Only', qty, 70, null, null, false],
   ['Flooring', qty, [2.1, 'custom'], null, null, vrb],
   ['Replace Light Fixture', qty, 42, null, null, false],
   ['Replace GFCI', qty, 105, null, null, false],
   ['Replace Microwave', qty, 70, null, null, false],
   ['Replace Range Hood', qty, 210, null, null, false],
   ['Install Charcoal Filtered Range Hood', qty, 450, null, null, false],
-  ['Replace Sink', qty, 420, null, null, false],
-  ['Replace Sink and Faucet', qty, 420, ['Glacier Bay', 'Moen'], null, false],
+  ['Replace Sink and Faucet', qty, 420, null, null, false],
   ['Replace Baseboard', qty, 4.2, null, null, false],
   ['Replace Door Trim', qty, 4.2, null, null, false],
-  ['Walls', qty, [35, 8.4], ['Repair', 'Replace'], null, vrb],
+  ['Walls', qty, [35, 8.4], null, null, vrb],
   ['Replace Ceiling', qty, 5, null, null, false],
   ['Kitchen Backsplash Install', qty, 22, null, null, false],
-  ['Repair Dishwasher', qty, 75, null, null, false],
+  ['Remove and Re-Install Existing Dishwasher', qty, 75, null, null, false],
   ['Refridgerator', qty, 105, ['White 59 7/8H x 24W x 28 5/8D (in.)', 'White 66 5/8H x 29 1/2W x 30 15/16D (in.)', 'White 61 3/4H x 28W x 31 5/8D (in.)', 'Stainless Steel 66 5/8H x 29 1/2W x 30 15/16D (in.)'], null, false],
   ['Stove', qty, 105, ['White 24W x 42 1/8H x 26 5/8D (in.)', 'White 30W x 46 1/2H x 29 7/8D (in.)', 'Stainless Steel 30W x 46 7/8H x 26 1/4D (in.)'], null, false],
   ['Dishwasher', qty, 640, ['White 32 1/2H x 17 19/32W x 22 13/32D (in.)', 'White 32 1/2H x 23 1/2W x 22 13/32D (in.)', 'Stainless Steel 32 1/2H x 23 1/2W x 22 13/32D (in.)'], null, false]
@@ -84,6 +91,7 @@ var kitchen = [
 var bedrooms = [
   'Bedroom(s)',
   ['Replace Blinds', qty, 105, null, null, false],
+  ['Build Down Bulkhead to Install Bi-Fold Door', qty, 450, null, null, false],
   ['Replace Door - Masonite Lincoln Park Bi-Fold', qty, 150, ['24"', '30"', '36"'], null, false],
   ['Replace Bypass Door - White VERANDA', qty, 200, ['72', '48'], null, false],
   ['Paint Doors', qty, 100, null, null, false],
@@ -94,15 +102,16 @@ var bedrooms = [
   ['Replace Ceiling Fan', qty, 105, null, null, false],
   ['Replace Closet Rod/Rack', qty, 105, null, null, false],
   ['Replace Closet/Drawer Knobs	', qty, 35, null, null, false],
+  ['Replace Closet Shelves', qty, 75, null, null, false],
   ['Replace Crown Molding', qty, 14, null, null, false],
   ['Replace Doorstop/Hinges/Closer', qty, 28, null, null, false],
-  ['Flooring', qty, ['custom', 2.1], null, null, true],
+  ['Flooring', qty, ['custom', 2.1], null, null, vrb],
   ['Replace Light Fixtures', qty, 42, null, null, false],
   ['Replace Privacy Lockset', qty, 35, null, null, false],
   ['Smoke alarm/CO2 Alarm', qty, 84, null, null, false],
   ['Replace Baseboard (LNFT)', qty, 4.2, null, null, false],
   ['Replace Trim (LNFT)', qty, 4.2, null, null, false],
-  ['Walls', qty, [8.4, 35], null, null, true],
+  ['Walls', qty, [8.4, 35], null, null, vrb],
   ['Replace Switches', qty, 25, null, null, false],
   ['Replace Receptacle', qty, 25, null, null, false],
   // ['Replace Wall Plates for Electrical', qty, 35, null, null, false],
@@ -111,15 +120,15 @@ var bedrooms = [
 
 var bathrooms = [
   'Bathroom(s)',
-  ['Tub to Shower Conversion - Tile and Acrylic Shower Base', qty, 2500, null, null, false],
+  ['Tub to Shower Conversion - Tile and Acrylic Shower Base', qty, 2500, ['60"', '48"'], ['LH', 'RH'], false],
   ['Replace Door - Masonite Lincoln Park', qty, 200, ['32"', '30"', '28"', '24"'], ['LH', 'RH'], false],
   ['Replace Angle Stop', qty, 75, null, null, false],
-  ['Replace Greenboard, Acrylic Shower Walls, Bathtub, and Shower Faucet', qty, 1400, null, null, false],
+  ['Replace Greenboard, Acrylic Shower Walls, Bathtub, and Shower Faucet', qty, 1400, null, ['LH', 'RH'], false],
   ['Replace Hardware - End Brackets/ Soap Holder/ Toilet Paper Holder(s)', qty, 105, null, null, false],
-  ['Cabinets and Drawer Pulls', qty, [70, 210], null, null, true],
-  ['Replace Cabinet Door Hinges', qty, 210, null, null, false],
-  ['Paint Cabinets and Drawers', qty, 350, null, null, false],
-  ['Pain Medicine Cabinet', qty, 140, null, null, false],
+  ['Cabinets and Drawer Pulls - Per Handle', qty, 20, null, null, false],
+  ['Replace Cabinet Door Hinges - Per Hinge', qty, 7.5, null, null, false],
+  ['Prime and Paint Cabinets and Drawers', qty, 350, null, null, false],
+  ['Paint Medicine Cabinet', qty, 140, null, null, false],
   ['Paint Baseboard or Trim', qty, 2.1, null, null, false],
   ['Paint Walls (SQFT)', qty, 3.5, null, null, false],
   ['Paint Doors', qty, 100, null, null, false],
@@ -137,12 +146,13 @@ var bathrooms = [
   ['Replace Mirror', qty, 70, null, null, false],
   ['Replace Shower Door', qty, 350, null, null, false],
   ['Replace Shower Head / Rod', qty, 70, null, null, false],
+  ['Install 2 Rows of Wall Tile for Vanity Backsplash - Subway (SQFT)', qty, 22, null, null, false],
   ['Replace Sink/Vanity', qty, 575, ['24"', '30"', '48"', 'Pedestal Sink'], null, false],
-  ['Replace Toilet', qty, 210, null, null, false],
-  ['Replace Tub', qty, 1540, null, ['LH', 'RH'], false],
+  ['Replace Existing Toilet', qty, 210, null, null, false],
+  ['Remove and Install New Toilet', qty, 210, null, null, false],
   ['Replace Door Trim', qty, 4.2, null, null, false],
   ['Replace Baseboard', qty, 4.2, null, null, false],
-  ['Replace Walls (LNFT)', qty, [8.4, 32], null, null, true]
+  ['Replace Walls (LNFT)', qty, [8.4, 32], null, null, vrb]
 ]
 
 var additionalItems = [
@@ -223,179 +233,144 @@ var roughMaterial = [
   duraProAngleStop(),
   plPremium295mlWaterProof(),
   tubSurroundAdhesive()
-
 ]
 
 function rollOfRamBoard () {
-  return ['Roll of Ram Board ', placeholder, price, sku, placeholder*price]
 
+  return ['Roll of Ram Board ', placeholder, price, sku, placeholder * price]
 }
-function blueTape  () {
-  return ['Blue Tape 2', placeholder2, price, sku, placeholder2*price]
-
+function blueTape () {
+  return ['Blue Tape 2', placeholder2, price, sku, placeholder2 * price]
 }
 
 function drywall () {
-  return ['Drywall(1/2 Inch) ', placeholder3, price, sku, placeholder3*price]
-
+  return ['Drywall(1/2 Inch) ', placeholder3, price, sku, placeholder3 * price]
 }
 
 function drywallScrews () {
-  return ['Drywall Screws(Individual-Quantity) ', placeholder4, price, sku, placeholde4r*price]
-
+  return ['Drywall Screws(Individual-Quantity) ', placeholder4, price, sku, placeholde4r * price]
 }
 
 function cornerBeads () {
-  return ['Corner Beads(90 degree) ', placeholder5, price, sku, placeholder5*price]
-
+  return ['Corner Beads(90 degree) ', placeholder5, price, sku, placeholder5 * price]
 }
 
 function sheetrock90 () {
-  return ['Sheetrock 90 ', placeholder6, price, sku, placeholder6*price]
-
+  return ['Sheetrock 90 ', placeholder6, price, sku, placeholder6 * price]
 }
 
 function sheetrock20 () {
-  return ['Sheetrock 20 ', placeholder7, price, sku, placeholder7*price]
-
+  return ['Sheetrock 20 ', placeholder7, price, sku, placeholder7 * price]
 }
 
 function metalStuds () {
-  return ['Metal Studs 2.5 x 8 ', placeholder8, price, sku, placeholder8*price]
-
+  return ['Metal Studs 2.5 x 8 ', placeholder8, price, sku, placeholder8 * price]
 }
 
 function meshTape () {
-  return ['Mesh Tape ', placeholder9, price, sku, placeholder9*price]
-
+  return ['Mesh Tape ', placeholder9, price, sku, placeholder9 * price]
 }
 
 function bundleOfStrapping () {
-  return ['Bundle of strapping ', placeholderq, price, sku, placeholderq*price]
-
+  return ['Bundle of strapping ', placeholderq, price, sku, placeholderq * price]
 }
 
 function goldScrews () {
-  return ['Gold Screws (2 and a 1/2 Inch) ', placeholderw, price, sku, placeholderw*price]
-
+  return ['Gold Screws (2 and a 1/2 Inch) ', placeholderw, price, sku, placeholderw * price]
 }
 
 function sakrete () {
-  return ['Sakrete ', placeholdere, price, sku, placeholdere*price]
-
+  return ['Sakrete ', placeholdere, price, sku, placeholdere * price]
 }
 
 function siliconeClear () {
-  return ['Silicone Clear(MONO) ', placeholderr, price, sku, placeholderr*price]
-
+  return ['Silicone Clear(MONO) ', placeholderr, price, sku, placeholderr * price]
 }
 
 function whiteSilicone () {
-  return ['White Silicone ', placeholdert, price, sku, placeholdert*price]
-
+  return ['White Silicone ', placeholdert, price, sku, placeholdert * price]
 }
 
 function customSkimCoatPatchCementUnderlayment () {
-  return ['Custom - Skim Coat & Patch Cement Underlayment 11.34kg ', placeholdery, price, sku, placeholdery*price]
-
+  return ['Custom - Skim Coat & Patch Cement Underlayment 11.34kg ', placeholdery, price, sku, placeholdery * price]
 }
 
 function flexBondThinsetMortarLFT () {
-  return ['FlexBond Thinset Mortar - LFT ', placeholderu, price, sku, placeholderu*price]
-
+  return ['FlexBond Thinset Mortar - LFT ', placeholderu, price, sku, placeholderu * price]
 }
 
 function cementBoardScrews () {
-  return ['Cement Board Screws  ', placeholderi, price, sku, placeholderi*price]
-
+  return ['Cement Board Screws  ', placeholderi, price, sku, placeholderi * price]
 }
 
 function megalyte () {
-  return ['Megalyte  ', placeholdero, price, sku, placeholdero*price]
-
+  return ['Megalyte  ', placeholdero, price, sku, placeholdero * price]
 }
 
 function insulation () {
-  return ['Insulation(R20/OC16/2x4) ', placeholderp, price, sku, placeholderp*price]
-
+  return ['Insulation(R20/OC16/2x4) ', placeholderp, price, sku, placeholderp * price]
 }
 
 function paperTape () {
-  return ['Paper Tape ', placeholdera, price, sku, placeholdera*price]
-
+  return ['Paper Tape ', placeholdera, price, sku, placeholdera * price]
 }
 
 function doorstop () {
-  return ['Door stop  ', placeholders, price, sku, placeholders*price]
-
+  return ['Door stop  ', placeholders, price, sku, placeholders * price]
 }
 
 function pocketDoorFrame () {
-  return ['Pocket Door Frame ', placeholderd, price, sku, placeholderd*price]
-
+  return ['Pocket Door Frame ', placeholderd, price, sku, placeholderd * price]
 }
 
 function dap () {
-  return ['Dap ', placeholderf, price, sku, placeholderf*price]
-
+  return ['Dap ', placeholderf, price, sku, placeholderf * price]
 }
 
 function fourInchMarbleJamb () {
-  return ['4 Inch Marble Jamb ', placeholderg, price, sku, placeholderg*price]
-
+  return ['4 Inch Marble Jamb ', placeholderg, price, sku, placeholderg * price]
 }
 
 function tuckTape () {
-  return ['Tuck Tape ', placeholderh, price, sku, placeholderh*price]
-
+  return ['Tuck Tape ', placeholderh, price, sku, placeholderh * price]
 }
 
 function sixMmPoly () {
-  return ['6MM Poly ', placeholderi, price, sku, placeholderj*price]
-
+  return ['6MM Poly ', placeholderi, price, sku, placeholderj * price]
 }
 
 function sheetrockUltraLightMoldTough () {
-  return ['Sheetrock UltraLight Mold Tough 1/2x4x8 ', placeholderj, price, sku, placeholderk*price]
-
+  return ['Sheetrock UltraLight Mold Tough 1/2x4x8 ', placeholderj, price, sku, placeholderk * price]
 }
 
 function twox4x8WoodStuds () {
-  return ['2x4x8 Wood Studs ', placeholderk, price, sku, placeholderl*price]
-
+  return ['2x4x8 Wood Studs ', placeholderk, price, sku, placeholderl * price]
 }
 
 function toiletKit () {
-  return ['Toilet Kit(Wax Ring, Flexible Connector, Bolts) ', placeholderl, price, sku, placeholderz*price]
-
+  return ['Toilet Kit(Wax Ring, Flexible Connector, Bolts) ', placeholderl, price, sku, placeholderz * price]
 }
 
 function robertsTemporaryCarpetProtectionFilm () {
-  return ['Roberts Temporary Carpet Protection Film ', placeholderm, price, sku, placeholderx*price]
-
+  return ['Roberts Temporary Carpet Protection Film ', placeholderm, price, sku, placeholderx * price]
 }
 
 function omnigripTileStoneAdhesive () {
-  return ['OMNIGRIP TILE & STONE ADHESIVE 3.79L ', placeholdern, price, sku, placeholderc*price]
-
+  return ['OMNIGRIP TILE & STONE ADHESIVE 3.79L ', placeholdern, price, sku, placeholderc * price]
 }
 
 function sheetrockCeilingSprayTexture () {
-  return ['Sheetrock Ceiling Spray Texture, Medium Finish, 20 kg Bag ', placeholdero, price, sku, placeholder*vprice]
-
+  return ['Sheetrock Ceiling Spray Texture, Medium Finish, 20 kg Bag ', placeholdero, price, sku, placeholder * vprice]
 }
 
 function duraProAngleStop () {
-  return ['DuraPro Angle Stop, Quarter Turn, 1/2 inch Sweat X 3/8 inch Compression, Lead Free ', placeholderp, price, sku, placeholderb*price]
-
+  return ['DuraPro Angle Stop, Quarter Turn, 1/2 inch Sweat X 3/8 inch Compression, Lead Free ', placeholderp, price, sku, placeholderb * price]
 }
 
 function plPremium295mlWaterProof () {
-  return ['PL Premium 295 mL Waterproof Interior/Exterior Construction Adhesive ', placeholderq, price, sku, placeholder*nprice]
-
+  return ['PL Premium 295 mL Waterproof Interior/Exterior Construction Adhesive ', placeholderq, price, sku, placeholder * nprice]
 }
 
 function tubSurroundAdhesive () {
-  return ['TUB SURROUND ADHESIVE PL700-300ML - 1/4 P ', placeholderr, price, sku, placeholderm*price]
-
+  return ['TUB SURROUND ADHESIVE PL700-300ML - 1/4 P ', placeholderr, price, sku, placeholderm * price]
 }

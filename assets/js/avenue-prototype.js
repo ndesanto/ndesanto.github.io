@@ -1,4 +1,5 @@
 // var rowObject = [ 'Words', Quantity, Price, Size, Variant, variable]
+
 var qty = 0
 var vrb = true
 var preConstruction = [
@@ -174,11 +175,227 @@ var additionalItems = [
 const sectionsList = [preConstruction, demolition, livingRoom, kitchen, bedrooms, bathrooms, additionalItems]
 
 for (var i = 0; i < sectionsList.length; i++) {
-  console.log(' **** :' + sectionsList[i][0])
+  console.log(' **** ' + sectionsList[i][0])
 
   for (var j = 1; j < sectionsList[i].length; j++) {
     for (var z = 0; z < sectionsList[i][j].length; z++) {
       console.log(sectionsList[i][j][z])
     }
   }
+}
+
+// ROUGH MATERIAL OBJECT
+// var example = ['name', qty, price, sku, qty*price]
+
+var roughMaterial = [
+  rollOfRamBoard(),
+  blueTape(),
+  drywall(),
+  drywallScrews(),
+  cornerBeads(),
+  sheetrock90(),
+  sheetrock20(),
+  metalStuds(),
+  meshTape(),
+  bundleOfStrapping(),
+  goldScrews(),
+  sakrete(),
+  siliconeClear(),
+  whiteSilicone(),
+  customSkimCoatPatchCementUnderlayment(),
+  flexBondThinsetMortarLFT(),
+  cementBoardScrews(),
+  megalyte(),
+  insulation(),
+  paperTape(),
+  doorstop(),
+  pocketDoorFrame(),
+  dap(),
+  fourInchMarbleJamb(),
+  tuckTape(),
+  sixMmPoly(),
+  sheetrockUltraLightMoldTough(),
+  twox4x8WoodStuds(),
+  toiletKit(),
+  robertsTemporaryCarpetProtectionFilm(),
+  omnigripTileStoneAdhesive(),
+  sheetrockCeilingSprayTexture(),
+  duraProAngleStop(),
+  plPremium295mlWaterProof(),
+  tubSurroundAdhesive()
+
+]
+
+function rollOfRamBoard () {
+  return ['Roll of Ram Board ', placeholder, price, sku, placeholder*price]
+
+}
+function blueTape  () {
+  return ['Blue Tape 2', placeholder2, price, sku, placeholder2*price]
+
+}
+
+function drywall () {
+  return ['Drywall(1/2 Inch) ', placeholder3, price, sku, placeholder3*price]
+
+}
+
+function drywallScrews () {
+  return ['Drywall Screws(Individual-Quantity) ', placeholder4, price, sku, placeholde4r*price]
+
+}
+
+function cornerBeads () {
+  return ['Corner Beads(90 degree) ', placeholder5, price, sku, placeholder5*price]
+
+}
+
+function sheetrock90 () {
+  return ['Sheetrock 90 ', placeholder6, price, sku, placeholder6*price]
+
+}
+
+function sheetrock20 () {
+  return ['Sheetrock 20 ', placeholder7, price, sku, placeholder7*price]
+
+}
+
+function metalStuds () {
+  return ['Metal Studs 2.5 x 8 ', placeholder8, price, sku, placeholder8*price]
+
+}
+
+function meshTape () {
+  return ['Mesh Tape ', placeholder9, price, sku, placeholder9*price]
+
+}
+
+function bundleOfStrapping () {
+  return ['Bundle of strapping ', placeholderq, price, sku, placeholderq*price]
+
+}
+
+function goldScrews () {
+  return ['Gold Screws (2 and a 1/2 Inch) ', placeholderw, price, sku, placeholderw*price]
+
+}
+
+function sakrete () {
+  return ['Sakrete ', placeholdere, price, sku, placeholdere*price]
+
+}
+
+function siliconeClear () {
+  return ['Silicone Clear(MONO) ', placeholderr, price, sku, placeholderr*price]
+
+}
+
+function whiteSilicone () {
+  return ['White Silicone ', placeholdert, price, sku, placeholdert*price]
+
+}
+
+function customSkimCoatPatchCementUnderlayment () {
+  return ['Custom - Skim Coat & Patch Cement Underlayment 11.34kg ', placeholdery, price, sku, placeholdery*price]
+
+}
+
+function flexBondThinsetMortarLFT () {
+  return ['FlexBond Thinset Mortar - LFT ', placeholderu, price, sku, placeholderu*price]
+
+}
+
+function cementBoardScrews () {
+  return ['Cement Board Screws  ', placeholderi, price, sku, placeholderi*price]
+
+}
+
+function megalyte () {
+  return ['Megalyte  ', placeholdero, price, sku, placeholdero*price]
+
+}
+
+function insulation () {
+  return ['Insulation(R20/OC16/2x4) ', placeholderp, price, sku, placeholderp*price]
+
+}
+
+function paperTape () {
+  return ['Paper Tape ', placeholdera, price, sku, placeholdera*price]
+
+}
+
+function doorstop () {
+  return ['Door stop  ', placeholders, price, sku, placeholders*price]
+
+}
+
+function pocketDoorFrame () {
+  return ['Pocket Door Frame ', placeholderd, price, sku, placeholderd*price]
+
+}
+
+function dap () {
+  return ['Dap ', placeholderf, price, sku, placeholderf*price]
+
+}
+
+function fourInchMarbleJamb () {
+  return ['4 Inch Marble Jamb ', placeholderg, price, sku, placeholderg*price]
+
+}
+
+function tuckTape () {
+  return ['Tuck Tape ', placeholderh, price, sku, placeholderh*price]
+
+}
+
+function sixMmPoly () {
+  return ['6MM Poly ', placeholderi, price, sku, placeholderj*price]
+
+}
+
+function sheetrockUltraLightMoldTough () {
+  return ['Sheetrock UltraLight Mold Tough 1/2x4x8 ', placeholderj, price, sku, placeholderk*price]
+
+}
+
+function twox4x8WoodStuds () {
+  return ['2x4x8 Wood Studs ', placeholderk, price, sku, placeholderl*price]
+
+}
+
+function toiletKit () {
+  return ['Toilet Kit(Wax Ring, Flexible Connector, Bolts) ', placeholderl, price, sku, placeholderz*price]
+
+}
+
+function robertsTemporaryCarpetProtectionFilm () {
+  return ['Roberts Temporary Carpet Protection Film ', placeholderm, price, sku, placeholderx*price]
+
+}
+
+function omnigripTileStoneAdhesive () {
+  return ['OMNIGRIP TILE & STONE ADHESIVE 3.79L ', placeholdern, price, sku, placeholderc*price]
+
+}
+
+function sheetrockCeilingSprayTexture () {
+  return ['Sheetrock Ceiling Spray Texture, Medium Finish, 20 kg Bag ', placeholdero, price, sku, placeholder*vprice]
+
+}
+
+function duraProAngleStop () {
+  return ['DuraPro Angle Stop, Quarter Turn, 1/2 inch Sweat X 3/8 inch Compression, Lead Free ', placeholderp, price, sku, placeholderb*price]
+
+}
+
+function plPremium295mlWaterProof () {
+  return ['PL Premium 295 mL Waterproof Interior/Exterior Construction Adhesive ', placeholderq, price, sku, placeholder*nprice]
+
+}
+
+function tubSurroundAdhesive () {
+  return ['TUB SURROUND ADHESIVE PL700-300ML - 1/4 P ', placeholderr, price, sku, placeholderm*price]
+
 }

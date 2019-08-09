@@ -374,3 +374,285 @@ function plPremium295mlWaterProof () {
 function tubSurroundAdhesive () {
   return ['TUB SURROUND ADHESIVE PL700-300ML - 1/4 P ', placeholderr, price, sku, placeholderm * price]
 }
+
+var finishMaterial = [
+
+    vinylPlank(),
+    snowfall5GalSG(),
+    snowfall1Gal1GalSG(),
+    classicGrey5GalEGG(),
+    classicGrey1GalSG(),
+    interiorCeilingPaint(),
+    KilzOdorlessGallon(),
+    baseAlexandriaMoulding(),
+    trimAlexandriaMoulding(),
+    doorMasoniteLincolnParkx(),
+    doorMasoniteLincolinParkBiFoldx(),
+    everbiltClosetRod(),
+    everbiltPoleSockets(),
+    passageDoorLever(),
+    privacyDoorLever(),
+    hingePinDoorStop(),
+    springDoorStop(),
+    eurostyleCabinets(),
+    subwayTile(),
+    tileEdge(),
+    vanityx(),
+    bathroomFaucet(),
+    bathtubx(),
+    tubWallKitEach(),
+    moenShowerRod(),
+    mirrorBevelededge(),
+    toilet(),
+    showerFaucet(),
+    bathAccessoryKit(),
+    rangeHoodSS(),
+    plugs(),
+    switches(),
+    plugCoverPlates(),
+    gFCIOutlet(),
+    smokeDetector(),
+    lightFixture6pk(),
+    flushMounteach4PK(),
+    trackLight(),
+    brushedNickelBathBar(),
+    ledLights(),
+    bathroomexhaustfaneach(),
+    unsandedGrout(),
+    ArboriteCountertop(),
+    endcapKit(),
+    reginoxSSSink(),
+    kitchenFaucet (),
+    cordlessBlindsx(),
+    verticalBlindKitx(),
+    bathroomSink(),
+    refridgeratorx(),
+    rangex(),
+    dishwasherx(),
+    washer(),
+    dryer(),
+    frontLoadWasher(),
+    frontLoadDryer(),
+    stackingKit(),
+    libertyKnob(),
+    tMolding(),
+    showerBasex(),
+    hinge(),
+    showerTile(),
+    breakawayScrews(),
+    millworkCove(),
+    stairNosing(),
+    decora3Gang(),
+    decora2Gang(),
+    quarterRound(),
+    ]
+
+
+
+
+    
+ function vinylPlank () {
+
+}
+function snowfall5GalSG () {
+
+}
+function snowfall1Gal1GalSG () {
+
+}
+function classicGrey5GalEGG () {
+
+}
+function classicGrey1GalSG () {
+
+}
+function interiorCeilingPaint () {
+
+}
+function KilzOdorlessGallon () {
+
+}
+function baseAlexandriaMoulding () {
+
+}
+function trimAlexandriaMoulding () {
+
+}
+function doorMasoniteLincolnParkx () {
+
+}
+function doorMasoniteLincolinParkBi-Foldx () {
+
+}
+function everbiltClosetRod () {
+
+}
+function everbiltPoleSockets () {
+
+}
+function passageDoorLever () {
+
+}
+function privacyDoorLever () {
+
+}
+function hingePinDoorStop () {
+
+}
+function springDoorStop () {
+
+}
+function eurostyleCabinets () {
+
+}
+function subwayTile () {
+
+}
+function tileEdge () {
+
+}
+function vanityx () {
+
+}
+function bathroomFaucet () {
+
+}
+function bathtubx () {
+
+}
+function tubWallKitEach () {
+
+}
+function moenShowerRod () {
+
+}
+function mirrorBevelededge () {
+
+}
+function toilet () {
+
+}
+function showerFaucet () {
+
+}
+function bathAccessoryKit () {
+
+}
+function rangeHoodSS () {
+
+}
+function plugs () {
+
+}
+function switches () {
+
+}
+function plugCoverPlates () {
+
+}
+function gFCIOutlet () {
+
+}
+function smokeDetector () {
+
+}
+function lightFixture(6-Pack) () {
+
+}
+function flushMounteach4PK () {
+
+}
+function trackLight () {
+
+}
+function brushedNickelBathBar () {
+
+}
+function ledLights () {
+
+}
+function bathroomexhaustfaneach () {
+
+}
+function unsandedGrout () {
+
+}
+function ArboriteCountertop () {
+
+}
+function endcapKit () {
+
+}
+function reginoxSSSink () {
+
+}
+function kitchenFaucet  () {
+
+}
+function cordlessBlindsx () {
+
+}
+function verticalBlindKitx () {
+
+}
+function bathroomSink () {
+
+}
+function refridgeratorx () {
+
+}
+function rangex () {
+
+}
+function dishwasherx () {
+
+}
+function washer () {
+
+}
+function dryer () {
+
+}
+function frontLoadWasher () {
+
+}
+function frontLoadDryer () {
+
+}
+function stackingKit () {
+
+}
+function libertyKnob () {
+
+}
+function t-Molding () {
+
+}
+function showerBasex () {
+
+}
+function hinge () {
+
+}
+function showerTile () {
+
+}
+function breakawayScrews () {
+
+}
+function millworkCove () {
+
+}
+function stairNosing () {
+
+}
+function decora3Gang () {
+
+}
+function decora2Gang () {
+
+}
+function quarterRound () {
+
+}
+    

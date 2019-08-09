@@ -18,7 +18,7 @@ var demolition = [
 ]
 
 var livingRoom = [
-  'Living Room',
+  'Living Room/Dining Room',
   ['2.5 Inch Cordless Blinds', qty, 105, ['72x48"', '18x72"', '24x72"', '30x72"', '36x72"', '42x72"', '48x72"', '60x48"', '60x72"', '72x72"', '36x48"'], ['Esspresso', 'White'], false],
   ['Vertical Blinds', qty, 105, ['78x84"', '66x84"'], ['White'], false],
   ['Balcony Door', qty, [200, 115], null, null, vrb],
@@ -59,7 +59,9 @@ var kitchen = [
   ['Boiler Pan', qty, 'custom', null, null, vrb],
   ['Cabinets and Drawer Pulls', qty, [20, 'custom'], null, null, vrb],
   ['Replace Cabinet Door Hinges', qty, 350, null, null, false],
-  ['Replace Cabinets and Drawers', qty, [1400, 1600, 1800], ['Small', 'Medium', 'Large'], null, false],
+  ['Replace Cabinets and Drawers Small', qty, 1400, null, null, false],
+  ['Replace Cabinets and Drawers Medium', qty, 1600, null, null, false],
+  ['Replace Cabinets and Drawers Large', qty, 1800, null, null, false],
   ['Paint Cabinets and Drawers', qty, 980, null, null, false],
   ['Paint Crown Molding (LNFT)', qty, 4.2, null, null, false],
   ['Paint Baseboard (LNFT)', qty, 2.1, null, null, false],
@@ -171,28 +173,192 @@ var additionalItems = [
   ['Audit Fire Extinguisher', qty, 0, null, null, false],
   ['Inspect Air Conditioner/Heat Pump (outside)', qty, 0, null, null, false],
   ['Inspect Air Handler (inside)', qty, 0, null, null, false],
-  ['Inspect Garage Entry Door	', qty, 0, null, null, false],
+  ['Inspect Garage Entry Door ', qty, 0, null, null, false],
   ['Inspect Water Heater ', qty, 0, null, null, false],
   ['Replace Air Filter', qty, 0, null, null, false],
   ['Replace Light Bulbs ', qty, 0, null, null, false],
   ['Replace Portion of Ceiling in Bedroom and Living Room & Paint Ceilings Entire Unit', qty, 0, null, null, false],
   ['Washer 43 1/2H x 26 7/8W x 26 5/8D (in.)', qty, 105, null, false],
   ['Dryer 42 3/5H x 26 7/8W x 29 1/2D (in.)', qty, 105, null, false],
-  ['Front Load Washer 33 5/16H x 23 1/2W x 26 5/8D (in.)', qty, 105, null, false],
-  ['Front Load Dryer 33 3/8H x 23 1/2W x 25 11/16D (in.)', qty, 105, null, false]
+  ['Front Load Washer 33 5/16H x 23 1/2W x 26 5/8D (in.)', qty, 105, null, null, false],
+  ['Front Load Dryer 33 3/8H x 23 1/2W x 25 11/16D (in.)', qty, 105, null, null, false]
 ]
 
 const sectionsList = [preConstruction, demolition, livingRoom, kitchen, bedrooms, bathrooms, additionalItems]
+var innerPage = document.getElementById('al-inner-page')
+var multiplierList = []
+function createHTML () {
+  for (var i = 0; i < sectionsList.length; i++) {
+    var newTitle = document.createElement('h2')
+    newTitle.innerHTML = sectionsList[i][0]
+    var newDiv = document.createElement('div')
+    $(newDiv).addClass('content-wrap')
+    console.log(' **** ' + sectionsList[i][0])
 
-for (var i = 0; i < sectionsList.length; i++) {
-  console.log(' **** ' + sectionsList[i][0])
+    for (var j = 1; j < sectionsList[i].length; j++) {
+      var newDivContainer = document.createElement('div')
+      $(newDivContainer).addClass('al-grid')
 
-  for (var j = 1; j < sectionsList[i].length; j++) {
-    for (var z = 0; z < sectionsList[i][j].length; z++) {
-      console.log(sectionsList[i][j][z])
+      var divProductName = document.createElement('div')
+      divProductName.innerHTML = sectionsList[i][j][0]
+      $(divProductName).addClass('capitalize')
+      $(divProductName).addClass('grid-col')
+
+      var newInput = document.createElement('input')
+      newInput.setAttribute('name', 'al-input')
+      newInput.setAttribute('placeholder', 'quantity')
+
+      $(newInput).addClass('grid-col')
+
+      var hRule = document.createElement('hr')
+      newDivContainer.appendChild(divProductName)
+
+      var sizeSelector = document.createElement('div')
+      if (Array.isArray(sectionsList[i][j][3])) {
+        sizeSelector = document.createElement('select')
+        for (var y = 0; y < sectionsList[i][j][3].length; y++) {
+          var newOption = document.createElement('option')
+          newOption.innerHTML = [sectionsList[i][j][3][y]]
+          sizeSelector.appendChild(newOption)
+        }
+      }
+      if (sizeSelector != null) {
+        newDivContainer.appendChild(sizeSelector)
+      }
+      var variantSelector = document.createElement('div')
+      if (Array.isArray(sectionsList[i][j][4])) {
+        variantSelector = document.createElement('select')
+        for (var yy = 0; yy < sectionsList[i][j][4].length; yy++) {
+          var newOption2 = document.createElement('option')
+          newOption2.innerHTML = [sectionsList[i][j][4][yy]]
+          variantSelector.appendChild(newOption2)
+        }
+      }
+      if (variantSelector != null) {
+        newDivContainer.appendChild(variantSelector)
+      }
+
+
+      var vrbSelector = document.createElement('div')
+      if (sectionsList[i][j][5]) {
+        vrbSelector = document.createElement('select')
+        var newOption3 = document.createElement('option')
+        var newOption4 = document.createElement('option')
+        newOption3.innerHTML = 'Replace'
+        newOption4.innerHTML = 'Repair'
+
+        vrbSelector.appendChild(newOption3)
+        vrbSelector.appendChild(newOption4)
+      }
+      if (vrbSelector != null) {
+        newDivContainer.appendChild(vrbSelector)
+      }
+
+      var customValue = document.createElement('div')
+      if (Array.isArray(sectionsList[i][j][2]) || sectionsList[i][j][2] === 'custom') {
+        // multiplierList.push(parseFloat(sectionsList[i][j][2]))
+        console.log(sectionsList[i][j][2])
+        customValue = document.createElement('input')
+        customValue.setAttribute('name', 'al-input-price')
+        customValue.setAttribute('placeholder', 'Input Price')
+        $(customValue).addClass('grid-col')
+        // multiplierList.push(parseFloat(sectionsList[i][j][2][1]))
+      }
+
+      newDivContainer.appendChild(newInput)
+
+      if (customValue != null) {
+        newDivContainer.appendChild(customValue)
+      }
+      newDiv.appendChild(newDivContainer)
+      newDiv.appendChild(hRule)
     }
+
+    innerPage.appendChild(newTitle)
+    innerPage.appendChild(newDiv)
   }
 }
+createHTML()
+
+var newFinalDiv = document.createElement('div')
+var newFinalDivPre = document.createElement('div')
+var newFinalDivHST = document.createElement('div')
+
+$(newFinalDiv).addClass('cs-wrap-final')
+newFinalDivPre.innerHTML = 'Total Price: ' + 0
+newFinalDivHST.innerHTML = 'Total Price (Including HST): ' + 0
+newFinalDiv.appendChild(newFinalDivPre)
+newFinalDiv.appendChild(newFinalDivHST)
+
+innerPage.appendChild(newFinalDiv)
+
+function updateFinal (final) {
+  newFinalDivPre.innerHTML = 'Total Price: ' + final
+  newFinalDivHST.innerHTML = 'Total Price (Including HST): ' + (final * 1.13)
+  // print(final)
+}
+
+var newFinalOutputContainer = document.createElement('div')
+$(newFinalOutputContainer).addClass('cs-wrap-final')
+$(newFinalOutputContainer).addClass('smallFont')
+var customerName = document.getElementById('cs-customer-name')
+var customerAdd = document.getElementById('cs-customer-address')
+var customerNum = document.getElementById('cs-customer-lead')
+setInterval(
+  function custInfo () {
+    customerName = document.getElementById('cs-customer-name')
+    customerAdd = document.getElementById('cs-customer-address')
+    customerNum = document.getElementById('cs-customer-lead')
+  }, 5000)
+
+// function print (final) {
+//   newFinalOutputContainer.innerHTML = `Name: ${customerName.value} Address: ${customerAdd.value} Lead #: ${customerNum.value} `
+//   var count = 0
+//   for (let i = 0; i < listOfLists.length; i++) {
+
+//     for (let j = 0; j < listOfLists[i].length; j++) {
+//       var newFinalOutput = document.createElement('div')
+//       newFinalOutput.innerHTML += `${listOfLists[i][j]} : quantity: ${quantityList[count]} at $${value[count]} `
+//       document.createElement('br')
+//       count++
+//       newFinalOutputContainer.appendChild(newFinalOutput)
+//     }
+//   }
+//   newFinalOutputContainer.innerHTML += `Total: ${final} w/ HST: ${(final * 1.13)}`
+
+//   innerPage.appendChild(newFinalOutputContainer)
+// }
+
+var quantityList = []
+var value = []
+var alInput = document.getElementsByName('al-input')
+quantityList.length = multiplierList.length
+quantityList.fill(0)
+function doAddition (zValue) {
+  if (parseFloat(alInput[zValue].value)) {
+    quantityList[zValue] = parseFloat(alInput[zValue].value)
+  } else {
+    return null
+  }
+  var tempNum = 0
+
+  for (let x = 0; x < multiplierList.length; x++) {
+    value[x] = (quantityList[x] * multiplierList[x])
+    tempNum += parseFloat(value[x])
+  }
+  updateFinal(tempNum)
+}
+// console.log(multiplierList)
+// console.log(quantityList)
+
+setTimeout(function () {
+  setInterval(
+    function addValues () {
+      for (let z = 0; z < alInput.length; z++) {
+        alInput[z].addEventListener('change', doAddition(z))
+      }
+    }, 5000)
+}, 400)
 
 // ROUGH MATERIAL OBJECT
 // var example = ['name', qty, price, sku, qty*price]
@@ -319,7 +485,7 @@ function doorstop () {
   return ['Door stop  ', placeholders, price, sku, placeholders * price]
 }
 
-function pocketDoorFrame () {
+function pocketDoorFrame () {  
   return ['Pocket Door Frame ', placeholderd, price, sku, placeholderd * price]
 }
 

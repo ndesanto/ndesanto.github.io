@@ -92,11 +92,11 @@ body {
 	color: #424242;
 	margin: 0;
 	z-index: 2;
-	border-radius: 6px;
-	width: 80%;
-	padding: 8px 10px;
+	border-radius: 3px;
+	width: 70%;
+	padding: 5px 8px;
 	height: 20px;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 @media (max-width: 767px) {

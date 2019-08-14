@@ -141,7 +141,7 @@ var bathrooms = [
   ['Replace Exhaust Fan', qty, 105, null, null, false],
   ['Replace GFCI', qty, 105, null, null, false],
   ['Replace Electrical Fixture', qty, 42, null, null, false],
-  ['Flooring', qty, ['custom', 2.1], null, null, false],
+  ['Flooring', qty, ['custom', 2.1], null, null, vrb],
   ['Replace Handles and Index Buttons', qty, 35, null, null, false],
   ['Replace Light Fixture', qty, 42, null, null, false],
   ['Replace Medicine Cabinet ', qty, 150, null, null, false],
@@ -193,8 +193,6 @@ function createHTML () {
     newTitle.innerHTML = sectionsList[i][0]
     var newDiv = document.createElement('div')
     $(newDiv).addClass('content-wrap')
-    console.log(' **** ' + sectionsList[i][0])
-
     for (var j = 1; j < sectionsList[i].length; j++) {
       var newDivContainer = document.createElement('div')
       $(newDivContainer).addClass('al-grid')
@@ -238,7 +236,6 @@ function createHTML () {
         newDivContainer.appendChild(variantSelector)
       }
 
-
       var vrbSelector = document.createElement('div')
       if (sectionsList[i][j][5]) {
         vrbSelector = document.createElement('select')
@@ -255,15 +252,33 @@ function createHTML () {
       }
 
       var customValue = document.createElement('div')
-      if (Array.isArray(sectionsList[i][j][2]) || sectionsList[i][j][2] === 'custom') {
-        // multiplierList.push(parseFloat(sectionsList[i][j][2]))
-        // console.log(sectionsList[i][j][2])
-        customValue = document.createElement('input')
-        customValue.setAttribute('name', 'al-input-price' + customPriceCount)
-        customValue.setAttribute('placeholder', 'Input Price')
-        $(customValue).addClass('grid-col')
-        // multiplierList.push(parseFloat(sectionsList[i][j][2][1]))
-        customPriceCount++ 
+      if (Array.isArray(sectionsList[i][j][2])) {
+        if ((sectionsList[i][j][2][0] === 'custom') && (sectionsList[i][j][2][1] === 'custom')) {
+          customValue = document.createElement('input')
+          customValue.setAttribute('name', 'al-input-price' + customPriceCount)
+          customValue.setAttribute('placeholder', 'Input Price')
+          $(customValue).addClass('grid-col')
+          customPriceCount++
+        } else if (sectionsList[i][j][2][0] === 'custom' ) {
+          customValue = document.createElement('input')
+          customValue.setAttribute('name', 'al-input-price' + customPriceCount)
+          customValue.setAttribute('placeholder', 'Replace Price')
+          $(customValue).addClass('grid-col')
+          customPriceCount++
+        } else if (sectionsList[i][j][2][1] === 'custom') {
+          customValue = document.createElement('input')
+          customValue.setAttribute('name', 'al-input-price' + customPriceCount)
+          customValue.setAttribute('placeholder', 'Repair Price')
+          $(customValue).addClass('grid-col')
+          customPriceCount++
+        } else {
+          customValue = document.createElement('input')
+          customValue.setAttribute('name', 'al-input-price' + customPriceCount)
+          customValue.setAttribute('placeholder', 'Input Price')
+          $(customValue).addClass('grid-col')
+          $(customValue).addClass('hidden-vis')
+          customPriceCount++
+        }
       }
 
       newDivContainer.appendChild(newInput)
@@ -333,27 +348,35 @@ setInterval(
 var multiplierList = []
 var multiplierCustomCount = -1
 function multiplierTracker () {
-  for (var i = 0; i < sectionsList.length; i++) {
-    console.log(' **** ' + sectionsList[i][0])
+  multiplierList = []
+  multiplierCustomCount = -1
 
+  for (var i = 0; i < sectionsList.length; i++) {
     for (var j = 1; j < sectionsList[i].length; j++) {
       var multiplierValue = sectionsList[i][j][2]
-      // console.log(sectionsList[i][j][2])
-      if (Array.isArray(sectionsList[i][j][2]) && (sectionsList[i][j][2][0] === 'custom' || sectionsList[i][j][2][1] === 'custom')) {
+      if (Array.isArray(sectionsList[i][j][2])) {
         multiplierCustomCount++
-
-        console.log(document.getElementsByName('al-input-price' + multiplierCustomCount)[0].parentElement.childNodes[3])
-        if (document.getElementsByName('al-input-price' + multiplierCustomCount).parentNodeElement.childNodes[3]) {  /// get parent node, get the value of the chosen selected value.
-          console.log(document.getElementsByName('al-input-price' + multiplierCustomCount).innerHTML)
-          multiplierValue = document.getElementsByName('al-input-price' + multiplierCustomCount).innerHTML
+        if (document.getElementsByName('al-input-price' + multiplierCustomCount)[0].parentElement.childNodes[3].childNodes[0].selected && (sectionsList[i][j][2][0] !== 'custom')) {  // if replace is selected
+          multiplierValue = sectionsList[i][j][2][0]
+        } else if (document.getElementsByName('al-input-price' + multiplierCustomCount)[0].parentElement.childNodes[3].childNodes[1].selected && (sectionsList[i][j][2][1] !== 'custom')) {  // if repair
+          multiplierValue = sectionsList[i][j][2][1]
+        } else if ((sectionsList[i][j][2][0] === 'custom' || sectionsList[i][j][2][1] === 'custom')) {
+          if (sectionsList[i][j][2][0] === 'custom' && document.getElementsByName('al-input-price' + multiplierCustomCount)[0].parentElement.childNodes[3].childNodes[0].selected) {  // if replace is selected
+            multiplierValue = parseFloat($('input[name=' + 'al-input-price' + multiplierCustomCount + ']').val()) || 0
+          } else if (sectionsList[i][j][2][1] === 'custom' && document.getElementsByName('al-input-price' + multiplierCustomCount)[0].parentElement.childNodes[3].childNodes[1].selected) {
+            multiplierValue = parseFloat($('input[name=' + 'al-input-price' + multiplierCustomCount + ']').val()) || 0
+          }
         }
+        multiplierList.push(multiplierValue)
+      } else {
+        multiplierList.push(sectionsList[i][j][2])
       }
-      multiplierList.push(multiplierValue)
     }
   }
 }
 multiplierTracker()
 
+console.log(multiplierList)
 var quantityList = []
 var value = []
 var alInput = document.getElementsByName('al-input')
@@ -373,17 +396,13 @@ function doAddition (zValue) {
   }
   updateFinal(tempNum)
 }
-// console.log(multiplierList)
-// console.log(quantityList)
 
-setTimeout(function () {
-  setInterval(
-    function addValues () {
-      for (let z = 0; z < alInput.length; z++) {
-        alInput[z].addEventListener('change', doAddition(z))
-      }
-    }, 5000)
-}, 400)
+$('#al-button').on('click', function () {
+  multiplierTracker()
+  for (let z = 0; z < alInput.length; z++) {
+    doAddition(z)
+  }
+})
 
 // ROUGH MATERIAL OBJECT
 // var example = ['name', qty, price, sku, qty*price]

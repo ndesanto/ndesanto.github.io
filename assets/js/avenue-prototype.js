@@ -186,7 +186,8 @@ var additionalItems = [
 
 const sectionsList = [preConstruction, demolition, livingRoom, kitchen, bedrooms, bathrooms, additionalItems]
 var innerPage = document.getElementById('al-inner-page')
-var customPriceCount = 0;
+var customPriceCount = 0
+var alGridItemCount = 0
 function createHTML () {
   for (var i = 0; i < sectionsList.length; i++) {
     var newTitle = document.createElement('h2')
@@ -196,6 +197,8 @@ function createHTML () {
     for (var j = 1; j < sectionsList[i].length; j++) {
       var newDivContainer = document.createElement('div')
       $(newDivContainer).addClass('al-grid')
+      newDivContainer.setAttribute('name', 'al-grid-item' + alGridItemCount)
+      alGridItemCount++
 
       var divProductName = document.createElement('div')
       divProductName.innerHTML = sectionsList[i][j][0]
@@ -259,7 +262,7 @@ function createHTML () {
           customValue.setAttribute('placeholder', 'Input Price')
           $(customValue).addClass('grid-col')
           customPriceCount++
-        } else if (sectionsList[i][j][2][0] === 'custom' ) {
+        } else if (sectionsList[i][j][2][0] === 'custom') {
           customValue = document.createElement('input')
           customValue.setAttribute('name', 'al-input-price' + customPriceCount)
           customValue.setAttribute('placeholder', 'Replace Price')
@@ -356,12 +359,12 @@ function multiplierTracker () {
       var multiplierValue = sectionsList[i][j][2]
       if (Array.isArray(sectionsList[i][j][2])) {
         multiplierCustomCount++
-        if (document.getElementsByName('al-input-price' + multiplierCustomCount)[0].parentElement.childNodes[3].childNodes[0].selected && (sectionsList[i][j][2][0] !== 'custom')) {  // if replace is selected
+        if (document.getElementsByName('al-input-price' + multiplierCustomCount)[0].parentElement.childNodes[3].childNodes[0].selected && (sectionsList[i][j][2][0] !== 'custom')) { // if replace is selected
           multiplierValue = sectionsList[i][j][2][0]
-        } else if (document.getElementsByName('al-input-price' + multiplierCustomCount)[0].parentElement.childNodes[3].childNodes[1].selected && (sectionsList[i][j][2][1] !== 'custom')) {  // if repair
+        } else if (document.getElementsByName('al-input-price' + multiplierCustomCount)[0].parentElement.childNodes[3].childNodes[1].selected && (sectionsList[i][j][2][1] !== 'custom')) { // if repair
           multiplierValue = sectionsList[i][j][2][1]
         } else if ((sectionsList[i][j][2][0] === 'custom' || sectionsList[i][j][2][1] === 'custom')) {
-          if (sectionsList[i][j][2][0] === 'custom' && document.getElementsByName('al-input-price' + multiplierCustomCount)[0].parentElement.childNodes[3].childNodes[0].selected) {  // if replace is selected
+          if (sectionsList[i][j][2][0] === 'custom' && document.getElementsByName('al-input-price' + multiplierCustomCount)[0].parentElement.childNodes[3].childNodes[0].selected) { // if replace is selected
             multiplierValue = parseFloat($('input[name=' + 'al-input-price' + multiplierCustomCount + ']').val()) || 0
           } else if (sectionsList[i][j][2][1] === 'custom' && document.getElementsByName('al-input-price' + multiplierCustomCount)[0].parentElement.childNodes[3].childNodes[1].selected) {
             multiplierValue = parseFloat($('input[name=' + 'al-input-price' + multiplierCustomCount + ']').val()) || 0
@@ -374,9 +377,7 @@ function multiplierTracker () {
     }
   }
 }
-multiplierTracker()
 
-console.log(multiplierList)
 var quantityList = []
 var value = []
 var alInput = document.getElementsByName('al-input')
@@ -386,13 +387,18 @@ function doAddition (zValue) {
   if (parseFloat(alInput[zValue].value)) {
     quantityList[zValue] = parseFloat(alInput[zValue].value)
   } else {
+    quantityList[zValue] = 0
     return null
   }
-  var tempNum = 0
+}
 
+function doMultiplication () {
+  var tempNum = 0
+  console.log(quantityList)
   for (let x = 0; x < multiplierList.length; x++) {
-    value[x] = (quantityList[x] * multiplierList[x])
+    value[x] = (quantityList[x] * multiplierList[x]) || 0
     tempNum += parseFloat(value[x])
+    console.log(value[x])
   }
   updateFinal(tempNum)
 }
@@ -402,7 +408,49 @@ $('#al-button').on('click', function () {
   for (let z = 0; z < alInput.length; z++) {
     doAddition(z)
   }
+  doMultiplication()
+  jsonCreation()
 })
+
+
+
+/////// TODO: if selected, get its innerhtml
+function jsonCreation () {
+  console.log(sectionsList.length)
+  var sectionCount = 0
+  for (var i = 0; i < sectionsList.length; i++) {
+    for (var j = 1; j < sectionsList[i].length; j++) {
+      console.log(document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].innerHTML)
+      try {
+        console.log(document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[1].childNodes[0].selected)
+      } catch (err) {}
+      try {
+        console.log(document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[2].childNodes[0].selected)
+      } catch (err) {}
+      try {
+        console.log(document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[3].childNodes[0].selected)
+      } catch (err) {}
+      console.log(document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[4].innerHTML)
+      sectionCount++
+    }
+  }
+}
+
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
 // ROUGH MATERIAL OBJECT
 // var example = ['name', qty, price, sku, qty*price]
@@ -446,7 +494,6 @@ var roughMaterial = [
 ]
 
 function rollOfRamBoard () {
-
   return ['Roll of Ram Board ', placeholder, price, sku, placeholder * price]
 }
 function blueTape () {
@@ -529,7 +576,7 @@ function doorstop () {
   return ['Door stop  ', placeholders, price, sku, placeholders * price]
 }
 
-function pocketDoorFrame () {  
+function pocketDoorFrame () {
   return ['Pocket Door Frame ', placeholderd, price, sku, placeholderd * price]
 }
 
@@ -587,80 +634,76 @@ function tubSurroundAdhesive () {
 
 var finishMaterial = [
 
-    vinylPlank(),
-    snowfall5GalSG(),
-    snowfall1Gal1GalSG(),
-    classicGrey5GalEGG(),
-    classicGrey1GalSG(),
-    interiorCeilingPaint(),
-    KilzOdorlessGallon(),
-    baseAlexandriaMoulding(),
-    trimAlexandriaMoulding(),
-    doorMasoniteLincolnParkx(),
-    doorMasoniteLincolinParkBiFoldx(),
-    everbiltClosetRod(),
-    everbiltPoleSockets(),
-    passageDoorLever(),
-    privacyDoorLever(),
-    hingePinDoorStop(),
-    springDoorStop(),
-    eurostyleCabinets(),
-    subwayTile(),
-    tileEdge(),
-    vanityx(),
-    bathroomFaucet(),
-    bathtubx(),
-    tubWallKit(),
-    moenShowerRod(),
-    mirrorBevelededge(),
-    toilet(),
-    showerFaucet(),
-    bathAccessoryKit(),
-    rangeHoodSS(),
-    plugs(),
-    switches(),
-    plugCoverPlates(),
-    gFCIOutlet(),
-    smokeDetector(),
-    lightFixture6pk(),
-    flushMounteach4PK(),
-    trackLight(),
-    brushedNickelBathBar(),
-    ledLights(),
-    bathroomexhaustfaneach(),
-    unsandedGrout(),
-    ArboriteCountertop(),
-    endcapKit(),
-    reginoxSSSink(),
-    kitchenFaucet (),
-    cordlessBlindsx(),
-    verticalBlindKitx(),
-    bathroomSink(),
-    refridgeratorx(),
-    rangex(),
-    dishwasherx(),
-    washer(),
-    dryer(),
-    frontLoadWasher(),
-    frontLoadDryer(),
-    stackingKit(),
-    libertyKnob(),
-    tMolding(),
-    showerBasex(),
-    hinge(),
-    showerTile(),
-    breakawayScrews(),
-    millworkCove(),
-    stairNosing(),
-    decora3Gang(),
-    decora2Gang(),
-    quarterRound()
-    ]
+  vinylPlank(),
+  snowfall5GalSG(),
+  snowfall1Gal1GalSG(),
+  classicGrey5GalEGG(),
+  classicGrey1GalSG(),
+  interiorCeilingPaint(),
+  KilzOdorlessGallon(),
+  baseAlexandriaMoulding(),
+  trimAlexandriaMoulding(),
+  doorMasoniteLincolnParkx(),
+  doorMasoniteLincolinParkBiFoldx(),
+  everbiltClosetRod(),
+  everbiltPoleSockets(),
+  passageDoorLever(),
+  privacyDoorLever(),
+  hingePinDoorStop(),
+  springDoorStop(),
+  eurostyleCabinets(),
+  subwayTile(),
+  tileEdge(),
+  vanityx(),
+  bathroomFaucet(),
+  bathtubx(),
+  tubWallKit(),
+  moenShowerRod(),
+  mirrorBevelededge(),
+  toilet(),
+  showerFaucet(),
+  bathAccessoryKit(),
+  rangeHoodSS(),
+  plugs(),
+  switches(),
+  plugCoverPlates(),
+  gFCIOutlet(),
+  smokeDetector(),
+  lightFixture6pk(),
+  flushMounteach4PK(),
+  trackLight(),
+  brushedNickelBathBar(),
+  ledLights(),
+  bathroomexhaustfaneach(),
+  unsandedGrout(),
+  ArboriteCountertop(),
+  endcapKit(),
+  reginoxSSSink(),
+  kitchenFaucet(),
+  cordlessBlindsx(),
+  verticalBlindKitx(),
+  bathroomSink(),
+  refridgeratorx(),
+  rangex(),
+  dishwasherx(),
+  washer(),
+  dryer(),
+  frontLoadWasher(),
+  frontLoadDryer(),
+  stackingKit(),
+  libertyKnob(),
+  tMolding(),
+  showerBasex(),
+  hinge(),
+  showerTile(),
+  breakawayScrews(),
+  millworkCove(),
+  stairNosing(),
+  decora3Gang(),
+  decora2Gang(),
+  quarterRound()
+]
 
-
-
-
-    
 //  function vinylPlank () {
 //     return ['Vinyl Plank - Unifloor Chateau - Imperial (1551-160-01)', placeholder, price, sku, placeholder * price]
 // }
@@ -876,4 +919,4 @@ var finishMaterial = [
 // function quarterRound () {
 //     return ['Quarter Round (In SQFT) - Alexandria Molding', placeholder, price, sku, placeholder * price]
 // }
-    
+

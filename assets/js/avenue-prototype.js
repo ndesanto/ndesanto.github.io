@@ -456,9 +456,15 @@ $('#al-button').on('click', function () {
   doMultiplication()
   finalJsonOutput = JSON.parse(jsonCreation())
   console.log(finalJsonOutput)
-  
+
   console.log(rollOfRamBoard())
   console.log(blueTape())
+  // PDF downloader
+  // let doc = new jsPDF('p', 'pt', 'a4')
+  // doc.addHTML(document.body, function() {
+  //   doc.save('html.pdf')
+  // http://raw.githack.com/MrRio/jsPDF/master/
+  // });
 })
 
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
@@ -536,137 +542,170 @@ function blueTape () {
   return ['Blue Tape 2', tempArray[1], price, '#1000172308', tempArray[1] * price]
 }
 
-// function drywall () {
-//   return ['Drywall(1/2 Inch) ', placeholder3, price, sku, placeholder3 * price]
-// }
+function drywall () {
+var price = 0
+return ['Drywall(1/2 Inch) ', placeholder3, price, sku, placeholder3 * price]
+}
 
-// function drywallScrews () {
-//   return ['Drywall Screws(Individual-Quantity) ', placeholder4, price, sku, placeholde4r * price]
-// }
+function drywallScrews () {
+var price = 0
+return ['Drywall Screws(Individual-Quantity) ', placeholder4, price, sku, placeholde4r * price]
+}
 
-// function cornerBeads () {
-//   return ['Corner Beads(90 degree) ', placeholder5, price, sku, placeholder5 * price]
-// }
+function cornerBeads () {
+var price = 0
+return ['Corner Beads(90 degree) ', placeholder5, price, sku, placeholder5 * price]
+}
 
-// function sheetrock90 () {
-//   return ['Sheetrock 90 ', placeholder6, price, sku, placeholder6 * price]
-// }
+function sheetrock90 () {
+var price = 0
+return ['Sheetrock 90 ', placeholder6, price, sku, placeholder6 * price]
+}
 
-// function sheetrock20 () {
-//   return ['Sheetrock 20 ', placeholder7, price, sku, placeholder7 * price]
-// }
+function sheetrock20 () {
+var price = 0
+return ['Sheetrock 20 ', placeholder7, price, sku, placeholder7 * price]
+}
 
-// function metalStuds () {
-//   return ['Metal Studs 2.5 x 8 ', placeholder8, price, sku, placeholder8 * price]
-// }
+function metalStuds () {
+var price = 0
+return ['Metal Studs 2.5 x 8 ', placeholder8, price, sku, placeholder8 * price]
+}
 
-// function meshTape () {
-//   return ['Mesh Tape ', placeholder9, price, sku, placeholder9 * price]
-// }
+function meshTape () {
+var price = 0
+return ['Mesh Tape ', placeholder9, price, sku, placeholder9 * price]
+}
 
-// function bundleOfStrapping () {
-//   return ['Bundle of strapping ', placeholderq, price, sku, placeholderq * price]
-// }
+function bundleOfStrapping () {
+var price = 0
+return ['Bundle of strapping ', placeholderq, price, sku, placeholderq * price]
+}
 
-// function goldScrews () {
-//   return ['Gold Screws (2 and a 1/2 Inch) ', placeholderw, price, sku, placeholderw * price]
-// }
+function goldScrews () {
+var price = 0
+return ['Gold Screws (2 and a 1/2 Inch) ', placeholderw, price, sku, placeholderw * price]
+}
 
-// function sakrete () {
-//   return ['Sakrete ', placeholdere, price, sku, placeholdere * price]
-// }
+function sakrete () {
+var price = 0
+return ['Sakrete ', placeholdere, price, sku, placeholdere * price]
+}
 
-// function siliconeClear () {
-//   return ['Silicone Clear(MONO) ', placeholderr, price, sku, placeholderr * price]
-// }
+function siliconeClear () {
+var price = 0
+return ['Silicone Clear(MONO) ', placeholderr, price, sku, placeholderr * price]
+}
 
-// function whiteSilicone () {
-//   return ['White Silicone ', placeholdert, price, sku, placeholdert * price]
-// }
+function whiteSilicone () {
+var price = 0
+return ['White Silicone ', placeholdert, price, sku, placeholdert * price]
+}
 
-// function customSkimCoatPatchCementUnderlayment () {
-//   return ['Custom - Skim Coat & Patch Cement Underlayment 11.34kg ', placeholdery, price, sku, placeholdery * price]
-// }
+function customSkimCoatPatchCementUnderlayment () {
+var price = 0
+return ['Custom - Skim Coat & Patch Cement Underlayment 11.34kg ', placeholdery, price, sku, placeholdery * price]
+}
 
-// function flexBondThinsetMortarLFT () {
-//   return ['FlexBond Thinset Mortar - LFT ', placeholderu, price, sku, placeholderu * price]
-// }
+function flexBondThinsetMortarLFT () {
+var price = 0
+return ['FlexBond Thinset Mortar - LFT ', placeholderu, price, sku, placeholderu * price]
+}
 
-// function cementBoardScrews () {
-//   return ['Cement Board Screws  ', placeholderi, price, sku, placeholderi * price]
-// }
+function cementBoardScrews () {
+var price = 0
+return ['Cement Board Screws  ', placeholderi, price, sku, placeholderi * price]
+}
 
-// function megalyte () {
-//   return ['Megalyte  ', placeholdero, price, sku, placeholdero * price]
-// }
+function megalyte () {
+var price = 0
+return ['Megalyte  ', placeholdero, price, sku, placeholdero * price]
+}
 
-// function insulation () {
-//   return ['Insulation(R20/OC16/2x4) ', placeholderp, price, sku, placeholderp * price]
-// }
+function insulation () {
+var price = 0
+return ['Insulation(R20/OC16/2x4) ', placeholderp, price, sku, placeholderp * price]
+}
 
-// function paperTape () {
-//   return ['Paper Tape ', placeholdera, price, sku, placeholdera * price]
-// }
+function paperTape () {
+var price = 0
+return ['Paper Tape ', placeholdera, price, sku, placeholdera * price]
+}
 
-// function doorstop () {
-//   return ['Door stop  ', placeholders, price, sku, placeholders * price]
-// }
+function doorstop () {
+var price = 0
+return ['Door stop  ', placeholders, price, sku, placeholders * price]
+}
 
-// function pocketDoorFrame () {
-//   return ['Pocket Door Frame ', placeholderd, price, sku, placeholderd * price]
-// }
+function pocketDoorFrame () {
+var price = 0
+return ['Pocket Door Frame ', placeholderd, price, sku, placeholderd * price]
+}
 
-// function dap () {
-//   return ['Dap ', placeholderf, price, sku, placeholderf * price]
-// }
+function dap () {
+var price = 0
+return ['Dap ', placeholderf, price, sku, placeholderf * price]
+}
 
-// function fourInchMarbleJamb () {
-//   return ['4 Inch Marble Jamb ', placeholderg, price, sku, placeholderg * price]
-// }
+function fourInchMarbleJamb () {
+var price = 0
+return ['4 Inch Marble Jamb ', placeholderg, price, sku, placeholderg * price]
+}
 
-// function tuckTape () {
-//   return ['Tuck Tape ', placeholderh, price, sku, placeholderh * price]
-// }
+function tuckTape () {
+var price = 0
+return ['Tuck Tape ', placeholderh, price, sku, placeholderh * price]
+}
 
-// function sixMmPoly () {
-//   return ['6MM Poly ', placeholderi, price, sku, placeholderj * price]
-// }
+function sixMmPoly () {
+var price = 0
+return ['6MM Poly ', placeholderi, price, sku, placeholderj * price]
+}
 
-// function sheetrockUltraLightMoldTough () {
-//   return ['Sheetrock UltraLight Mold Tough 1/2x4x8 ', placeholderj, price, sku, placeholderk * price]
-// }
+function sheetrockUltraLightMoldTough () {
+var price = 0
+return ['Sheetrock UltraLight Mold Tough 1/2x4x8 ', placeholderj, price, sku, placeholderk * price]
+}
 
-// function twox4x8WoodStuds () {
-//   return ['2x4x8 Wood Studs ', placeholderk, price, sku, placeholderl * price]
-// }
+function twox4x8WoodStuds () {
+var price = 0
+return ['2x4x8 Wood Studs ', placeholderk, price, sku, placeholderl * price]
+}
 
-// function toiletKit () {
-//   return ['Toilet Kit(Wax Ring, Flexible Connector, Bolts) ', placeholderl, price, sku, placeholderz * price]
-// }
+function toiletKit () {
+var price = 0
+return ['Toilet Kit(Wax Ring, Flexible Connector, Bolts) ', placeholderl, price, sku, placeholderz * price]
+}
 
-// function robertsTemporaryCarpetProtectionFilm () {
-//   return ['Roberts Temporary Carpet Protection Film ', placeholderm, price, sku, placeholderx * price]
-// }
+function robertsTemporaryCarpetProtectionFilm () {
+var price = 0
+return ['Roberts Temporary Carpet Protection Film ', placeholderm, price, sku, placeholderx * price]
+}
 
-// function omnigripTileStoneAdhesive () {
-//   return ['OMNIGRIP TILE & STONE ADHESIVE 3.79L ', placeholdern, price, sku, placeholderc * price]
-// }
+function omnigripTileStoneAdhesive () {
+var price = 0
+return ['OMNIGRIP TILE & STONE ADHESIVE 3.79L ', placeholdern, price, sku, placeholderc * price]
+}
 
-// function sheetrockCeilingSprayTexture () {
-//   return ['Sheetrock Ceiling Spray Texture, Medium Finish, 20 kg Bag ', placeholdero, price, sku, placeholder * vprice]
-// }
+function sheetrockCeilingSprayTexture () {
+var price = 0
+return ['Sheetrock Ceiling Spray Texture, Medium Finish, 20 kg Bag ', placeholdero, price, sku, placeholder * vprice]
+}
 
-// function duraProAngleStop () {
-//   return ['DuraPro Angle Stop, Quarter Turn, 1/2 inch Sweat X 3/8 inch Compression, Lead Free ', placeholderp, price, sku, placeholderb * price]
-// }
+function duraProAngleStop () {
+var price = 0
+return ['DuraPro Angle Stop, Quarter Turn, 1/2 inch Sweat X 3/8 inch Compression, Lead Free ', placeholderp, price, sku, placeholderb * price]
+}
 
-// function plPremium295mlWaterProof () {
-//   return ['PL Premium 295 mL Waterproof Interior/Exterior Construction Adhesive ', placeholderq, price, sku, placeholder * nprice]
-// }
+function plPremium295mlWaterProof () {
+var price = 0
+return ['PL Premium 295 mL Waterproof Interior/Exterior Construction Adhesive ', placeholderq, price, sku, placeholder * nprice]
+}
 
-// function tubSurroundAdhesive () {
-//   return ['TUB SURROUND ADHESIVE PL700-300ML - 1/4 P ', placeholderr, price, sku, placeholderm * price]
-// }
+function tubSurroundAdhesive () {
+var price = 0
+return ['TUB SURROUND ADHESIVE PL700-300ML - 1/4 P ', placeholderr, price, sku, placeholderm * price]
+}
 
 // var finishMaterial = [
 
@@ -740,218 +779,286 @@ function blueTape () {
 //   quarterRound()
 // ]
 
-//  function vinylPlank () {
-//     return ['Vinyl Plank - Unifloor Chateau - Imperial (1551-160-01)', placeholder, price, sku, placeholder * price]
-// }
-// function snowfall5GalSG () {
-//     return ['BEHR i300 INT S/G WHT 18.5L  - Snowfall OC 118', placeholder, price, sku, placeholder * price]
-// }
-// function snowfall1Gal1GalSG () {
-//     return ['BEHR i300 INT S/G WHT 1 Gal  - Snowfall OC 118', placeholder, price, sku, placeholder * price]
-// }
-// function classicGrey5GalEGG () {
-//     return ['BEHR i300 INT EGG WHT 18.5L - Classic Grey OC-23', placeholder, price, sku, placeholder * price]
-// }
-// function classicGrey1GalSG () {
-//     return ['BEHR i300 INT S/G WHT 1 Gal - Classic Grey OC -23', placeholder, price, sku, placeholder * price]
-// }
-// function interiorCeilingPaint () {
-//     return ['Behr Premium Plus Interior Ceiling Paint - 18.9L', placeholder, price, sku, placeholder * price]
-// }
-// function kilzOdorlessGallon () {
-//     return ['KILZ ODOURLESS GALLON', placeholder, price, sku, placeholder * price]
-// }
-// function baseAlexandriaMoulding () {
-//     return ['Base - Alexandria Moulding 3-1/2 x 8 10PK', placeholder, price, sku, placeholder * price]
-// }
-// function trimAlexandriaMoulding () {
-//     return ['Trim - Alexandria Moulding 1/2-inch x 2-1/2-inch x 8ft. 10PK', placeholder, price, sku, placeholder * price]
-// }
-// function doorMasoniteLincolnParkx () {
-//     'Masonite Lincoln Park 32" RH','Masonite Lincoln Park 30" LH','Masonite Lincoln Park 30" RH','Masonite Lincoln Park 28" LH','Masonite Lincoln Park 28" RH','Masonite Lincoln Park 24" LH','Masonite Lincoln Park 24" RH'
-//     return ['Masonite Lincoln Park 32" LH', placeholder, price, sku, placeholder * price]
-// }
-// function doorMasoniteLincolinParkBiFoldx () {
-//     'Masonite Lincolin Park Bi-Fold 30"','Masonite Lincolin Park Bi-Fold 36"'
-//     return ['Masonite Lincolin Park Bi-Fold 24"', placeholder, price, sku, placeholder * price]
-// }
-// function everbiltClosetRod () {
-//     return ['Everbilt 96" Chrome Closet Rod', placeholder, price, sku, placeholder * price]
-// }
-// function everbiltPoleSockets () {
-//     return ['Everbilt 1 5/16-inch Heavy Duty Closet Pole Sockets', placeholder, price, sku, placeholder * price]
-// }
-// function passageDoorLever () {
-//     return ['Defiant Olympic Stainless Steel Passage Door Lever (6-Pack)', placeholder, price, sku, placeholder * price]
-// }
-// function privacyDoorLever () {
-//     return ['Defiant Olympic Stainless Steel Privacy Door Lever', placeholder, price, sku, placeholder * price]
-// }
-// function hingePinDoorStop () {
-//     return ['Everbilt Satin Nickel Hinge Pin Door Stop 6PC', placeholder, price, sku, placeholder * price]
-// }
-// function springDoorStop () {
-//     return ['Everbilt 3inch. Satin Nickel Spring Door Stop 6PC', placeholder, price, sku, placeholder * price]
-// }
-// function eurostyleCabinets () {
-//     return ['EUROSTYLE Cabinets - Oxford White', placeholder, price, sku, placeholder * price]
-// }
-// function subwayTile () {
-//     return ['ENIGMA - Subway tile Metro warm grey 3" x 6"', placeholder, price, sku, placeholder * price]
-// }
-// function tileEdge () {
-//     return ['Schluter Bright Clear Tile Edge', placeholder, price, sku, placeholder * price]
-// }
-// function vanityx () {
-//     'Glacier Bay 48 Inch White Hampton Vanity ','GB 24" Peython Vanity ','White Premier Pedestal'
-//     return ['GLACIER BAY  Lancaster 30-inch with Vanity', placeholder, price, sku, placeholder * price]
-// }
-// function bathroomFaucet () {
-//     return ['Moen Zarina 1 H Bathroom Faucet', placeholder, price, sku, placeholder * price]
-// }
-// function bathtubx () {
-//     'MAAX Avenue 60-inch Alcove Bathtub in White with Left-Hand Drain'
-//     return ['MAAX Avenue 60-inch Alcove Bathtub in White with Right-Hand Drain', placeholder, price, sku, placeholder * price]
-// }
-// function tubWallKit () {
-//     return ['MAAX 59'' ALABAMA tub wall kit', placeholder, price, sku, placeholder * price]
-// }
-// function moenShowerRod () {
-//     return ['Moen Shower Rod', placeholder, price, sku, placeholder * price]
-// }
-// function mirrorBevelededge () {
-//     return ['THD 24 x 36 Beveled edge', placeholder, price, sku, placeholder * price]
-// }
-// function toilet () {
-//     return ['KOHLER - Wellworth single flush', placeholder, price, sku, placeholder * price]
-// }
-// function showerFaucet () {
-//     return ['Moen Zarina 1-Spray Tub and Shower Faucet in Chrome', placeholder, price, sku, placeholder * price]
-// }
-// function bathAccessoryKit () {
-//     return ['Moen Danika Bath Accessory Kit in Chrome (3-Piece)', placeholder, price, sku, placeholder * price]
-// }
-// function rangeHoodSS () {
-//     return ['Nutone 30-in 160 CFM Under Cabinet Range Hoo', placeholder, price, sku, placeholder * price]
-// }
-// function plugs () {
-//     return ['Decora Plugs 10 pk', placeholder, price, sku, placeholder * price]
-// }
-// function switches () {
-//     return ['Decora Switches 10 pk', placeholder, price, sku, placeholder * price]
-// }
-// function plugCoverPlates () {
-//     return ['Decora Plug Cover Plates', placeholder, price, sku, placeholder * price]
-// }
-// function gFCIOutlet () {
-//     return ['GFCI Outlet', placeholder, price, sku, placeholder * price]
-// }
-// function smokeDetector () {
-//     return ['Smoke Detector', placeholder, price, sku, placeholder * price]
-// }
-// function lightFixture(6-Pack) () {
-//     return ['Commercial Electric 2-Light 60W Brushed Nickel & Alabaster Glass', placeholder, price, sku, placeholder * price]
-// }
-// function flushMounteach4PK () {
-//     return ['Commercial Electric Alabaster Glass 4PK Flush Mount', placeholder, price, sku, placeholder * price]
-// }
-// function trackLight () {
-//     return ['Hampton Bay 3-Light Semi-Flushmount Track Light Fixture in Brushed Nickel', placeholder, price, sku, placeholder * price]
-// }
-// function brushedNickelBathBar () {
-//     return ['Commercial Electric 3-Light Brushed Nickel Bath Bar', placeholder, price, sku, placeholder * price]
-// }
-// function ledLights () {
-//     return ['Ecosmart 60W Equivalent Daylight 5000K LED Lights', placeholder, price, sku, placeholder * price]
-// }
-// function bathroomexhaustfaneach () {
-//     return ['Nutone 70cfm bathroom exhaust fan', placeholder, price, sku, placeholder * price]
-// }
-// function unsandedGrout () {
-//     return ['#165 Delorean Grey 10lb Unsanded Grout', placeholder, price, sku, placeholder * price]
-// }
-// function ArboriteCountertop () {
-//     '8FT ELEMENTAL CONCRETE COUNTERTOP','6FT ELEMENTAL CONCRETE COUNTERTOP','4FT ELEMENTAL CONCRETE COUNTERTOP'
-//     return ['10FT ELEMENTAL CONCRETE COUNTERTOP', placeholder, price, sku, placeholder * price]
-// }
-// function endcapKit () {
-//     return ['END CAP KIT 8830-58 ELEMENTAL CONC', placeholder, price, sku, placeholder * price]
-// }
-// function reginoxSSSink () {
-//     return ['Reginox SS sink & half, 3 hole', placeholder, price, sku, placeholder * price]
-// }
-// function kitchenFaucet  () {
-//     return ['MOEN TORRANCE 1H KITCHEN FAUCET CHROME', placeholder, price, sku, placeholder * price]
-// }
-// function cordlessBlindsx () {
-//     'HDC 2.5 CORDLESS FAUXWD BLD 18x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 24x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 30x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 36x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 42x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 48x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 60x48 WH','HDC 2.5 CORDLESS FAUXWD BLD 60x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 72x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 36x48 WH'
-//     return ['HDC 2.5 CORDLESS FAUXWD BLD 72x48 WH', placeholder, price, sku, placeholder * price]
-// }
-// function verticalBlindKitx () {
-//     'HB 3.5" 66x84 Vertical Blind Kit White'
-//     return ['HB 3.5" 78x84 Vertical Blind Kit White', placeholder, price, sku, placeholder * price]
-// }
-// function bathroomSink () {
-//     return ['GB Oval drop in Sink', placeholder, price, sku, placeholder * price]
-// }
-// function refridgeratorx () {
-//     'White Refrigerator 66 5/8H x 29 1/2W x 30 15/16D (in.)','White Refrigerator 61 3/4H x 28W x 31 5/8D (in.)','Stainless Steel Refridgerator 66 5/8H x 29 1/2W x 30 15/16D (in.)'
-//     return ['White Refrigerator 59 7/8H x 24W x 28 5/8D (in.)', placeholder, price, sku, placeholder * price]
-// }
-// function rangex () {
-//     'White Range 30W x 46 1/2H x 29 7/8D (in.)','Stainless Steel Range 30W x 46 7/8H x 26 1/4D (in.)'
-//     return ['White Range 24W x 42 1/8H x 26 5/8D (in.)', placeholder, price, sku, placeholder * price]
-// }
-// function dishwasherx () {
-//     'White Dishwasher 32 1/2H x 23 1/2W x 22 13/32D (in.)','Stainless Steel Dishwasher 32 1/2H x 23 1/2W x 22 13/32D (in.)'
-//     return ['White Dishwasher 32 1/2H x 17 19/32W x 22 13/32D (in.)', placeholder, price, sku, placeholder * price]
-// }
-// function washer () {
-//     return ['Washer 43 1/2H x 26 7/8W x 26 5/8D (in.)', placeholder, price, sku, placeholder * price]
-// }
-// function dryer () {
-//     return ['Dryer 42 3/5H x 26 7/8W x 29 1/2D (in.)', placeholder, price, sku, placeholder * price]
-// }
-// function frontLoadWasher () {
-//     return ['Front Load Washer 33 5/16H x 23 1/2W x 26 5/8D (in.)', placeholder, price, sku, placeholder * price]
-// }
-// function frontLoadDryer () {
-//     return ['Front Load Dryer 33 3/8H x 23 1/2W x 25 11/16D (in.)', placeholder, price, sku, placeholder * price]
-// }
-// function stackingKit () {
-//     return ['Stacking Kit fo 24" Front Load Laundry', placeholder, price, sku, placeholder * price]
-// }
-// function libertyKnob () {
-//     return ['Liberty 1-1/4 in. Garrett Knob 10PK', placeholder, price, sku, placeholder * price]
-// }
-// function tMolding () {
-//     return ['Kaindl Silver Oak 7/16-inch Thick x 1 3/4-inch W x 72-inch L T-Molding', placeholder, price, sku, placeholder * price]
-// }
-// function showerBasex () {
-//     'MAAX Olympia 60-inch x 32-inch Left-Drain Shower Base in White','GLACIER BAY 48 inch x 32 inch Acrylic Shower Base with Left Concealed Drain','GLACIER BAY 48 inch x 32 inch Acrylic Shower Base with Right Concealed Drain'
-//     return ['MAAX Olympia 60-inch x 32-inch Right-Drain Shower Base in White', placeholder, price, sku, placeholder * price]
-// }
-// function hinge () {
-//     return ['Richelieu Semi-Concealed Self-Closing Hinge - Brushed Nickel 20 Pack', placeholder, price, sku, placeholder * price]
-// }
-// function showerTile () {
-//     return ['Enigma 12-inch x 24 Gladstone Grey Rectified', placeholder, price, sku, placeholder * price]
-// }
-// function breakawayScrews () {
-//     return ['Richelieu Hardware 6-Pack, Break-Away Zinc Plated Machine screw ', placeholder, price, sku, placeholder * price]
-// }
-// function millworkCove () {
-//     return ['R2i Millwork Cove - 3/4 In. x 3/4 In. x 8 Ft.', placeholder, price, sku, placeholder * price]
-// }
-// function stairNosing () {
-//     return ['Shur Trim Stair Nosing Floor Moulding, Hammered Silver - 1-5/8 Inch', placeholder, price, sku, placeholder * price]
-// }
-// function decora3Gang () {
-//     return ['Leviton Decora wall plate 3 Gang, White', placeholder, price, sku, placeholder * price]
-// }
-// function decora2Gang () {
-//     return ['Leviton Decora wall plate 2 Gang, White', placeholder, price, sku, placeholder * price]
-// }
-// function quarterRound () {
-//     return ['Quarter Round (In SQFT) - Alexandria Molding', placeholder, price, sku, placeholder * price]
-// }
+ function vinylPlank () {
+var price = 0
+return ['Vinyl Plank - Unifloor Chateau - Imperial (1551-160-01)', placeholder, price, sku, placeholder * price]
+}
+function snowfall5GalSG () {
+var price = 0
+return ['BEHR i300 INT S/G WHT 18.5L  - Snowfall OC 118', placeholder, price, sku, placeholder * price]
+}
+function snowfall1Gal1GalSG () {
+var price = 0
+return ['BEHR i300 INT S/G WHT 1 Gal  - Snowfall OC 118', placeholder, price, sku, placeholder * price]
+}
+function classicGrey5GalEGG () {
+var price = 0
+return ['BEHR i300 INT EGG WHT 18.5L - Classic Grey OC-23', placeholder, price, sku, placeholder * price]
+}
+function classicGrey1GalSG () {
+var price = 0
+return ['BEHR i300 INT S/G WHT 1 Gal - Classic Grey OC -23', placeholder, price, sku, placeholder * price]
+}
+function interiorCeilingPaint () {
+var price = 0
+return ['Behr Premium Plus Interior Ceiling Paint - 18.9L', placeholder, price, sku, placeholder * price]
+}
+function kilzOdorlessGallon () {
+var price = 0
+return ['KILZ ODOURLESS GALLON', placeholder, price, sku, placeholder * price]
+}
+function baseAlexandriaMoulding () {
+var price = 0
+return ['Base - Alexandria Moulding 3-1/2 x 8 10PK', placeholder, price, sku, placeholder * price]
+}
+function trimAlexandriaMoulding () {
+var price = 0
+return ['Trim - Alexandria Moulding 1/2-inch x 2-1/2-inch x 8ft. 10PK', placeholder, price, sku, placeholder * price]
+}
+function doorMasoniteLincolnParkx () {
+    // 'Masonite Lincoln Park 32" RH','Masonite Lincoln Park 30" LH','Masonite Lincoln Park 30" RH','Masonite Lincoln Park 28" LH','Masonite Lincoln Park 28" RH','Masonite Lincoln Park 24" LH','Masonite Lincoln Park 24" RH'
+var price = 0
+return ['Masonite Lincoln Park 32" LH', placeholder, price, sku, placeholder * price]
+}
+function doorMasoniteLincolinParkBiFoldx () {
+    // 'Masonite Lincolin Park Bi-Fold 30"','Masonite Lincolin Park Bi-Fold 36"'
+var price = 0
+return ['Masonite Lincolin Park Bi-Fold 24"', placeholder, price, sku, placeholder * price]
+}
+function everbiltClosetRod () {
+var price = 0
+return ['Everbilt 96" Chrome Closet Rod', placeholder, price, sku, placeholder * price]
+}
+function everbiltPoleSockets () {
+var price = 0
+return ['Everbilt 1 5/16-inch Heavy Duty Closet Pole Sockets', placeholder, price, sku, placeholder * price]
+}
+function passageDoorLever () {
+var price = 0
+return ['Defiant Olympic Stainless Steel Passage Door Lever (6-Pack)', placeholder, price, sku, placeholder * price]
+}
+function privacyDoorLever () {
+var price = 0
+return ['Defiant Olympic Stainless Steel Privacy Door Lever', placeholder, price, sku, placeholder * price]
+}
+function hingePinDoorStop () {
+var price = 0
+return ['Everbilt Satin Nickel Hinge Pin Door Stop 6PC', placeholder, price, sku, placeholder * price]
+}
+function springDoorStop () {
+var price = 0
+return ['Everbilt 3inch. Satin Nickel Spring Door Stop 6PC', placeholder, price, sku, placeholder * price]
+}
+function eurostyleCabinets () {
+var price = 0
+return ['EUROSTYLE Cabinets - Oxford White', placeholder, price, sku, placeholder * price]
+}
+function subwayTile () {
+var price = 0
+return ['ENIGMA - Subway tile Metro warm grey 3" x 6"', placeholder, price, sku, placeholder * price]
+}
+function tileEdge () {
+var price = 0
+return ['Schluter Bright Clear Tile Edge', placeholder, price, sku, placeholder * price]
+}
+function vanityx () {
+    // 'Glacier Bay 48 Inch White Hampton Vanity ','GB 24" Peython Vanity ','White Premier Pedestal'
+var price = 0
+return ['GLACIER BAY  Lancaster 30-inch with Vanity', placeholder, price, sku, placeholder * price]
+}
+function bathroomFaucet () {
+var price = 0
+return ['Moen Zarina 1 H Bathroom Faucet', placeholder, price, sku, placeholder * price]
+}
+function bathtubx () {
+    // 'MAAX Avenue 60-inch Alcove Bathtub in White with Left-Hand Drain'
+var price = 0
+return ['MAAX Avenue 60-inch Alcove Bathtub in White with Right-Hand Drain', placeholder, price, sku, placeholder * price]
+}
+function tubWallKit () {
+var price = 0
+return ['MAAX 59\'\' ALABAMA tub wall kit', placeholder, price, sku, placeholder * price]
+}
+function moenShowerRod () {
+var price = 0
+return ['Moen Shower Rod', placeholder, price, sku, placeholder * price]
+}
+function mirrorBevelededge () {
+var price = 0
+return ['THD 24 x 36 Beveled edge', placeholder, price, sku, placeholder * price]
+}
+function toilet () {
+var price = 0
+return ['KOHLER - Wellworth single flush', placeholder, price, sku, placeholder * price]
+}
+function showerFaucet () {
+var price = 0
+return ['Moen Zarina 1-Spray Tub and Shower Faucet in Chrome', placeholder, price, sku, placeholder * price]
+}
+function bathAccessoryKit () {
+var price = 0
+return ['Moen Danika Bath Accessory Kit in Chrome (3-Piece)', placeholder, price, sku, placeholder * price]
+}
+function rangeHoodSS () {
+var price = 0
+return ['Nutone 30-in 160 CFM Under Cabinet Range Hoo', placeholder, price, sku, placeholder * price]
+}
+function plugs () {
+var price = 0
+return ['Decora Plugs 10 pk', placeholder, price, sku, placeholder * price]
+}
+function switches () {
+var price = 0
+return ['Decora Switches 10 pk', placeholder, price, sku, placeholder * price]
+}
+function plugCoverPlates () {
+var price = 0
+return ['Decora Plug Cover Plates', placeholder, price, sku, placeholder * price]
+}
+function gFCIOutlet () {
+var price = 0
+return ['GFCI Outlet', placeholder, price, sku, placeholder * price]
+}
+function smokeDetector () {
+var price = 0
+return ['Smoke Detector', placeholder, price, sku, placeholder * price]
+}
+function lightFixture6Pack () {
+var price = 0
+return ['Commercial Electric 2-Light 60W Brushed Nickel & Alabaster Glass', placeholder, price, sku, placeholder * price]
+}
+function flushMounteach4PK () {
+var price = 0
+return ['Commercial Electric Alabaster Glass 4PK Flush Mount', placeholder, price, sku, placeholder * price]
+}
+function trackLight () {
+var price = 0
+return ['Hampton Bay 3-Light Semi-Flushmount Track Light Fixture in Brushed Nickel', placeholder, price, sku, placeholder * price]
+}
+function brushedNickelBathBar () {
+var price = 0
+return ['Commercial Electric 3-Light Brushed Nickel Bath Bar', placeholder, price, sku, placeholder * price]
+}
+function ledLights () {
+var price = 0
+return ['Ecosmart 60W Equivalent Daylight 5000K LED Lights', placeholder, price, sku, placeholder * price]
+}
+function bathroomexhaustfaneach () {
+var price = 0
+return ['Nutone 70cfm bathroom exhaust fan', placeholder, price, sku, placeholder * price]
+}
+function unsandedGrout () {
+var price = 0
+return ['#165 Delorean Grey 10lb Unsanded Grout', placeholder, price, sku, placeholder * price]
+}
+function ArboriteCountertop () {
+    // '8FT ELEMENTAL CONCRETE COUNTERTOP','6FT ELEMENTAL CONCRETE COUNTERTOP','4FT ELEMENTAL CONCRETE COUNTERTOP'
+var price = 0
+return ['10FT ELEMENTAL CONCRETE COUNTERTOP', placeholder, price, sku, placeholder * price]
+}
+function endcapKit () {
+var price = 0
+return ['END CAP KIT 8830-58 ELEMENTAL CONC', placeholder, price, sku, placeholder * price]
+}
+function reginoxSSSink () {
+var price = 0
+return ['Reginox SS sink & half, 3 hole', placeholder, price, sku, placeholder * price]
+}
+function kitchenFaucet  () {
+var price = 0
+return ['MOEN TORRANCE 1H KITCHEN FAUCET CHROME', placeholder, price, sku, placeholder * price]
+}
+function cordlessBlindsx () {
+    // 'HDC 2.5 CORDLESS FAUXWD BLD 18x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 24x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 30x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 36x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 42x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 48x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 60x48 WH','HDC 2.5 CORDLESS FAUXWD BLD 60x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 72x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 36x48 WH'
+var price = 0
+return ['HDC 2.5 CORDLESS FAUXWD BLD 72x48 WH', placeholder, price, sku, placeholder * price]
+}
+function verticalBlindKitx () {
+    // 'HB 3.5" 66x84 Vertical Blind Kit White'
+var price = 0
+return ['HB 3.5" 78x84 Vertical Blind Kit White', placeholder, price, sku, placeholder * price]
+}
+function bathroomSink () {
+var price = 0
+return ['GB Oval drop in Sink', placeholder, price, sku, placeholder * price]
+}
+function refridgeratorx () {
+    // 'White Refrigerator 66 5/8H x 29 1/2W x 30 15/16D (in.)','White Refrigerator 61 3/4H x 28W x 31 5/8D (in.)','Stainless Steel Refridgerator 66 5/8H x 29 1/2W x 30 15/16D (in.)'
+var price = 0
+return ['White Refrigerator 59 7/8H x 24W x 28 5/8D (in.)', placeholder, price, sku, placeholder * price]
+}
+function rangex () {
+    // 'White Range 30W x 46 1/2H x 29 7/8D (in.)','Stainless Steel Range 30W x 46 7/8H x 26 1/4D (in.)'
+var price = 0
+return ['White Range 24W x 42 1/8H x 26 5/8D (in.)', placeholder, price, sku, placeholder * price]
+}
+function dishwasherx () {
+    // 'White Dishwasher 32 1/2H x 23 1/2W x 22 13/32D (in.)','Stainless Steel Dishwasher 32 1/2H x 23 1/2W x 22 13/32D (in.)'
+var price = 0
+return ['White Dishwasher 32 1/2H x 17 19/32W x 22 13/32D (in.)', placeholder, price, sku, placeholder * price]
+}
+function washer () {
+var price = 0
+return ['Washer 43 1/2H x 26 7/8W x 26 5/8D (in.)', placeholder, price, sku, placeholder * price]
+}
+function dryer () {
+var price = 0
+return ['Dryer 42 3/5H x 26 7/8W x 29 1/2D (in.)', placeholder, price, sku, placeholder * price]
+}
+function frontLoadWasher () {
+var price = 0
+return ['Front Load Washer 33 5/16H x 23 1/2W x 26 5/8D (in.)', placeholder, price, sku, placeholder * price]
+}
+function frontLoadDryer () {
+var price = 0
+return ['Front Load Dryer 33 3/8H x 23 1/2W x 25 11/16D (in.)', placeholder, price, sku, placeholder * price]
+}
+function stackingKit () {
+var price = 0
+return ['Stacking Kit fo 24" Front Load Laundry', placeholder, price, sku, placeholder * price]
+}
+function libertyKnob () {
+var price = 0
+return ['Liberty 1-1/4 in. Garrett Knob 10PK', placeholder, price, sku, placeholder * price]
+}
+function tMolding () {
+var price = 0
+return ['Kaindl Silver Oak 7/16-inch Thick x 1 3/4-inch W x 72-inch L T-Molding', placeholder, price, sku, placeholder * price]
+}
+function showerBasex () {
+    // 'MAAX Olympia 60-inch x 32-inch Left-Drain Shower Base in White','GLACIER BAY 48 inch x 32 inch Acrylic Shower Base with Left Concealed Drain','GLACIER BAY 48 inch x 32 inch Acrylic Shower Base with Right Concealed Drain'
+var price = 0
+return ['MAAX Olympia 60-inch x 32-inch Right-Drain Shower Base in White', placeholder, price, sku, placeholder * price]
+}
+function hinge () {
+var price = 0
+return ['Richelieu Semi-Concealed Self-Closing Hinge - Brushed Nickel 20 Pack', placeholder, price, sku, placeholder * price]
+}
+function showerTile () {
+var price = 0
+return ['Enigma 12-inch x 24 Gladstone Grey Rectified', placeholder, price, sku, placeholder * price]
+}
+function breakawayScrews () {
+var price = 0
+return ['Richelieu Hardware 6-Pack, Break-Away Zinc Plated Machine screw ', placeholder, price, sku, placeholder * price]
+}
+function millworkCove () {
+var price = 0
+return ['R2i Millwork Cove - 3/4 In. x 3/4 In. x 8 Ft.', placeholder, price, sku, placeholder * price]
+}
+function stairNosing () {
+var price = 0
+return ['Shur Trim Stair Nosing Floor Moulding, Hammered Silver - 1-5/8 Inch', placeholder, price, sku, placeholder * price]
+}
+function decora3Gang () {
+var price = 0
+return ['Leviton Decora wall plate 3 Gang, White', placeholder, price, sku, placeholder * price]
+}
+function decora2Gang () {
+var price = 0
+return ['Leviton Decora wall plate 2 Gang, White', placeholder, price, sku, placeholder * price]
+}
+function quarterRound () {
+var price = 0
+return ['Quarter Round (In SQFT) - Alexandria Molding', placeholder, price, sku, placeholder * price]
+}

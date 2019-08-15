@@ -456,9 +456,9 @@ $('#al-button').on('click', function () {
   doMultiplication()
   finalJsonOutput = JSON.parse(jsonCreation())
   console.log(finalJsonOutput)
+  
   console.log(rollOfRamBoard())
   console.log(blueTape())
-
 })
 
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
@@ -521,16 +521,15 @@ $('#al-button').on('click', function () {
 function rollOfRamBoard () {
   var quantity = 0
   const price = 59.99
-  console.log(finalJsonOutput.list0.rowList[0].quantity)
   if (finalJsonOutput.list0.rowList[0].quantity > 0) {
     quantity += parseFloat(finalJsonOutput.list0.rowList[0].quantity)
   }
   if (finalJsonOutput.list0.rowList[2].quantity > 0) {
     quantity += parseFloat(finalJsonOutput.list0.rowList[2].quantity)
   }
-  console.log(quantity)
   return ['Roll of Ram Board ', quantity, price, '#1001063958', quantity * price]
 }
+
 function blueTape () {
   var tempArray = rollOfRamBoard()
   const price = 8.98

@@ -401,15 +401,6 @@ function doMultiplication () {
   updateFinal(tempNum)
 }
 
-$('#al-button').on('click', function () {
-  multiplierTracker()
-  for (let z = 0; z < alInput.length; z++) {
-    doAddition(z)
-  }
-  doMultiplication()
-  jsonCreation()
-})
-
 function jsonCreation () {
   var jsonString = '{ '
   var sectionCount = 0
@@ -444,7 +435,6 @@ function jsonCreation () {
       if (j === sectionsList[i].length - 1) {
         jsonString += '"price": "' + multiplierList[sectionCount] + '" }'
       } else { jsonString += '"price": "' + multiplierList[sectionCount] + '" },' }
-      console.log(sectionCount)
       sectionCount++
     }
     jsonString += ']'
@@ -454,9 +444,22 @@ function jsonCreation () {
     } else { jsonString += '},' }
   }
   jsonString += '}'
-  console.log(jsonString)
-  console.log(multiplierList)
+  return jsonString
 }
+
+var finalJsonOutput = null
+$('#al-button').on('click', function () {
+  multiplierTracker()
+  for (let z = 0; z < alInput.length; z++) {
+    doAddition(z)
+  }
+  doMultiplication()
+  finalJsonOutput = JSON.parse(jsonCreation())
+  console.log(finalJsonOutput)
+  console.log(rollOfRamBoard())
+  console.log(blueTape())
+
+})
 
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
@@ -478,49 +481,61 @@ function jsonCreation () {
 // var example = ['name', qty, price, sku, qty*price]
 
 // var roughMaterial = [
-//   rollOfRamBoard(),
-//   blueTape(),
-//   drywall(),
-//   drywallScrews(),
-//   cornerBeads(),
-//   sheetrock90(),
-//   sheetrock20(),
-//   metalStuds(),
-//   meshTape(),
-//   bundleOfStrapping(),
-//   goldScrews(),
-//   sakrete(),
-//   siliconeClear(),
-//   whiteSilicone(),
-//   customSkimCoatPatchCementUnderlayment(),
-//   flexBondThinsetMortarLFT(),
-//   cementBoardScrews(),
-//   megalyte(),
-//   insulation(),
-//   paperTape(),
-//   doorstop(),
-//   pocketDoorFrame(),
-//   dap(),
-//   fourInchMarbleJamb(),
-//   tuckTape(),
-//   sixMmPoly(),
-//   sheetrockUltraLightMoldTough(),
-//   twox4x8WoodStuds(),
-//   toiletKit(),
-//   robertsTemporaryCarpetProtectionFilm(),
-//   omnigripTileStoneAdhesive(),
-//   sheetrockCeilingSprayTexture(),
-//   duraProAngleStop(),
-//   plPremium295mlWaterProof(),
-//   tubSurroundAdhesive()
+//   rollOfRamBoard() //,
+//   // blueTape(),
+//   // drywall(),
+//   // drywallScrews(),
+//   // cornerBeads(),
+//   // sheetrock90(),
+//   // sheetrock20(),
+//   // metalStuds(),
+//   // meshTape(),
+//   // bundleOfStrapping(),
+//   // goldScrews(),
+//   // sakrete(),
+//   // siliconeClear(),
+//   // whiteSilicone(),
+//   // customSkimCoatPatchCementUnderlayment(),
+//   // flexBondThinsetMortarLFT(),
+//   // cementBoardScrews(),
+//   // megalyte(),
+//   // insulation(),
+//   // paperTape(),
+//   // doorstop(),
+//   // pocketDoorFrame(),
+//   // dap(),
+//   // fourInchMarbleJamb(),
+//   // tuckTape(),
+//   // sixMmPoly(),
+//   // sheetrockUltraLightMoldTough(),
+//   // twox4x8WoodStuds(),
+//   // toiletKit(),
+//   // robertsTemporaryCarpetProtectionFilm(),
+//   // omnigripTileStoneAdhesive(),
+//   // sheetrockCeilingSprayTexture(),
+//   // duraProAngleStop(),
+//   // plPremium295mlWaterProof(),
+//   // tubSurroundAdhesive()
 // ]
 
-// function rollOfRamBoard () {
-//   return ['Roll of Ram Board ', placeholder, price, sku, placeholder * price]
-// }
-// function blueTape () {
-//   return ['Blue Tape 2', placeholder2, price, sku, placeholder2 * price]
-// }
+function rollOfRamBoard () {
+  var quantity = 0
+  const price = 59.99
+  console.log(finalJsonOutput.list0.rowList[0].quantity)
+  if (finalJsonOutput.list0.rowList[0].quantity > 0) {
+    quantity += parseFloat(finalJsonOutput.list0.rowList[0].quantity)
+  }
+  if (finalJsonOutput.list0.rowList[2].quantity > 0) {
+    quantity += parseFloat(finalJsonOutput.list0.rowList[2].quantity)
+  }
+  console.log(quantity)
+  return ['Roll of Ram Board ', quantity, price, '#1001063958', quantity * price]
+}
+function blueTape () {
+  var tempArray = rollOfRamBoard()
+  const price = 8.98
+  return ['Blue Tape 2', tempArray[1], price, '#1000172308', tempArray[1] * price]
+}
 
 // function drywall () {
 //   return ['Drywall(1/2 Inch) ', placeholder3, price, sku, placeholder3 * price]

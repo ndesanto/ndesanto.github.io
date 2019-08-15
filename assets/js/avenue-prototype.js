@@ -103,7 +103,7 @@ var bedrooms = [
   ['Patch and Replace Stucco Ceiling', qty, 400, null, null, false],
   ['Replace Ceiling Fan', qty, 105, null, null, false],
   ['Replace Closet Rod/Rack', qty, 105, null, null, false],
-  ['Replace Closet/Drawer Knobs	', qty, 35, null, null, false],
+  ['Replace Closet/Drawer Knobs', qty, 35, null, null, false],
   ['Replace Closet Shelves', qty, 75, null, null, false],
   ['Replace Crown Molding', qty, 14, null, null, false],
   ['Replace Doorstop/Hinges/Closer', qty, 28, null, null, false],
@@ -394,11 +394,9 @@ function doAddition (zValue) {
 
 function doMultiplication () {
   var tempNum = 0
-  console.log(quantityList)
   for (let x = 0; x < multiplierList.length; x++) {
     value[x] = (quantityList[x] * multiplierList[x]) || 0
     tempNum += parseFloat(value[x])
-    console.log(value[x])
   }
   updateFinal(tempNum)
 }
@@ -412,28 +410,52 @@ $('#al-button').on('click', function () {
   jsonCreation()
 })
 
-
-
-/////// TODO: if selected, get its innerhtml
 function jsonCreation () {
-  console.log(sectionsList.length)
+  var jsonString = '{ '
   var sectionCount = 0
+  var k = 0
   for (var i = 0; i < sectionsList.length; i++) {
+    jsonString += '"list' + i + '": { "name": "' + sectionsList[i][0] + '", "rowList": ['
     for (var j = 1; j < sectionsList[i].length; j++) {
-      console.log(document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].innerHTML)
+      jsonString += '{ "rowName": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].innerHTML.replace(/"/g, '\\"') + '",'
       try {
-        console.log(document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[1].childNodes[0].selected)
-      } catch (err) {}
+        for (k = 0; k < document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[1].length; k++) {
+          if (document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[1].childNodes[k].selected) {
+            jsonString += '"size": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[1].childNodes[k].innerHTML.replace(/"/g, '\\"') + '",'
+          }
+        }
+      } catch (err) { console.log(err) }
       try {
-        console.log(document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[2].childNodes[0].selected)
-      } catch (err) {}
+        for (k = 0; k < document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[2].length; k++) {
+          if (document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[2].childNodes[k].selected) {
+            jsonString += '"variant": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[2].childNodes[k].innerHTML.replace(/"/g, '\\"') + '",'
+          }
+        }
+      } catch (err) { console.log(err) }
       try {
-        console.log(document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[3].childNodes[0].selected)
-      } catch (err) {}
-      console.log(document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[4].innerHTML)
+        for (k = 0; k < document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[3].length; k++) {
+          if (document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[3].childNodes[k].selected) {
+            jsonString += '"variable": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[3].childNodes[k].innerHTML.replace(/"/g, '\\"') + '",'
+          }
+        }
+      } catch (err) { console.log(err) }
+      jsonString += '"quantity": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[4].value + '",'
+
+      if (j === sectionsList[i].length - 1) {
+        jsonString += '"price": "' + multiplierList[sectionCount] + '" }'
+      } else { jsonString += '"price": "' + multiplierList[sectionCount] + '" },' }
+      console.log(sectionCount)
       sectionCount++
     }
+    jsonString += ']'
+
+    if (i === sectionsList.length - 1) {
+      jsonString += '}'
+    } else { jsonString += '},' }
   }
+  jsonString += '}'
+  console.log(jsonString)
+  console.log(multiplierList)
 }
 
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
@@ -455,254 +477,254 @@ function jsonCreation () {
 // ROUGH MATERIAL OBJECT
 // var example = ['name', qty, price, sku, qty*price]
 
-var roughMaterial = [
-  rollOfRamBoard(),
-  blueTape(),
-  drywall(),
-  drywallScrews(),
-  cornerBeads(),
-  sheetrock90(),
-  sheetrock20(),
-  metalStuds(),
-  meshTape(),
-  bundleOfStrapping(),
-  goldScrews(),
-  sakrete(),
-  siliconeClear(),
-  whiteSilicone(),
-  customSkimCoatPatchCementUnderlayment(),
-  flexBondThinsetMortarLFT(),
-  cementBoardScrews(),
-  megalyte(),
-  insulation(),
-  paperTape(),
-  doorstop(),
-  pocketDoorFrame(),
-  dap(),
-  fourInchMarbleJamb(),
-  tuckTape(),
-  sixMmPoly(),
-  sheetrockUltraLightMoldTough(),
-  twox4x8WoodStuds(),
-  toiletKit(),
-  robertsTemporaryCarpetProtectionFilm(),
-  omnigripTileStoneAdhesive(),
-  sheetrockCeilingSprayTexture(),
-  duraProAngleStop(),
-  plPremium295mlWaterProof(),
-  tubSurroundAdhesive()
-]
+// var roughMaterial = [
+//   rollOfRamBoard(),
+//   blueTape(),
+//   drywall(),
+//   drywallScrews(),
+//   cornerBeads(),
+//   sheetrock90(),
+//   sheetrock20(),
+//   metalStuds(),
+//   meshTape(),
+//   bundleOfStrapping(),
+//   goldScrews(),
+//   sakrete(),
+//   siliconeClear(),
+//   whiteSilicone(),
+//   customSkimCoatPatchCementUnderlayment(),
+//   flexBondThinsetMortarLFT(),
+//   cementBoardScrews(),
+//   megalyte(),
+//   insulation(),
+//   paperTape(),
+//   doorstop(),
+//   pocketDoorFrame(),
+//   dap(),
+//   fourInchMarbleJamb(),
+//   tuckTape(),
+//   sixMmPoly(),
+//   sheetrockUltraLightMoldTough(),
+//   twox4x8WoodStuds(),
+//   toiletKit(),
+//   robertsTemporaryCarpetProtectionFilm(),
+//   omnigripTileStoneAdhesive(),
+//   sheetrockCeilingSprayTexture(),
+//   duraProAngleStop(),
+//   plPremium295mlWaterProof(),
+//   tubSurroundAdhesive()
+// ]
 
-function rollOfRamBoard () {
-  return ['Roll of Ram Board ', placeholder, price, sku, placeholder * price]
-}
-function blueTape () {
-  return ['Blue Tape 2', placeholder2, price, sku, placeholder2 * price]
-}
+// function rollOfRamBoard () {
+//   return ['Roll of Ram Board ', placeholder, price, sku, placeholder * price]
+// }
+// function blueTape () {
+//   return ['Blue Tape 2', placeholder2, price, sku, placeholder2 * price]
+// }
 
-function drywall () {
-  return ['Drywall(1/2 Inch) ', placeholder3, price, sku, placeholder3 * price]
-}
+// function drywall () {
+//   return ['Drywall(1/2 Inch) ', placeholder3, price, sku, placeholder3 * price]
+// }
 
-function drywallScrews () {
-  return ['Drywall Screws(Individual-Quantity) ', placeholder4, price, sku, placeholde4r * price]
-}
+// function drywallScrews () {
+//   return ['Drywall Screws(Individual-Quantity) ', placeholder4, price, sku, placeholde4r * price]
+// }
 
-function cornerBeads () {
-  return ['Corner Beads(90 degree) ', placeholder5, price, sku, placeholder5 * price]
-}
+// function cornerBeads () {
+//   return ['Corner Beads(90 degree) ', placeholder5, price, sku, placeholder5 * price]
+// }
 
-function sheetrock90 () {
-  return ['Sheetrock 90 ', placeholder6, price, sku, placeholder6 * price]
-}
+// function sheetrock90 () {
+//   return ['Sheetrock 90 ', placeholder6, price, sku, placeholder6 * price]
+// }
 
-function sheetrock20 () {
-  return ['Sheetrock 20 ', placeholder7, price, sku, placeholder7 * price]
-}
+// function sheetrock20 () {
+//   return ['Sheetrock 20 ', placeholder7, price, sku, placeholder7 * price]
+// }
 
-function metalStuds () {
-  return ['Metal Studs 2.5 x 8 ', placeholder8, price, sku, placeholder8 * price]
-}
+// function metalStuds () {
+//   return ['Metal Studs 2.5 x 8 ', placeholder8, price, sku, placeholder8 * price]
+// }
 
-function meshTape () {
-  return ['Mesh Tape ', placeholder9, price, sku, placeholder9 * price]
-}
+// function meshTape () {
+//   return ['Mesh Tape ', placeholder9, price, sku, placeholder9 * price]
+// }
 
-function bundleOfStrapping () {
-  return ['Bundle of strapping ', placeholderq, price, sku, placeholderq * price]
-}
+// function bundleOfStrapping () {
+//   return ['Bundle of strapping ', placeholderq, price, sku, placeholderq * price]
+// }
 
-function goldScrews () {
-  return ['Gold Screws (2 and a 1/2 Inch) ', placeholderw, price, sku, placeholderw * price]
-}
+// function goldScrews () {
+//   return ['Gold Screws (2 and a 1/2 Inch) ', placeholderw, price, sku, placeholderw * price]
+// }
 
-function sakrete () {
-  return ['Sakrete ', placeholdere, price, sku, placeholdere * price]
-}
+// function sakrete () {
+//   return ['Sakrete ', placeholdere, price, sku, placeholdere * price]
+// }
 
-function siliconeClear () {
-  return ['Silicone Clear(MONO) ', placeholderr, price, sku, placeholderr * price]
-}
+// function siliconeClear () {
+//   return ['Silicone Clear(MONO) ', placeholderr, price, sku, placeholderr * price]
+// }
 
-function whiteSilicone () {
-  return ['White Silicone ', placeholdert, price, sku, placeholdert * price]
-}
+// function whiteSilicone () {
+//   return ['White Silicone ', placeholdert, price, sku, placeholdert * price]
+// }
 
-function customSkimCoatPatchCementUnderlayment () {
-  return ['Custom - Skim Coat & Patch Cement Underlayment 11.34kg ', placeholdery, price, sku, placeholdery * price]
-}
+// function customSkimCoatPatchCementUnderlayment () {
+//   return ['Custom - Skim Coat & Patch Cement Underlayment 11.34kg ', placeholdery, price, sku, placeholdery * price]
+// }
 
-function flexBondThinsetMortarLFT () {
-  return ['FlexBond Thinset Mortar - LFT ', placeholderu, price, sku, placeholderu * price]
-}
+// function flexBondThinsetMortarLFT () {
+//   return ['FlexBond Thinset Mortar - LFT ', placeholderu, price, sku, placeholderu * price]
+// }
 
-function cementBoardScrews () {
-  return ['Cement Board Screws  ', placeholderi, price, sku, placeholderi * price]
-}
+// function cementBoardScrews () {
+//   return ['Cement Board Screws  ', placeholderi, price, sku, placeholderi * price]
+// }
 
-function megalyte () {
-  return ['Megalyte  ', placeholdero, price, sku, placeholdero * price]
-}
+// function megalyte () {
+//   return ['Megalyte  ', placeholdero, price, sku, placeholdero * price]
+// }
 
-function insulation () {
-  return ['Insulation(R20/OC16/2x4) ', placeholderp, price, sku, placeholderp * price]
-}
+// function insulation () {
+//   return ['Insulation(R20/OC16/2x4) ', placeholderp, price, sku, placeholderp * price]
+// }
 
-function paperTape () {
-  return ['Paper Tape ', placeholdera, price, sku, placeholdera * price]
-}
+// function paperTape () {
+//   return ['Paper Tape ', placeholdera, price, sku, placeholdera * price]
+// }
 
-function doorstop () {
-  return ['Door stop  ', placeholders, price, sku, placeholders * price]
-}
+// function doorstop () {
+//   return ['Door stop  ', placeholders, price, sku, placeholders * price]
+// }
 
-function pocketDoorFrame () {
-  return ['Pocket Door Frame ', placeholderd, price, sku, placeholderd * price]
-}
+// function pocketDoorFrame () {
+//   return ['Pocket Door Frame ', placeholderd, price, sku, placeholderd * price]
+// }
 
-function dap () {
-  return ['Dap ', placeholderf, price, sku, placeholderf * price]
-}
+// function dap () {
+//   return ['Dap ', placeholderf, price, sku, placeholderf * price]
+// }
 
-function fourInchMarbleJamb () {
-  return ['4 Inch Marble Jamb ', placeholderg, price, sku, placeholderg * price]
-}
+// function fourInchMarbleJamb () {
+//   return ['4 Inch Marble Jamb ', placeholderg, price, sku, placeholderg * price]
+// }
 
-function tuckTape () {
-  return ['Tuck Tape ', placeholderh, price, sku, placeholderh * price]
-}
+// function tuckTape () {
+//   return ['Tuck Tape ', placeholderh, price, sku, placeholderh * price]
+// }
 
-function sixMmPoly () {
-  return ['6MM Poly ', placeholderi, price, sku, placeholderj * price]
-}
+// function sixMmPoly () {
+//   return ['6MM Poly ', placeholderi, price, sku, placeholderj * price]
+// }
 
-function sheetrockUltraLightMoldTough () {
-  return ['Sheetrock UltraLight Mold Tough 1/2x4x8 ', placeholderj, price, sku, placeholderk * price]
-}
+// function sheetrockUltraLightMoldTough () {
+//   return ['Sheetrock UltraLight Mold Tough 1/2x4x8 ', placeholderj, price, sku, placeholderk * price]
+// }
 
-function twox4x8WoodStuds () {
-  return ['2x4x8 Wood Studs ', placeholderk, price, sku, placeholderl * price]
-}
+// function twox4x8WoodStuds () {
+//   return ['2x4x8 Wood Studs ', placeholderk, price, sku, placeholderl * price]
+// }
 
-function toiletKit () {
-  return ['Toilet Kit(Wax Ring, Flexible Connector, Bolts) ', placeholderl, price, sku, placeholderz * price]
-}
+// function toiletKit () {
+//   return ['Toilet Kit(Wax Ring, Flexible Connector, Bolts) ', placeholderl, price, sku, placeholderz * price]
+// }
 
-function robertsTemporaryCarpetProtectionFilm () {
-  return ['Roberts Temporary Carpet Protection Film ', placeholderm, price, sku, placeholderx * price]
-}
+// function robertsTemporaryCarpetProtectionFilm () {
+//   return ['Roberts Temporary Carpet Protection Film ', placeholderm, price, sku, placeholderx * price]
+// }
 
-function omnigripTileStoneAdhesive () {
-  return ['OMNIGRIP TILE & STONE ADHESIVE 3.79L ', placeholdern, price, sku, placeholderc * price]
-}
+// function omnigripTileStoneAdhesive () {
+//   return ['OMNIGRIP TILE & STONE ADHESIVE 3.79L ', placeholdern, price, sku, placeholderc * price]
+// }
 
-function sheetrockCeilingSprayTexture () {
-  return ['Sheetrock Ceiling Spray Texture, Medium Finish, 20 kg Bag ', placeholdero, price, sku, placeholder * vprice]
-}
+// function sheetrockCeilingSprayTexture () {
+//   return ['Sheetrock Ceiling Spray Texture, Medium Finish, 20 kg Bag ', placeholdero, price, sku, placeholder * vprice]
+// }
 
-function duraProAngleStop () {
-  return ['DuraPro Angle Stop, Quarter Turn, 1/2 inch Sweat X 3/8 inch Compression, Lead Free ', placeholderp, price, sku, placeholderb * price]
-}
+// function duraProAngleStop () {
+//   return ['DuraPro Angle Stop, Quarter Turn, 1/2 inch Sweat X 3/8 inch Compression, Lead Free ', placeholderp, price, sku, placeholderb * price]
+// }
 
-function plPremium295mlWaterProof () {
-  return ['PL Premium 295 mL Waterproof Interior/Exterior Construction Adhesive ', placeholderq, price, sku, placeholder * nprice]
-}
+// function plPremium295mlWaterProof () {
+//   return ['PL Premium 295 mL Waterproof Interior/Exterior Construction Adhesive ', placeholderq, price, sku, placeholder * nprice]
+// }
 
-function tubSurroundAdhesive () {
-  return ['TUB SURROUND ADHESIVE PL700-300ML - 1/4 P ', placeholderr, price, sku, placeholderm * price]
-}
+// function tubSurroundAdhesive () {
+//   return ['TUB SURROUND ADHESIVE PL700-300ML - 1/4 P ', placeholderr, price, sku, placeholderm * price]
+// }
 
-var finishMaterial = [
+// var finishMaterial = [
 
-  vinylPlank(),
-  snowfall5GalSG(),
-  snowfall1Gal1GalSG(),
-  classicGrey5GalEGG(),
-  classicGrey1GalSG(),
-  interiorCeilingPaint(),
-  KilzOdorlessGallon(),
-  baseAlexandriaMoulding(),
-  trimAlexandriaMoulding(),
-  doorMasoniteLincolnParkx(),
-  doorMasoniteLincolinParkBiFoldx(),
-  everbiltClosetRod(),
-  everbiltPoleSockets(),
-  passageDoorLever(),
-  privacyDoorLever(),
-  hingePinDoorStop(),
-  springDoorStop(),
-  eurostyleCabinets(),
-  subwayTile(),
-  tileEdge(),
-  vanityx(),
-  bathroomFaucet(),
-  bathtubx(),
-  tubWallKit(),
-  moenShowerRod(),
-  mirrorBevelededge(),
-  toilet(),
-  showerFaucet(),
-  bathAccessoryKit(),
-  rangeHoodSS(),
-  plugs(),
-  switches(),
-  plugCoverPlates(),
-  gFCIOutlet(),
-  smokeDetector(),
-  lightFixture6pk(),
-  flushMounteach4PK(),
-  trackLight(),
-  brushedNickelBathBar(),
-  ledLights(),
-  bathroomexhaustfaneach(),
-  unsandedGrout(),
-  ArboriteCountertop(),
-  endcapKit(),
-  reginoxSSSink(),
-  kitchenFaucet(),
-  cordlessBlindsx(),
-  verticalBlindKitx(),
-  bathroomSink(),
-  refridgeratorx(),
-  rangex(),
-  dishwasherx(),
-  washer(),
-  dryer(),
-  frontLoadWasher(),
-  frontLoadDryer(),
-  stackingKit(),
-  libertyKnob(),
-  tMolding(),
-  showerBasex(),
-  hinge(),
-  showerTile(),
-  breakawayScrews(),
-  millworkCove(),
-  stairNosing(),
-  decora3Gang(),
-  decora2Gang(),
-  quarterRound()
-]
+//   vinylPlank(),
+//   snowfall5GalSG(),
+//   snowfall1Gal1GalSG(),
+//   classicGrey5GalEGG(),
+//   classicGrey1GalSG(),
+//   interiorCeilingPaint(),
+//   KilzOdorlessGallon(),
+//   baseAlexandriaMoulding(),
+//   trimAlexandriaMoulding(),
+//   doorMasoniteLincolnParkx(),
+//   doorMasoniteLincolinParkBiFoldx(),
+//   everbiltClosetRod(),
+//   everbiltPoleSockets(),
+//   passageDoorLever(),
+//   privacyDoorLever(),
+//   hingePinDoorStop(),
+//   springDoorStop(),
+//   eurostyleCabinets(),
+//   subwayTile(),
+//   tileEdge(),
+//   vanityx(),
+//   bathroomFaucet(),
+//   bathtubx(),
+//   tubWallKit(),
+//   moenShowerRod(),
+//   mirrorBevelededge(),
+//   toilet(),
+//   showerFaucet(),
+//   bathAccessoryKit(),
+//   rangeHoodSS(),
+//   plugs(),
+//   switches(),
+//   plugCoverPlates(),
+//   gFCIOutlet(),
+//   smokeDetector(),
+//   lightFixture6pk(),
+//   flushMounteach4PK(),
+//   trackLight(),
+//   brushedNickelBathBar(),
+//   ledLights(),
+//   bathroomexhaustfaneach(),
+//   unsandedGrout(),
+//   ArboriteCountertop(),
+//   endcapKit(),
+//   reginoxSSSink(),
+//   kitchenFaucet(),
+//   cordlessBlindsx(),
+//   verticalBlindKitx(),
+//   bathroomSink(),
+//   refridgeratorx(),
+//   rangex(),
+//   dishwasherx(),
+//   washer(),
+//   dryer(),
+//   frontLoadWasher(),
+//   frontLoadDryer(),
+//   stackingKit(),
+//   libertyKnob(),
+//   tMolding(),
+//   showerBasex(),
+//   hinge(),
+//   showerTile(),
+//   breakawayScrews(),
+//   millworkCove(),
+//   stairNosing(),
+//   decora3Gang(),
+//   decora2Gang(),
+//   quarterRound()
+// ]
 
 //  function vinylPlank () {
 //     return ['Vinyl Plank - Unifloor Chateau - Imperial (1551-160-01)', placeholder, price, sku, placeholder * price]
@@ -919,4 +941,3 @@ var finishMaterial = [
 // function quarterRound () {
 //     return ['Quarter Round (In SQFT) - Alexandria Molding', placeholder, price, sku, placeholder * price]
 // }
-

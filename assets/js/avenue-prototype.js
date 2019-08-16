@@ -459,6 +459,8 @@ $('#al-button').on('click', function () {
 
   console.log(rollOfRamBoard())
   console.log(blueTape())
+  console.log(whiteSilicone())
+  console.log(cordlessBlindsx())
   // PDF downloader
   // let doc = new jsPDF('p', 'pt', 'a4')
   // doc.addHTML(document.body, function() {
@@ -528,7 +530,7 @@ function rollOfRamBoard () {
   var quantity = 0
   const price = 59.99
   if (finalJsonOutput.list0.rowList[0].quantity > 0) {
-    quantity += parseFloat(finalJsonOutput.list0.rowList[0].quantity)
+    quantity = quantity + parseFloat(finalJsonOutput.list0.rowList[0].quantity)
   }
   if (finalJsonOutput.list0.rowList[2].quantity > 0) {
     quantity += parseFloat(finalJsonOutput.list0.rowList[2].quantity)
@@ -543,8 +545,8 @@ function blueTape () {
 }
 
 function drywall () {
-var price = 0
-return ['Drywall(1/2 Inch) ', placeholder3, price, sku, placeholder3 * price]
+  var price = 0
+  return ['Drywall(1/2 Inch) ', placeholder3, price, sku, placeholder3 * price]
 }
 
 function drywallScrews () {
@@ -598,8 +600,13 @@ return ['Silicone Clear(MONO) ', placeholderr, price, sku, placeholderr * price]
 }
 
 function whiteSilicone () {
-var price = 0
-return ['White Silicone ', placeholdert, price, sku, placeholdert * price]
+  var price = 6.27
+  var quantity = 0
+  if (finalJsonOutput.list5.rowList[3].quantity > 0) {
+    quantity = quantity + parseFloat(finalJsonOutput.list5.rowList[3].quantity)
+  }
+
+  return ['White Silicone ', quantity, price, '#1001001923', quantity * price]
 }
 
 function customSkimCoatPatchCementUnderlayment () {
@@ -911,10 +918,33 @@ function switches () {
 var price = 0
 return ['Decora Switches 10 pk', placeholder, price, sku, placeholder * price]
 }
+
+
+
 function plugCoverPlates () {
-var price = 0
-return ['Decora Plug Cover Plates', placeholder, price, sku, placeholder * price]
+  var price = 4.97
+  var quantity = 0
+  if (finalJsonOutput.list2.rowList[13].quantity > 0) {
+    quantity += (parseFloat(finalJsonOutput.list2.rowList[13].quantity) / 10)
+  }
+  if (finalJsonOutput.list2.rowList[14].quantity > 0) {
+    quantity += (parseFloat(finalJsonOutput.list2.rowList[14].quantity) / 10)
+  }
+
+  if (finalJsonOutput.list4.rowList[21].quantity > 0) {
+    quantity += (parseFloat(finalJsonOutput.list2.rowList[21].quantity) / 10)
+  }
+  if (finalJsonOutput.list4.rowList[22].quantity > 0) {
+    quantity += (parseFloat(finalJsonOutput.list2.rowList[22].quantity) / 10)
+  }
+
+  return ['Decora Plug Cover Plates', quantity, price, '#1000126191', quantity * price]
 }
+
+
+
+
+
 function gFCIOutlet () {
 var price = 0
 return ['GFCI Outlet', placeholder, price, sku, placeholder * price]
@@ -968,11 +998,27 @@ function kitchenFaucet  () {
 var price = 0
 return ['MOEN TORRANCE 1H KITCHEN FAUCET CHROME', placeholder, price, sku, placeholder * price]
 }
+
+
+
 function cordlessBlindsx () {
-    // 'HDC 2.5 CORDLESS FAUXWD BLD 18x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 24x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 30x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 36x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 42x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 48x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 60x48 WH','HDC 2.5 CORDLESS FAUXWD BLD 60x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 72x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 36x48 WH'
-var price = 0
-return ['HDC 2.5 CORDLESS FAUXWD BLD 72x48 WH', placeholder, price, sku, placeholder * price]
+  //'HDC 2.5 CORDLESS FAUXWD BLD 18x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 24x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 30x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 36x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 42x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 48x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 60x48 WH','HDC 2.5 CORDLESS FAUXWD BLD 60x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 72x72 WH','HDC 2.5 CORDLESS FAUXWD BLD 36x48 WH'
+  
+  ////// make a map from name -> sku
+  var price = 0
+  var quantity = 0
+  var name = 'HDC 2.5 CORDLESS FAUXWD BLD'
+
+  if (finalJsonOutput.list2.rowList[0].quantity > 0) {
+    quantity += parseInt(finalJsonOutput.list2.rowList[0].quantity)
+    name += ' ' + finalJsonOutput.list2.rowList[0].size + ' ' + finalJsonOutput.list2.rowList[0].variant
+  }
+
+  return [name, quantity, price, '343243242', quantity * price]
 }
+
+
+
 function verticalBlindKitx () {
     // 'HB 3.5" 66x84 Vertical Blind Kit White'
 var price = 0

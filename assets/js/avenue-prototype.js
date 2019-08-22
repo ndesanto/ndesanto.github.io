@@ -529,6 +529,7 @@ $('#al-button').on('click', function () {
 function rollOfRamBoard () {
   var quantity = 0
   const price = 59.99
+
   if (finalJsonOutput.list0.rowList[0].quantity > 0) {
     quantity = quantity + parseFloat(finalJsonOutput.list0.rowList[0].quantity)
   }
@@ -581,7 +582,7 @@ return ['Mesh Tape ', placeholder9, price, '#1000115114', placeholder9 * price]
 
 function bundleOfStrapping () {
 var price = 0
-return ['Bundle of strapping ', placeholderq, price,'', placeholderq * price]
+return ['Bundle of strapping ', placeholderq, price, sku, placeholderq * price]
 }
 
 function goldScrews () {
@@ -685,7 +686,12 @@ return ['Toilet Kit(Wax Ring, Flexible Connector, Bolts) ', placeholderl, price,
 }
 
 function robertsTemporaryCarpetProtectionFilm () {
-var price = 0
+  var price = 20.19
+  var quantity = 0
+  if (finalJsonOutput.list0.rowList[3].quantity > 0) {
+    quantity = quantity + parseFloat(finalJsonOutput.list0.rowList[3].quantity)
+  }
+  
 return ['Roberts Temporary Carpet Protection Film ', placeholderm, price, '#1000538143', placeholderx * price]
 }
 

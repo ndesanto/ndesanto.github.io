@@ -546,57 +546,57 @@ function blueTape () {
 
 function drywall () {
   var price = 0
-  return ['Drywall(1/2 Inch) ', placeholder3, price, sku, placeholder3 * price]
+  return ['Drywall(1/2 Inch) ', placeholder3, price, '#1000686028', placeholder3 * price]
 }
 
 function drywallScrews () {
 var price = 0
-return ['Drywall Screws(Individual-Quantity) ', placeholder4, price, sku, placeholde4r * price]
+return ['Drywall Screws(Individual-Quantity) ', placeholder4, price, '#1001022574', placeholde4r * price]
 }
 
 function cornerBeads () {
 var price = 0
-return ['Corner Beads(90 degree) ', placeholder5, price, sku, placeholder5 * price]
+return ['Corner Beads(90 degree) ', placeholder5, price, '#1000435640', placeholder5 * price]
 }
 
 function sheetrock90 () {
 var price = 0
-return ['Sheetrock 90 ', placeholder6, price, sku, placeholder6 * price]
+return ['Sheetrock 90 ', placeholder6, price,'#1000116303', placeholder6 * price]
 }
 
 function sheetrock20 () {
 var price = 0
-return ['Sheetrock 20 ', placeholder7, price, sku, placeholder7 * price]
+return ['Sheetrock 20 ', placeholder7, price, '#1000414533', placeholder7 * price]
 }
 
 function metalStuds () {
 var price = 0
-return ['Metal Studs 2.5 x 8 ', placeholder8, price, sku, placeholder8 * price]
+return ['Metal Studs 2.5 x 8 ', placeholder8, price, '#1000497123', placeholder8 * price]
 }
 
 function meshTape () {
 var price = 0
-return ['Mesh Tape ', placeholder9, price, sku, placeholder9 * price]
+return ['Mesh Tape ', placeholder9, price, '#1000115114', placeholder9 * price]
 }
 
 function bundleOfStrapping () {
 var price = 0
-return ['Bundle of strapping ', placeholderq, price, sku, placeholderq * price]
+return ['Bundle of strapping ', placeholderq, price,'', placeholderq * price]
 }
 
 function goldScrews () {
 var price = 0
-return ['Gold Screws (2 and a 1/2 Inch) ', placeholderw, price, sku, placeholderw * price]
+return ['Gold Screws (2 and a 1/2 Inch) ', placeholderw, price, '#1000174528', placeholderw * price]
 }
 
 function sakrete () {
 var price = 0
-return ['Sakrete ', placeholdere, price, sku, placeholdere * price]
+return ['Sakrete ', placeholdere, price, '#1000109081', placeholdere * price]
 }
 
 function siliconeClear () {
 var price = 0
-return ['Silicone Clear(MONO) ', placeholderr, price, sku, placeholderr * price]
+return ['Silicone Clear(MONO) ', placeholderr, price, '#1001001931', placeholderr * price]
 }
 
 function whiteSilicone () {
@@ -611,12 +611,12 @@ function whiteSilicone () {
 
 function customSkimCoatPatchCementUnderlayment () {
 var price = 0
-return ['Custom - Skim Coat & Patch Cement Underlayment 11.34kg ', placeholdery, price, sku, placeholdery * price]
+return ['Custom - Skim Coat & Patch Cement Underlayment 11.34kg ', placeholdery, price, '#1000668621', placeholdery * price]
 }
 
 function flexBondThinsetMortarLFT () {
 var price = 0
-return ['FlexBond Thinset Mortar - LFT ', placeholderu, price, sku, placeholderu * price]
+return ['FlexBond Thinset Mortar - LFT ', placeholderu, price, '#1000797773', placeholderu * price]
 }
 
 function cementBoardScrews () {
@@ -631,7 +631,7 @@ return ['Megalyte  ', placeholdero, price, sku, placeholdero * price]
 
 function insulation () {
 var price = 0
-return ['Insulation(R20/OC16/2x4) ', placeholderp, price, sku, placeholderp * price]
+return ['Insulation(R20/OC16/2x4) ', placeholderp, price, '#1000181137', placeholderp * price]
 }
 
 function paperTape () {
@@ -651,7 +651,7 @@ return ['Pocket Door Frame ', placeholderd, price, sku, placeholderd * price]
 
 function dap () {
 var price = 0
-return ['Dap ', placeholderf, price, sku, placeholderf * price]
+return ['Dap ', placeholderf, price, '#1000158964', placeholderf * price]
 }
 
 function fourInchMarbleJamb () {
@@ -671,47 +671,47 @@ return ['6MM Poly ', placeholderi, price, sku, placeholderj * price]
 
 function sheetrockUltraLightMoldTough () {
 var price = 0
-return ['Sheetrock UltraLight Mold Tough 1/2x4x8 ', placeholderj, price, sku, placeholderk * price]
+return ['Sheetrock UltraLight Mold Tough 1/2x4x8 ', placeholderj, price, '#1000152285', placeholderk * price]
 }
 
 function twox4x8WoodStuds () {
 var price = 0
-return ['2x4x8 Wood Studs ', placeholderk, price, sku, placeholderl * price]
+return ['2x4x8 Wood Studs ', placeholderk, price, '#1000112108', placeholderl * price]
 }
 
 function toiletKit () {
 var price = 0
-return ['Toilet Kit(Wax Ring, Flexible Connector, Bolts) ', placeholderl, price, sku, placeholderz * price]
+return ['Toilet Kit(Wax Ring, Flexible Connector, Bolts) ', placeholderl, price, '#1000112461', placeholderz * price]
 }
 
 function robertsTemporaryCarpetProtectionFilm () {
 var price = 0
-return ['Roberts Temporary Carpet Protection Film ', placeholderm, price, sku, placeholderx * price]
+return ['Roberts Temporary Carpet Protection Film ', placeholderm, price, '#1000538143', placeholderx * price]
 }
 
 function omnigripTileStoneAdhesive () {
 var price = 0
-return ['OMNIGRIP TILE & STONE ADHESIVE 3.79L ', placeholdern, price, sku, placeholderc * price]
+return ['OMNIGRIP TILE & STONE ADHESIVE 3.79L ', placeholdern, price, '#1000160471', placeholderc * price]
 }
 
 function sheetrockCeilingSprayTexture () {
 var price = 0
-return ['Sheetrock Ceiling Spray Texture, Medium Finish, 20 kg Bag ', placeholdero, price, sku, placeholder * vprice]
+return ['Sheetrock Ceiling Spray Texture, Medium Finish, 20 kg Bag ', placeholdero, price, '#1000160957', placeholder * vprice]
 }
 
 function duraProAngleStop () {
 var price = 0
-return ['DuraPro Angle Stop, Quarter Turn, 1/2 inch Sweat X 3/8 inch Compression, Lead Free ', placeholderp, price, sku, placeholderb * price]
+return ['DuraPro Angle Stop, Quarter Turn, 1/2 inch Sweat X 3/8 inch Compression, Lead Free ', placeholderp, price, '#1001142024', placeholderb * price]
 }
 
 function plPremium295mlWaterProof () {
 var price = 0
-return ['PL Premium 295 mL Waterproof Interior/Exterior Construction Adhesive ', placeholderq, price, sku, placeholder * nprice]
+return ['PL Premium 295 mL Waterproof Interior/Exterior Construction Adhesive ', placeholderq, price, '#1000403473', placeholder * nprice]
 }
 
 function tubSurroundAdhesive () {
 var price = 0
-return ['TUB SURROUND ADHESIVE PL700-300ML - 1/4 P ', placeholderr, price, sku, placeholderm * price]
+return ['TUB SURROUND ADHESIVE PL700-300ML - 1/4 P ', placeholderr, price, '#1000409508', placeholderm * price]
 }
 
 // var finishMaterial = [
@@ -792,35 +792,35 @@ return ['Vinyl Plank - Unifloor Chateau - Imperial (1551-160-01)', placeholder, 
 }
 function snowfall5GalSG () {
 var price = 0
-return ['BEHR i300 INT S/G WHT 18.5L  - Snowfall OC 118', placeholder, price, sku, placeholder * price]
+return ['BEHR i300 INT S/G WHT 18.5L  - Snowfall OC 118', placeholder, price, '#1000687090', placeholder * price]
 }
 function snowfall1Gal1GalSG () {
 var price = 0
-return ['BEHR i300 INT S/G WHT 1 Gal  - Snowfall OC 118', placeholder, price, sku, placeholder * price]
+return ['BEHR i300 INT S/G WHT 1 Gal  - Snowfall OC 118', placeholder, price, '#1000687091', placeholder * price]
 }
 function classicGrey5GalEGG () {
 var price = 0
-return ['BEHR i300 INT EGG WHT 18.5L - Classic Grey OC-23', placeholder, price, sku, placeholder * price]
+return ['BEHR i300 INT EGG WHT 18.5L - Classic Grey OC-23', placeholder, price, '#1000687099', placeholder * price]
 }
 function classicGrey1GalSG () {
 var price = 0
-return ['BEHR i300 INT S/G WHT 1 Gal - Classic Grey OC -23', placeholder, price, sku, placeholder * price]
+return ['BEHR i300 INT S/G WHT 1 Gal - Classic Grey OC -23', placeholder, price, '#1000687091', placeholder * price]
 }
 function interiorCeilingPaint () {
 var price = 0
-return ['Behr Premium Plus Interior Ceiling Paint - 18.9L', placeholder, price, sku, placeholder * price]
+return ['Behr Premium Plus Interior Ceiling Paint - 18.9L', placeholder, price, '#1000402546', placeholder * price]
 }
 function kilzOdorlessGallon () {
 var price = 0
-return ['KILZ ODOURLESS GALLON', placeholder, price, sku, placeholder * price]
+return ['KILZ ODOURLESS GALLON', placeholder, price, '#1000510402', placeholder * price]
 }
 function baseAlexandriaMoulding () {
 var price = 0
-return ['Base - Alexandria Moulding 3-1/2 x 8 10PK', placeholder, price, sku, placeholder * price]
+return ['Base - Alexandria Moulding 3-1/2 x 8 10PK', placeholder, price, '#1000725900', placeholder * price]
 }
 function trimAlexandriaMoulding () {
 var price = 0
-return ['Trim - Alexandria Moulding 1/2-inch x 2-1/2-inch x 8ft. 10PK', placeholder, price, sku, placeholder * price]
+return ['Trim - Alexandria Moulding 1/2-inch x 2-1/2-inch x 8ft. 10PK', placeholder, price, '#1000724386', placeholder * price]
 }
 function doorMasoniteLincolnParkx () {
     // 'Masonite Lincoln Park 32" RH','Masonite Lincoln Park 30" LH','Masonite Lincoln Park 30" RH','Masonite Lincoln Park 28" LH','Masonite Lincoln Park 28" RH','Masonite Lincoln Park 24" LH','Masonite Lincoln Park 24" RH'
@@ -834,44 +834,44 @@ return ['Masonite Lincolin Park Bi-Fold 24"', placeholder, price, sku, placehold
 }
 function everbiltClosetRod () {
 var price = 0
-return ['Everbilt 96" Chrome Closet Rod', placeholder, price, sku, placeholder * price]
+return ['Everbilt 96" Chrome Closet Rod', placeholder, price, '#1000797464', placeholder * price]
 }
 function everbiltPoleSockets () {
 var price = 0
-return ['Everbilt 1 5/16-inch Heavy Duty Closet Pole Sockets', placeholder, price, sku, placeholder * price]
+return ['Everbilt 1 5/16-inch Heavy Duty Closet Pole Sockets', placeholder, price, '#1000797435', placeholder * price]
 }
 function passageDoorLever () {
 var price = 0
-return ['Defiant Olympic Stainless Steel Passage Door Lever (6-Pack)', placeholder, price, sku, placeholder * price]
+return ['Defiant Olympic Stainless Steel Passage Door Lever (6-Pack)', placeholder, price, '#1001013129', placeholder * price]
 }
 function privacyDoorLever () {
 var price = 0
-return ['Defiant Olympic Stainless Steel Privacy Door Lever', placeholder, price, sku, placeholder * price]
+return ['Defiant Olympic Stainless Steel Privacy Door Lever', placeholder, price, '#1000462243', placeholder * price]
 }
 function hingePinDoorStop () {
 var price = 0
-return ['Everbilt Satin Nickel Hinge Pin Door Stop 6PC', placeholder, price, sku, placeholder * price]
+return ['Everbilt Satin Nickel Hinge Pin Door Stop 6PC', placeholder, price, '#1001076030', placeholder * price]
 }
 function springDoorStop () {
 var price = 0
-return ['Everbilt 3inch. Satin Nickel Spring Door Stop 6PC', placeholder, price, sku, placeholder * price]
+return ['Everbilt 3inch. Satin Nickel Spring Door Stop 6PC', placeholder, price, '#1001076032', placeholder * price]
 }
 function eurostyleCabinets () {
 var price = 0
-return ['EUROSTYLE Cabinets - Oxford White', placeholder, price, sku, placeholder * price]
+return ['EUROSTYLE Cabinets - Oxford White', placeholder, price, '~', placeholder * price]
 }
 function subwayTile () {
 var price = 0
-return ['ENIGMA - Subway tile Metro warm grey 3" x 6"', placeholder, price, sku, placeholder * price]
+return ['ENIGMA - Subway tile Metro warm grey 3" x 6"', placeholder, '#1001072427', sku, placeholder * price]
 }
 function tileEdge () {
 var price = 0
-return ['Schluter Bright Clear Tile Edge', placeholder, price, sku, placeholder * price]
+return ['Schluter Bright Clear Tile Edge', placeholder, price, '#1000151559', placeholder * price]
 }
 function vanityx () {
     // 'Glacier Bay 48 Inch White Hampton Vanity ','GB 24" Peython Vanity ','White Premier Pedestal'
 var price = 0
-return ['GLACIER BAY  Lancaster 30-inch with Vanity', placeholder, price, sku, placeholder * price]
+return ['GLACIER BAY  Lancaster 30-inch with Vanity', placeholder, price, '#1001048101', placeholder * price]
 }
 function bathroomFaucet () {
 var price = 0

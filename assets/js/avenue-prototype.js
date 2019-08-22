@@ -871,11 +871,11 @@ return ['Schluter Bright Clear Tile Edge', placeholder, price, '#1000151559', pl
 function vanityx () {
     // 'Glacier Bay 48 Inch White Hampton Vanity ','GB 24" Peython Vanity ','White Premier Pedestal'
 var price = 0
-return ['GLACIER BAY  Lancaster 30-inch with Vanity', placeholder, price, '#1001048101', placeholder * price]
+return ['GLACIER BAY  Lancaster 30-inch with Vanity', placeholder, price, sku, placeholder * price]
 }
 function bathroomFaucet () {
 var price = 0
-return ['Moen Zarina 1 H Bathroom Faucet', placeholder, price, sku, placeholder * price]
+return ['Moen Zarina 1 H Bathroom Faucet', placeholder, price, '#1000714404', placeholder * price]
 }
 function bathtubx () {
     // 'MAAX Avenue 60-inch Alcove Bathtub in White with Left-Hand Drain'
@@ -884,39 +884,39 @@ return ['MAAX Avenue 60-inch Alcove Bathtub in White with Right-Hand Drain', pla
 }
 function tubWallKit () {
 var price = 0
-return ['MAAX 59\'\' ALABAMA tub wall kit', placeholder, price, sku, placeholder * price]
+return ['MAAX 59\'\' ALABAMA tub wall kit', placeholder, price, '#1000115106', placeholder * price]
 }
 function moenShowerRod () {
 var price = 0
-return ['Moen Shower Rod', placeholder, price, sku, placeholder * price]
+return ['Moen Shower Rod', placeholder, price, '#1000663536', placeholder * price]
 }
 function mirrorBevelededge () {
 var price = 0
-return ['THD 24 x 36 Beveled edge', placeholder, price, sku, placeholder * price]
+return ['THD 24 x 36 Beveled edge', placeholder, price, '#1000114485', placeholder * price]
 }
 function toilet () {
 var price = 0
-return ['KOHLER - Wellworth single flush', placeholder, price, sku, placeholder * price]
+return ['KOHLER - Wellworth single flush', placeholder, price, '#1000659913', placeholder * price]
 }
 function showerFaucet () {
 var price = 0
-return ['Moen Zarina 1-Spray Tub and Shower Faucet in Chrome', placeholder, price, sku, placeholder * price]
+return ['Moen Zarina 1-Spray Tub and Shower Faucet in Chrome', placeholder, price, '#1000726705', placeholder * price]
 }
 function bathAccessoryKit () {
 var price = 0
-return ['Moen Danika Bath Accessory Kit in Chrome (3-Piece)', placeholder, price, sku, placeholder * price]
+return ['Moen Danika Bath Accessory Kit in Chrome (3-Piece)', placeholder, price, '#1000836005', placeholder * price]
 }
 function rangeHoodSS () {
 var price = 0
-return ['Nutone 30-in 160 CFM Under Cabinet Range Hoo', placeholder, price, sku, placeholder * price]
+return ['Nutone 30-in 160 CFM Under Cabinet Range Hood', placeholder, price, '#1001124942', placeholder * price]
 }
 function plugs () {
 var price = 0
-return ['Decora Plugs 10 pk', placeholder, price, sku, placeholder * price]
+return ['Decora Plugs 10 pk', placeholder, price, '#1000665704', placeholder * price]
 }
 function switches () {
 var price = 0
-return ['Decora Switches 10 pk', placeholder, price, sku, placeholder * price]
+return ['Decora Switches 10 pk', placeholder, price, '#1000401081', placeholder * price]
 }
 
 
@@ -947,39 +947,39 @@ function plugCoverPlates () {
 
 function gFCIOutlet () {
 var price = 0
-return ['GFCI Outlet', placeholder, price, sku, placeholder * price]
+return ['GFCI Outlet', placeholder, price, '#1000660807', placeholder * price]
 }
 function smokeDetector () {
 var price = 0
-return ['Smoke Detector', placeholder, price, sku, placeholder * price]
+return ['Smoke Detector', placeholder, price, '#1000806868', placeholder * price]
 }
 function lightFixture6Pack () {
 var price = 0
-return ['Commercial Electric 2-Light 60W Brushed Nickel & Alabaster Glass', placeholder, price, sku, placeholder * price]
+return ['Commercial Electric 2-Light 60W Brushed Nickel & Alabaster Glass', placeholder, price, '#1000669012', placeholder * price]
 }
 function flushMounteach4PK () {
 var price = 0
-return ['Commercial Electric Alabaster Glass 4PK Flush Mount', placeholder, price, sku, placeholder * price]
+return ['Commercial Electric Alabaster Glass 4PK Flush Mount', placeholder, price, '#1000652038', placeholder * price]
 }
 function trackLight () {
 var price = 0
-return ['Hampton Bay 3-Light Semi-Flushmount Track Light Fixture in Brushed Nickel', placeholder, price, sku, placeholder * price]
+return ['Hampton Bay 3-Light Semi-Flushmount Track Light Fixture in Brushed Nickel', placeholder, price, '#1000544176', placeholder * price]
 }
 function brushedNickelBathBar () {
 var price = 0
-return ['Commercial Electric 3-Light Brushed Nickel Bath Bar', placeholder, price, sku, placeholder * price]
+return ['Commercial Electric 3-Light Brushed Nickel Bath Bar', placeholder, price, '#1000183460', placeholder * price]
 }
 function ledLights () {
 var price = 0
-return ['Ecosmart 60W Equivalent Daylight 5000K LED Lights', placeholder, price, sku, placeholder * price]
+return ['Ecosmart 60W Equivalent Daylight 5000K LED Lights', placeholder, price, '#1000835485', placeholder * price]
 }
 function bathroomexhaustfaneach () {
 var price = 0
-return ['Nutone 70cfm bathroom exhaust fan', placeholder, price, sku, placeholder * price]
+return ['Nutone 70cfm bathroom exhaust fan', placeholder, price, '#1000107095', placeholder * price]
 }
 function unsandedGrout () {
 var price = 0
-return ['#165 Delorean Grey 10lb Unsanded Grout', placeholder, price, sku, placeholder * price]
+return ['#165 Delorean Grey 10lb Unsanded Grout', placeholder, price, '#1000400052', placeholder * price]
 }
 function ArboriteCountertop () {
     // '8FT ELEMENTAL CONCRETE COUNTERTOP','6FT ELEMENTAL CONCRETE COUNTERTOP','4FT ELEMENTAL CONCRETE COUNTERTOP'
@@ -988,15 +988,15 @@ return ['10FT ELEMENTAL CONCRETE COUNTERTOP', placeholder, price, sku, placehold
 }
 function endcapKit () {
 var price = 0
-return ['END CAP KIT 8830-58 ELEMENTAL CONC', placeholder, price, sku, placeholder * price]
+return ['END CAP KIT 8830-58 ELEMENTAL CONC', placeholder, price, '#1001093815', placeholder * price]
 }
 function reginoxSSSink () {
 var price = 0
-return ['Reginox SS sink & half, 3 hole', placeholder, price, sku, placeholder * price]
+return ['Reginox SS sink & half, 3 hole', placeholder, price, '#1000811069', placeholder * price]
 }
 function kitchenFaucet  () {
 var price = 0
-return ['MOEN TORRANCE 1H KITCHEN FAUCET CHROME', placeholder, price, sku, placeholder * price]
+return ['MOEN TORRANCE 1H KITCHEN FAUCET CHROME', placeholder, price, '#1000101570', placeholder * price]
 }
 
 
@@ -1026,7 +1026,7 @@ return ['HB 3.5" 78x84 Vertical Blind Kit White', placeholder, price, sku, place
 }
 function bathroomSink () {
 var price = 0
-return ['GB Oval drop in Sink', placeholder, price, sku, placeholder * price]
+return ['GB Oval drop in Sink', placeholder, price, '#1000671624', placeholder * price]
 }
 function refridgeratorx () {
     // 'White Refrigerator 66 5/8H x 29 1/2W x 30 15/16D (in.)','White Refrigerator 61 3/4H x 28W x 31 5/8D (in.)','Stainless Steel Refridgerator 66 5/8H x 29 1/2W x 30 15/16D (in.)'
@@ -1045,31 +1045,31 @@ return ['White Dishwasher 32 1/2H x 17 19/32W x 22 13/32D (in.)', placeholder, p
 }
 function washer () {
 var price = 0
-return ['Washer 43 1/2H x 26 7/8W x 26 5/8D (in.)', placeholder, price, sku, placeholder * price]
+return ['Washer 43 1/2H x 26 7/8W x 26 5/8D (in.)', placeholder, price, 'GTW460BMMWW', placeholder * price]
 }
 function dryer () {
 var price = 0
-return ['Dryer 42 3/5H x 26 7/8W x 29 1/2D (in.)', placeholder, price, sku, placeholder * price]
+return ['Dryer 42 3/5H x 26 7/8W x 29 1/2D (in.)', placeholder, price, 'GTD40EBMKWW', placeholder * price]
 }
 function frontLoadWasher () {
 var price = 0
-return ['Front Load Washer 33 5/16H x 23 1/2W x 26 5/8D (in.)', placeholder, price, sku, placeholder * price]
+return ['Front Load Washer 33 5/16H x 23 1/2W x 26 5/8D (in.)', placeholder, price, 'WCVH4800KWW', placeholder * price]
 }
 function frontLoadDryer () {
 var price = 0
-return ['Front Load Dryer 33 3/8H x 23 1/2W x 25 11/16D (in.)', placeholder, price, sku, placeholder * price]
+return ['Front Load Dryer 33 3/8H x 23 1/2W x 25 11/16D (in.)', placeholder, price, 'PCVH480EKWW', placeholder * price]
 }
 function stackingKit () {
 var price = 0
-return ['Stacking Kit fo 24" Front Load Laundry', placeholder, price, sku, placeholder * price]
+return ['Stacking Kit fo 24" Front Load Laundry', placeholder, price, 'GE24STACK', placeholder * price]
 }
 function libertyKnob () {
 var price = 0
-return ['Liberty 1-1/4 in. Garrett Knob 10PK', placeholder, price, sku, placeholder * price]
+return ['Liberty 1-1/4 in. Garrett Knob 10PK', placeholder, price, '#1000181668', placeholder * price]
 }
 function tMolding () {
 var price = 0
-return ['Kaindl Silver Oak 7/16-inch Thick x 1 3/4-inch W x 72-inch L T-Molding', placeholder, price, sku, placeholder * price]
+return ['Kaindl Grey Fig 7/16-inch Thick x 1 3/4-inch W x 72-inch L T-Molding', placeholder, price, '#1001211203', placeholder * price]
 }
 function showerBasex () {
     // 'MAAX Olympia 60-inch x 32-inch Left-Drain Shower Base in White','GLACIER BAY 48 inch x 32 inch Acrylic Shower Base with Left Concealed Drain','GLACIER BAY 48 inch x 32 inch Acrylic Shower Base with Right Concealed Drain'
@@ -1078,33 +1078,33 @@ return ['MAAX Olympia 60-inch x 32-inch Right-Drain Shower Base in White', place
 }
 function hinge () {
 var price = 0
-return ['Richelieu Semi-Concealed Self-Closing Hinge - Brushed Nickel 20 Pack', placeholder, price, sku, placeholder * price]
+return ['Richelieu Semi-Concealed Self-Closing Hinge - Brushed Nickel 20 Pack', placeholder, price, '#1000164551', placeholder * price]
 }
 function showerTile () {
 var price = 0
-return ['Enigma 12-inch x 24 Gladstone Grey Rectified', placeholder, price, sku, placeholder * price]
+return ['Enigma 12-inch x 24 Gladstone Grey Rectified', placeholder, price, '#1000164551', placeholder * price]
 }
 function breakawayScrews () {
 var price = 0
-return ['Richelieu Hardware 6-Pack, Break-Away Zinc Plated Machine screw ', placeholder, price, sku, placeholder * price]
+return ['Richelieu Hardware 6-Pack, Break-Away Zinc Plated Machine screw ', placeholder, price, '#1001238456', placeholder * price]
 }
 function millworkCove () {
 var price = 0
-return ['R2i Millwork Cove - 3/4 In. x 3/4 In. x 8 Ft.', placeholder, price, sku, placeholder * price]
+return ['R2i Millwork Cove - 3/4 In. x 3/4 In. x 8 Ft.', placeholder, price, '#1000827501', placeholder * price]
 }
 function stairNosing () {
 var price = 0
-return ['Shur Trim Stair Nosing Floor Moulding, Hammered Silver - 1-5/8 Inch', placeholder, price, sku, placeholder * price]
+return ['Shur Trim Stair Nosing Floor Moulding, Hammered Silver - 1-5/8 Inch', placeholder, price, '#1000414477', placeholder * price]
 }
 function decora3Gang () {
 var price = 0
-return ['Leviton Decora wall plate 3 Gang, White', placeholder, price, sku, placeholder * price]
+return ['Leviton Decora wall plate 3 Gang, White', placeholder, price, '#1000108116', placeholder * price]
 }
 function decora2Gang () {
 var price = 0
-return ['Leviton Decora wall plate 2 Gang, White', placeholder, price, sku, placeholder * price]
+return ['Leviton Decora wall plate 2 Gang, White', placeholder, price, '#1000107166', placeholder * price]
 }
 function quarterRound () {
 var price = 0
-return ['Quarter Round (In SQFT) - Alexandria Molding', placeholder, price, sku, placeholder * price]
+return ['Quarter Round (In SQFT) - Alexandria Molding', placeholder, price, '#1000166990', placeholder * price]
 }

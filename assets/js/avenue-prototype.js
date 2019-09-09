@@ -546,23 +546,88 @@ function blueTape () {
 }
 
 function drywall () {
-  var price = 0
+  const price = 11.98
+  var quantity = 0
+
+  if (finalJsonOutput.list2.rowList[17].quantity > 0) {
+    quantity = quantity + (parseFloat(finalJsonOutput.list2.rowList[17].quantity)/4)
+  }
+  if (finalJsonOutput.list2.rowList[20].quantity > 0) {
+    quantity = quantity + (parseFloat(finalJsonOutput.list2.rowList[20].quantity)/4)
+  } 
+  if (finalJsonOutput.list2.rowList[28].quantity > 0) {
+    quantity = quantity + parseFloat(finalJsonOutput.list2.rowList[28].quantity)
+  }
+  if (finalJsonOutput.list3.rowList[26].quantity > 0) {
+    quantity = quantity + (parseFloat(finalJsonOutput.list3.rowList[26].quantity)/4)
+  }
+  if (finalJsonOutput.list3.rowList[27].quantity > 0) {
+    quantity = quantity + (parseFloat(finalJsonOutput.list3.rowList[27].quantity)/4)
+  }
+  if (finalJsonOutput.list4.rowList[1].quantity > 0) {
+    quantity = quantity + parseFloat(finalJsonOutput.list4.rowList[1].quantity)
+  }
+  if (finalJsonOutput.list4.rowList[20].quantity > 0) {
+      quantity = quantity + (parseFloat(finalJsonOutput.list4.rowList[20].quantity)/4)
+  }
   return ['Drywall(1/2 Inch) ', placeholder3, price, '#1000686028', placeholder3 * price]
 }
 
 function drywallScrews () {
-var price = 0
-return ['Drywall Screws(Individual-Quantity) ', placeholder4, price, '#1001022574', placeholde4r * price]
+  var quantity = 0
+  var price = 0.01
+  
+  if (finalJsonOutput.list2.rowList[17].quantity > 0) {
+    quantity = quantity + (parseFloat(finalJsonOutput.list2.rowList[17].quantity)*40)
+  }
+  if (finalJsonOutput.list2.rowList[20].quantity > 0) {
+    quantity = quantity + (parseFloat(finalJsonOutput.list2.rowList[17].quantity)*40)
+  } 
+  if (finalJsonOutput.list2.rowList[28].quantity > 0) {
+    quantity = quantity + (parseFloat(finalJsonOutput.list2.rowList[28].quantity)*50)
+  }
+  if (finalJsonOutput.list3.rowList[26].quantity > 0) {
+    quantity = quantity + (parseFloat(finalJsonOutput.list3.rowList[26].quantity)*40)
+  }
+  if (finalJsonOutput.list3.rowList[27].quantity > 0) {
+    quantity = quantity + (parseFloat(finalJsonOutput.list3.rowList[27].quantity)*40)
+  }
+  if (finalJsonOutput.list4.rowList[1].quantity > 0) {
+    quantity = quantity + (parseFloat(finalJsonOutput.list4.rowList[1].quantity)*50)
+  }
+  if (finalJsonOutput.list4.rowList[20].quantity > 0) {
+      quantity = quantity + (parseFloat(finalJsonOutput.list4.rowList[20].quantity)*40)
+  }
+  if (finalJsonOutput.list5.rowList[0].quantity > 0) {
+    quantity = quantity + (parseFloat(finalJsonOutput.list5.rowList[0].quantity)*200)
+  }
+  if (finalJsonOutput.list5.rowList[3].quantity > 0) {
+    quantity = quantity + (parseFloat(finalJsonOutput.list5.rowList[3].quantity)*200)
+  }
+  if (finalJsonOutput.list5.rowList[32].quantity > 0) {
+      quantity = quantity + (parseFloat(finalJsonOutput.list5.rowList[32].quantity)*40)
+  }  
+  return ['Drywall Screws(Individual-Quantity) ', placeholder4, price, '#1001022574', placeholde4r * price]
 }
 
 function cornerBeads () {
-var price = 0
+var quantity = 0
+const price = 2.38
+
+if (finalJsonOutput.list2.rowList[28].quantity > 0) {
+  quantity = quantity + (parseFloat(finalJsonOutput.list2.rowList[28].quantity)*3)
+}  
+if (finalJsonOutput.list4.rowList[1].quantity > 0) {
+  quantity = quantity + (parseFloat(finalJsonOutput.list4.rowList[1].quantity)*3)
+}  
 return ['Corner Beads(90 degree) ', placeholder5, price, '#1000435640', placeholder5 * price]
 }
 
 function sheetrock90 () {
-var price = 0
-return ['Sheetrock 90 ', placeholder6, price,'#1000116303', placeholder6 * price]
+var quantity = 0
+const price = 23.90
+
+return ['Sheetrock 90 ', placeholder6, price,'#1000405265', placeholder6 * price]
 }
 
 function sheetrock20 () {

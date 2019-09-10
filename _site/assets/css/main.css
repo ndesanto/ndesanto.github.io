@@ -106,6 +106,7 @@ body {
 .al-button a{
 	background: orangered;
 	width: 100%;
+	height: auto;
 	color: white;
 	padding: 10px 100px;
 	cursor: pointer;

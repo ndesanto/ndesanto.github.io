@@ -4,185 +4,185 @@ var qty = 0
 var vrb = true
 var preConstruction = [
   'Pre Construction Prep',
-  ['Protect Flooring With RAM board', qty, 600, null, null, false],
-  ['Clean Suite - Move in ready condition', qty, 550, null, null, false],
-  ['Cover Stairs - with RAM board', qty, 100, null, null, false],
-  ['Cover Hallways/Carpet Stairs - Roberts Carpet Protection Film', qty, 190, null, null, false]
+  ['Protect Flooring With RAM board', qty, 600, false, false, false],
+  ['Clean Suite - Move in ready condition', qty, 550, false, false, false],
+  ['Cover Stairs - with RAM board', qty, 100, false, false, false],
+  ['Cover Hallways/Carpet Stairs - Roberts Carpet Protection Film', qty, 190, false, false, false]
 ]
 
 var demolition = [
   'Demolition',
-  ['Classic Suite Demolition', qty, 1200, null, null, false],
-  ['Semi-Premium Demolition', qty, 1400, null, null, false],
-  ['Premium Suite Demolition', qty, 1800, null, null, false]
+  ['Classic Suite Demolition', qty, 1200, false, false, false],
+  ['Semi-Premium Demolition', qty, 1400, false, false, false],
+  ['Premium Suite Demolition', qty, 1800, false, false, false]
 ]
 
 var livingRoom = [
   'Living Room/Dining Room',
   ['2.5 Inch Cordless Blinds', qty, 105, ['72x48"', '18x72"', '24x72"', '30x72"', '36x72"', '42x72"', '48x72"', '60x48"', '60x72"', '72x72"', '36x48"'], ['Esspresso', 'White'], false],
   ['Vertical Blinds', qty, 105, ['78x84"', '66x84"'], ['White'], false],
-  ['Balcony Door', qty, [200, 115], null, null, vrb],
-  ['Replace Ceiling Fan', qty, 140, null, null, false],
-  ['Replace Crown Molding', qty, 14, null, null, false],
-  ['Flooring', qty, [2.1, 'custom'], null, null, vrb],
-  ['T-Mouldings required throughout unit', qty, 0, null, null, false],
-  ['Replace Light Fixture', qty, 42, null, null, false],
-  ['Replace Stairs', qty, 140, null, null, false],
-  ['Replace Smoke Alarm or CO2 Alarm', qty, 84, null, null, false],
-  ['Replace Baseboard', qty, 4.2, null, null, false],
-  ['Replace Quarter Round', qty, 4.2, null, null, false],
-  ['Replace Door Trim', qty, 4.2, null, null, false],
-  ['Replace Receptacles', qty, 35, null, null, false],
-  ['Replace Switches', qty, 35, null, null, false],
-  ['Decore 2 Gang Switch', qty, 35, null, null, false],
-  ['Decora 3 Gang Switch', qty, 35, null, null, false],
-  ['Walls', qty, [35, 8.4], null, null, vrb],
-  ['Replace Window Screens', qty, 28, null, null, false],
-  ['Screw Down Flooring', qty, 0.8, null, null, false],
-  ['Install Drywall - Tape, Sand, and Primer, Complete', qty, 5.5, null, null, false],
-  ['Paint Doors', qty, 100, null, null, false],
-  ['Paint Walls (SQFT)', qty, 3.5, null, null, false],
-  ['Paint Crown Molding (LNFT)', qty, 4.2, null, null, false],
-  ['Paint Baseboard or Trim', qty, 2.1, null, null, false],
-  ['Paint Ceiling', qty, 1000, ['Entire Unit', 'Per Room'], null, false],
-  ['Patch and Replace Stucco Ceiling', qty, [1000, 400], ['Entire Unit', 'Per Room'], null, vrb],
-  ['Replace Door', qty, 200, ['16"', '32"', '30"', '28"', '24"'], ['Left Handed', 'Right Handed'], false],
-  ['Build Down Bulkhead to Install Bi-Fold Door', qty, 450, null, null, false],
-  ['Replace Bi-Fold Door', qty, 150, ['24"', '30"', '36"'], null, false],
-  ['Replace Closet Rod/Rack', qty, 105, null, null, false],
-  ['Replace Closet Shelves', qty, 75, null, null, false]
+  ['Balcony Door', qty, [200, 115], false, false, vrb],
+  ['Replace Ceiling Fan', qty, 140, false, false, false],
+  ['Replace Crown Molding', qty, 14, false, false, false],
+  ['Flooring', qty, [2.1, 'custom'], false, false, vrb],
+  ['T-Mouldings required throughout unit', qty, 0, false, false, false],
+  ['Replace Light Fixture', qty, 42, false, false, false],
+  ['Replace Stairs', qty, 140, false, false, false],
+  ['Replace Smoke Alarm or CO2 Alarm', qty, 84, false, false, false],
+  ['Replace Baseboard', qty, 4.2, false, false, false],
+  ['Replace Quarter Round', qty, 4.2, false, false, false],
+  ['Replace Door Trim', qty, 4.2, false, false, false],
+  ['Replace Receptacles', qty, 35, false, false, false],
+  ['Replace Switches', qty, 35, false, false, false],
+  ['Decore 2 Gang Switch', qty, 35, false, false, false],
+  ['Decora 3 Gang Switch', qty, 35, false, false, false],
+  ['Walls', qty, [35, 8.4], false, false, vrb],
+  ['Replace Window Screens', qty, 28, false, false, false],
+  ['Screw Down Flooring', qty, 0.8, false, false, false],
+  ['Install Drywall - Tape, Sand, and Primer, Complete', qty, 5.5, false, false, false],
+  ['Paint Doors', qty, 100, false, false, false],
+  ['Paint Walls (SQFT)', qty, 3.5, false, false, false],
+  ['Paint Crown Molding (LNFT)', qty, 4.2, false, false, false],
+  ['Paint Baseboard or Trim', qty, 2.1, false, false, false],
+  ['Paint Ceiling', qty, 1000, ['Entire Unit', 'Per Room'], false, false],
+  ['Patch and Replace Stucco Ceiling', qty, [1000, 400], ['Entire Unit', 'Per Room'], false, vrb],
+  ['Replace Door', qty, 200, ['16"', '32"', '30"', '28"', '24"'], ['LH', 'RH'], false],
+  ['Build Down Bulkhead to Install Bi-Fold Door', qty, 450, false, false, false],
+  ['Replace Bi-Fold Door', qty, 150, ['24"', '30"', '36"'], false, false],
+  ['Replace Closet Rod/Rack', qty, 105, false, false, false],
+  ['Replace Closet Shelves', qty, 75, false, false, false]
 ]
 
 var kitchen = [
   'Kitchen',
-  ['Angle Stop', qty, 75, null, null, vrb],
-  ['Boiler Pan', qty, ['custom', 'custom'], null, null, vrb],
-  ['Cabinets and Drawer Pulls', qty, [20, 'custom'], null, null, vrb],
-  ['Replace Cabinet Door Hinges', qty, 350, null, null, false],
-  ['Replace Cabinets and Drawers Small', qty, 1400, null, null, false],
-  ['Replace Cabinets and Drawers Medium', qty, 1600, null, null, false],
-  ['Replace Cabinets and Drawers Large', qty, 1800, null, null, false],
-  ['Paint Cabinets and Drawers', qty, 980, null, null, false],
-  ['Paint Crown Molding (LNFT)', qty, 4.2, null, null, false],
-  ['Paint Baseboard (LNFT)', qty, 2.1, null, null, false],
-  ['Paint Trim (LNFT)', qty, 2.1, null, null, false],
-  ['Paint Walls (SQFT)', qty, 3.5, null, null, false],
-  ['Paint Doors', qty, 100, null, null, false],
-  ['Install Countertop', qty, 420, ['10\'', '8\'', '6\'', '4\''], null, false],
-  ['Countertop Endcaps Needed', qty, 0, null, null, false],
-  ['Miter Kitchen Countertop', qty, 220, null, null, false],
-  ['Replace Faucet Only', qty, 70, null, null, false],
-  ['Flooring', qty, [2.1, 'custom'], null, null, vrb],
-  ['Replace Light Fixture', qty, 42, null, null, false],
-  ['Replace GFCI', qty, 105, null, null, false],
-  ['Replace Microwave', qty, 70, null, null, false],
-  ['Replace Range Hood', qty, 210, null, null, false],
-  ['Install Charcoal Filtered Range Hood', qty, 450, null, null, false],
-  ['Replace Sink and Faucet', qty, 420, null, null, false],
-  ['Replace Baseboard', qty, 4.2, null, null, false],
-  ['Replace Door Trim', qty, 4.2, null, null, false],
-  ['Walls', qty, [35, 8.4], null, null, vrb],
-  ['Replace Ceiling', qty, 5, null, null, false],
-  ['Kitchen Backsplash Install', qty, 22, null, null, false],
-  ['Remove Existing Backsplash and Prep Walls', qty, 250, null, null, false],
-  ['Remove and Re-Install Existing Dishwasher', qty, 75, null, null, false],
-  ['Refridgerator', qty, 105, ['White 59 7/8H x 24W x 28 5/8D (in.)', 'White 66 5/8H x 29 1/2W x 30 15/16D (in.)', 'White 61 3/4H x 28W x 31 5/8D (in.)', 'Stainless Steel 66 5/8H x 29 1/2W x 30 15/16D (in.)'], null, false],
-  ['Stove', qty, 105, ['White 24W x 42 1/8H x 26 5/8D (in.)', 'White 30W x 46 1/2H x 29 7/8D (in.)', 'Stainless Steel 30W x 46 7/8H x 26 1/4D (in.)'], null, false],
-  ['Dishwasher', qty, 640, ['White 32 1/2H x 17 19/32W x 22 13/32D (in.)', 'White 32 1/2H x 23 1/2W x 22 13/32D (in.)', 'Stainless Steel 32 1/2H x 23 1/2W x 22 13/32D (in.)'], null, false]
+  ['Angle Stop', qty, 75, false, false, vrb],
+  ['Boiler Pan', qty, ['custom', 'custom'], false, false, vrb],
+  ['Cabinets and Drawer Pulls', qty, [20, 'custom'], false, false, vrb],
+  ['Replace Cabinet Door Hinges', qty, 350, false, false, false],
+  ['Replace Cabinets and Drawers Small', qty, 1400, false, false, false],
+  ['Replace Cabinets and Drawers Medium', qty, 1600, false, false, false],
+  ['Replace Cabinets and Drawers Large', qty, 1800, false, false, false],
+  ['Paint Cabinets and Drawers', qty, 980, false, false, false],
+  ['Paint Crown Molding (LNFT)', qty, 4.2, false, false, false],
+  ['Paint Baseboard (LNFT)', qty, 2.1, false, false, false],
+  ['Paint Trim (LNFT)', qty, 2.1, false, false, false],
+  ['Paint Walls (SQFT)', qty, 3.5, false, false, false],
+  ['Paint Doors', qty, 100, false, false, false],
+  ['Install Countertop', qty, 420, ['10\'', '8\'', '6\'', '4\''], false, false],
+  ['Countertop Endcaps Needed', qty, 0, false, false, false],
+  ['Miter Kitchen Countertop', qty, 220, false, false, false],
+  ['Replace Faucet Only', qty, 70, false, false, false],
+  ['Flooring', qty, [2.1, 'custom'], false, false, vrb],
+  ['Replace Light Fixture', qty, 42, false, false, false],
+  ['Replace GFCI', qty, 105, false, false, false],
+  ['Replace Microwave', qty, 70, false, false, false],
+  ['Replace Range Hood', qty, 210, false, false, false],
+  ['Install Charcoal Filtered Range Hood', qty, 450, false, false, false],
+  ['Replace Sink and Faucet', qty, 420, false, false, false],
+  ['Replace Baseboard', qty, 4.2, false, false, false],
+  ['Replace Door Trim', qty, 4.2, false, false, false],
+  ['Walls', qty, [35, 8.4], false, false, vrb],
+  ['Replace Ceiling', qty, 5, false, false, false],
+  ['Kitchen Backsplash Install', qty, 22, false, false, false],
+  ['Remove Existing Backsplash and Prep Walls', qty, 250, false, false, false],
+  ['Remove and Re-Install Existing Dishwasher', qty, 75, false, false, false],
+  ['Refridgerator', qty, 105, ['White 59 7/8H x 24W x 28 5/8D (in.)', 'White 66 5/8H x 29 1/2W x 30 15/16D (in.)', 'White 61 3/4H x 28W x 31 5/8D (in.)', 'Stainless Steel 66 5/8H x 29 1/2W x 30 15/16D (in.)'], false, false],
+  ['Stove', qty, 105, ['White 24W x 42 1/8H x 26 5/8D (in.)', 'White 30W x 46 1/2H x 29 7/8D (in.)', 'Stainless Steel 30W x 46 7/8H x 26 1/4D (in.)'], false, false],
+  ['Dishwasher', qty, 640, ['White 32 1/2H x 17 19/32W x 22 13/32D (in.)', 'White 32 1/2H x 23 1/2W x 22 13/32D (in.)', 'Stainless Steel 32 1/2H x 23 1/2W x 22 13/32D (in.)'], false, false]
 ]
 
 var bedrooms = [
   'Bedroom(s)',
-  ['Replace Blinds', qty, 105, null, null, false],
-  ['Build Down Bulkhead to Install Bi-Fold Door', qty, 450, null, null, false],
-  ['Replace Door - Masonite Lincoln Park Bi-Fold', qty, 150, ['24"', '30"', '36"'], null, false],
-  ['Replace Bypass Door - White VERANDA', qty, 200, ['72', '48'], null, false],
-  ['Paint Doors', qty, 100, null, null, false],
-  // ['Paint Bi-folding Door', qty, 105, null, null, false],
-  ['Paint Baseboard or Trim', qty, 2.1, null, null, false],
-  ['Paint Walls (SQFT)', qty, 3.5, null, null, false],
-  ['Patch and Replace Stucco Ceiling', qty, 400, null, null, false],
-  ['Replace Ceiling Fan', qty, 105, null, null, false],
-  ['Replace Closet Rod/Rack', qty, 105, null, null, false],
-  ['Replace Closet/Drawer Knobs', qty, 35, null, null, false],
-  ['Replace Closet Shelves', qty, 75, null, null, false],
-  ['Replace Crown Molding', qty, 14, null, null, false],
-  ['Replace Doorstop/Hinges/Closer', qty, 28, null, null, false],
-  ['Flooring', qty, ['custom', 2.1], null, null, vrb],
-  ['Replace Light Fixtures', qty, 42, null, null, false],
-  ['Replace Privacy Lockset', qty, 35, null, null, false],
-  ['Smoke alarm/CO2 Alarm', qty, 84, null, null, false],
-  ['Replace Baseboard (LNFT)', qty, 4.2, null, null, false],
-  ['Replace Trim (LNFT)', qty, 4.2, null, null, false],
-  ['Walls', qty, [8.4, 35], null, null, vrb],
-  ['Replace Switches', qty, 25, null, null, false],
-  ['Replace Receptacle', qty, 25, null, null, false],
-  // ['Replace Wall Plates for Electrical', qty, 35, null, null, false],
-  ['Repair Window Screens', qty, 28, null, null, false]
+  ['Replace Blinds', qty, 105, false, false, false],
+  ['Build Down Bulkhead to Install Bi-Fold Door', qty, 450, false, false, false],
+  ['Replace Door - Masonite Lincoln Park Bi-Fold', qty, 150, ['24"', '30"', '36"'], false, false],
+  ['Replace Bypass Door - White VERANDA', qty, 200, ['72', '48'], false, false],
+  ['Paint Doors', qty, 100, false, false, false],
+  // ['Paint Bi-folding Door', qty, 105, false, false, false],
+  ['Paint Baseboard or Trim', qty, 2.1, false, false, false],
+  ['Paint Walls (SQFT)', qty, 3.5, false, false, false],
+  ['Patch and Replace Stucco Ceiling', qty, 400, false, false, false],
+  ['Replace Ceiling Fan', qty, 105, false, false, false],
+  ['Replace Closet Rod/Rack', qty, 105, false, false, false],
+  ['Replace Closet/Drawer Knobs', qty, 35, false, false, false],
+  ['Replace Closet Shelves', qty, 75, false, false, false],
+  ['Replace Crown Molding', qty, 14, false, false, false],
+  ['Replace Doorstop/Hinges/Closer', qty, 28, false, false, false],
+  ['Flooring', qty, ['custom', 2.1], false, false, vrb],
+  ['Replace Light Fixtures', qty, 42, false, false, false],
+  ['Replace Privacy Lockset', qty, 35, false, false, false],
+  ['Smoke alarm/CO2 Alarm', qty, 84, false, false, false],
+  ['Replace Baseboard (LNFT)', qty, 4.2, false, false, false],
+  ['Replace Trim (LNFT)', qty, 4.2, false, false, false],
+  ['Walls', qty, [8.4, 35], false, false, vrb],
+  ['Replace Switches', qty, 25, false, false, false],
+  ['Replace Receptacle', qty, 25, false, false, false],
+  // ['Replace Wall Plates for Electrical', qty, 35, false, false, false],
+  ['Repair Window Screens', qty, 28, false, false, false]
 ]
 
 var bathrooms = [
   'Bathroom(s)',
   ['Tub to Shower Conversion - Tile and Acrylic Shower Base', qty, 2500, ['60"', '48"'], ['LH', 'RH'], false],
   ['Replace Door - Masonite Lincoln Park', qty, 200, ['32"', '30"', '28"', '24"'], ['LH', 'RH'], false],
-  ['Replace Angle Stop', qty, 75, null, null, false],
-  ['Replace Greenboard, Acrylic Shower Walls, Bathtub, and Shower Faucet', qty, 1400, null, ['LH', 'RH'], false],
-  ['Replace Hardware - End Brackets/ Soap Holder/ Toilet Paper Holder(s)', qty, 105, null, null, false],
-  ['Cabinets and Drawer Pulls - Per Handle', qty, 20, null, null, false],
-  ['Replace Cabinet Door Hinges - Per Hinge', qty, 7.5, null, null, false],
-  ['Prime and Paint Cabinets and Drawers', qty, 350, null, null, false],
-  ['Paint Medicine Cabinet', qty, 140, null, null, false],
-  ['Paint Baseboard or Trim', qty, 2.1, null, null, false],
-  ['Paint Walls (SQFT)', qty, 3.5, null, null, false],
-  ['Paint Doors', qty, 100, null, null, false],
-  ['Patch and Replace stucco ceiling', qty, 400, null, null, false],
-  ['Replace Countertop, Sink, Faucet*', qty, 420, null, null, false],
-  ['Replace Doorstop/Hinges/Closer', qty, 28, null, null, false],
-  ['Replace Faucet/ Pop-up', qty, 210, null, null, false],
-  ['Replace Exhaust Fan', qty, 105, null, null, false],
-  ['Replace GFCI', qty, 105, null, null, false],
-  ['Replace Electrical Fixture', qty, 42, null, null, false],
-  ['Flooring', qty, ['custom', 2.1], null, null, vrb],
-  ['Replace Handles and Index Buttons', qty, 35, null, null, false],
-  ['Replace Light Fixture', qty, 42, null, null, false],
-  ['Replace Medicine Cabinet ', qty, 150, null, null, false],
-  ['Replace Mirror', qty, 70, null, null, false],
-  ['Replace Shower Door', qty, 350, null, null, false],
-  ['Replace Shower Head / Rod', qty, 70, null, null, false],
-  ['Install 2 Rows of Wall Tile for Vanity Backsplash - Subway (SQFT)', qty, 22, null, null, false],
-  ['Replace Sink/Vanity', qty, 575, ['24"', '30"', '48"', 'Pedestal Sink'], null, false],
-  ['Replace Existing Toilet', qty, 210, null, null, false],
-  ['Remove and Install New Toilet', qty, 210, null, null, false],
-  ['Replace Door Trim', qty, 4.2, null, null, false],
-  ['Replace Baseboard', qty, 4.2, null, null, false],
-  ['Replace Walls (LNFT)', qty, [8.4, 32], null, null, vrb]
+  ['Replace Angle Stop', qty, 75, false, false, false],
+  ['Replace Greenboard, Acrylic Shower Walls, Bathtub, and Shower Faucet', qty, 1400, false, ['LH', 'RH'], false],
+  ['Replace Hardware - End Brackets/ Soap Holder/ Toilet Paper Holder(s)', qty, 105, false, false, false],
+  ['Cabinets and Drawer Pulls - Per Handle', qty, 20, false, false, false],
+  ['Replace Cabinet Door Hinges - Per Hinge', qty, 7.5, false, false, false],
+  ['Prime and Paint Cabinets and Drawers', qty, 350, false, false, false],
+  ['Paint Medicine Cabinet', qty, 140, false, false, false],
+  ['Paint Baseboard or Trim', qty, 2.1, false, false, false],
+  ['Paint Walls (SQFT)', qty, 3.5, false, false, false],
+  ['Paint Doors', qty, 100, false, false, false],
+  ['Patch and Replace stucco ceiling', qty, 400, false, false, false],
+  ['Replace Countertop, Sink, Faucet*', qty, 420, false, false, false],
+  ['Replace Doorstop/Hinges/Closer', qty, 28, false, false, false],
+  ['Replace Faucet/ Pop-up', qty, 210, false, false, false],
+  ['Replace Exhaust Fan', qty, 105, false, false, false],
+  ['Replace GFCI', qty, 105, false, false, false],
+  ['Replace Electrical Fixture', qty, 42, false, false, false],
+  ['Flooring', qty, ['custom', 2.1], false, false, vrb],
+  ['Replace Handles and Index Buttons', qty, 35, false, false, false],
+  ['Replace Light Fixture', qty, 42, false, false, false],
+  ['Replace Medicine Cabinet ', qty, 150, false, false, false],
+  ['Replace Mirror', qty, 70, false, false, false],
+  ['Replace Shower Door', qty, 350, false, false, false],
+  ['Replace Shower Head / Rod', qty, 70, false, false, false],
+  ['Install 2 Rows of Wall Tile for Vanity Backsplash - Subway (SQFT)', qty, 22, false, false, false],
+  ['Replace Sink/Vanity', qty, 575, ['24"', '30"', '48"', 'Pedestal Sink'], false, false],
+  ['Replace Existing Toilet', qty, 210, false, false, false],
+  ['Remove and Install New Toilet', qty, 210, false, false, false],
+  ['Replace Door Trim', qty, 4.2, false, false, false],
+  ['Replace Baseboard', qty, 4.2, false, false, false],
+  ['Replace Walls (LNFT)', qty, [8.4, 32], false, false, vrb]
 ]
 
 var additionalItems = [
   'Additional Items',
-  ['Apply Tub and Tile Caulk', qty, 175, null, null, false],
-  ['Clean Carpets', qty, 0, null, null, false],
-  ['Deodorize Carpets', qty, 0, null, null, false],
-  ['Intercom', qty, 105, null, null, false],
-  ['Paint and Patch Walls (SQFT)', qty, 3.5, null, null, false],
-  ['Replace Registers', qty, 21, null, null, false],
-  ['Replace Wall Plates', qty, 9, null, null, false],
-  ['Smoke Detector', qty, 84, null, null, false],
-  ['Upgrade Cabinet and Drawer Pulls', qty, 0, null, null, false],
-  ['Windows', qty, 0, null, null, false],
-  ['Apply Drain Options', qty, 0, null, null, false],
-  ['Audit Fire Extinguisher', qty, 0, null, null, false],
-  ['Inspect Air Conditioner/Heat Pump (outside)', qty, 0, null, null, false],
-  ['Inspect Air Handler (inside)', qty, 0, null, null, false],
-  ['Inspect Garage Entry Door ', qty, 0, null, null, false],
-  ['Inspect Water Heater ', qty, 0, null, null, false],
-  ['Replace Air Filter', qty, 0, null, null, false],
-  ['Replace Light Bulbs ', qty, 0, null, null, false],
-  ['Replace Portion of Ceiling in Bedroom and Living Room & Paint Ceilings Entire Unit', qty, 0, null, null, false],
-  ['Washer 43 1/2H x 26 7/8W x 26 5/8D (in.)', qty, 105, null, false],
-  ['Dryer 42 3/5H x 26 7/8W x 29 1/2D (in.)', qty, 105, null, false],
-  ['Front Load Washer 33 5/16H x 23 1/2W x 26 5/8D (in.)', qty, 105, null, null, false],
-  ['Front Load Dryer 33 3/8H x 23 1/2W x 25 11/16D (in.)', qty, 105, null, null, false]
+  ['Apply Tub and Tile Caulk', qty, 175, false, false, false],
+  ['Clean Carpets', qty, 0, false, false, false],
+  ['Deodorize Carpets', qty, 0, false, false, false],
+  ['Intercom', qty, 105, false, false, false],
+  ['Paint and Patch Walls (SQFT)', qty, 3.5, false, false, false],
+  ['Replace Registers', qty, 21, false, false, false],
+  ['Replace Wall Plates', qty, 9, false, false, false],
+  ['Smoke Detector', qty, 84, false, false, false],
+  ['Upgrade Cabinet and Drawer Pulls', qty, 0, false, false, false],
+  ['Windows', qty, 0, false, false, false],
+  ['Apply Drain Options', qty, 0, false, false, false],
+  ['Audit Fire Extinguisher', qty, 0, false, false, false],
+  ['Inspect Air Conditioner/Heat Pump (outside)', qty, 0, false, false, false],
+  ['Inspect Air Handler (inside)', qty, 0, false, false, false],
+  ['Inspect Garage Entry Door ', qty, 0, false, false, false],
+  ['Inspect Water Heater ', qty, 0, false, false, false],
+  ['Replace Air Filter', qty, 0, false, false, false],
+  ['Replace Light Bulbs ', qty, 0, false, false, false],
+  ['Replace Portion of Ceiling in Bedroom and Living Room & Paint Ceilings Entire Unit', qty, 0, false, false, false],
+  ['Washer 43 1/2H x 26 7/8W x 26 5/8D (in.)', qty, 105, false, false],
+  ['Dryer 42 3/5H x 26 7/8W x 29 1/2D (in.)', qty, 105, false, false],
+  ['Front Load Washer 33 5/16H x 23 1/2W x 26 5/8D (in.)', qty, 105, false, false, false],
+  ['Front Load Dryer 33 3/8H x 23 1/2W x 25 11/16D (in.)', qty, 105, false, false, false]
 ]
 
 const sectionsList = [preConstruction, demolition, livingRoom, kitchen, bedrooms, bathrooms, additionalItems]
@@ -191,109 +191,151 @@ var customPriceCount = 0
 var alGridItemCount = 0
 function createHTML () {
   for (var i = 0; i < sectionsList.length; i++) {
+    var hRule2 = document.createElement('hr')
     var newTitle = document.createElement('h2')
     newTitle.innerHTML = sectionsList[i][0]
     var newDiv = document.createElement('div')
     $(newDiv).addClass('content-wrap')
+    newDiv.appendChild(hRule2)
+
+
     for (var j = 1; j < sectionsList[i].length; j++) {
-      var newDivContainer = document.createElement('div')
-      $(newDivContainer).addClass('al-grid')
-      newDivContainer.setAttribute('name', 'al-grid-item' + alGridItemCount)
-      alGridItemCount++
+      var tempArray = []
+      var maxVariants = 0
 
-      var divProductName = document.createElement('div')
-      divProductName.innerHTML = sectionsList[i][j][0]
-      $(divProductName).addClass('capitalize')
-      $(divProductName).addClass('grid-col')
 
-      var newInput = document.createElement('input')
-      newInput.setAttribute('name', 'al-input')
-      newInput.setAttribute('placeholder', 'quantity')
+      if ((Array.isArray(sectionsList[i][j][2]) || Array.isArray(sectionsList[i][j][3]) || Array.isArray(sectionsList[i][j][4]) || sectionsList[i][j][5])) { 
+        maxVariants += sectionsList[i][j][2].length - 1 || 0
+        maxVariants += sectionsList[i][j][3].length - 1 || 0
+        maxVariants += sectionsList[i][j][4].length - 1 || 0 
+      }
+      for (var z = 0 ; z <= maxVariants; z++) {
 
-      $(newInput).addClass('grid-col')
+        var newDivContainer = document.createElement('div')
+        $(newDivContainer).addClass('al-grid')
 
-      var hRule = document.createElement('hr')
-      newDivContainer.appendChild(divProductName)
 
-      var sizeSelector = document.createElement('div')
-      if (Array.isArray(sectionsList[i][j][3])) {
-        sizeSelector = document.createElement('select')
-        for (var y = 0; y < sectionsList[i][j][3].length; y++) {
-          var newOption = document.createElement('option')
-          newOption.innerHTML = [sectionsList[i][j][3][y]]
-          sizeSelector.appendChild(newOption)
+        var divProductName = document.createElement('div')
+        divProductName.innerHTML = sectionsList[i][j][0]
+        $(divProductName).addClass('capitalize')
+        $(divProductName).addClass('grid-col')
+
+        var newInput = document.createElement('input')
+        newInput.setAttribute('name', 'al-input')
+        newInput.setAttribute('placeholder', 'quantity')
+
+        $(newInput).addClass('grid-col')
+
+        var hRule = document.createElement('hr')
+        newDivContainer.appendChild(divProductName)
+
+        var sizeSelector = document.createElement('div')
+        if (Array.isArray(sectionsList[i][j][3])) {
+          sizeSelector = document.createElement('select')
+          for (var y = 0; y < sectionsList[i][j][3].length; y++) {
+            var newOption = document.createElement('option')
+            newOption.innerHTML = [sectionsList[i][j][3][y]]
+            sizeSelector.appendChild(newOption)
+          }
         }
-      }
-      if (sizeSelector != null) {
-        newDivContainer.appendChild(sizeSelector)
-      }
-      var variantSelector = document.createElement('div')
-      if (Array.isArray(sectionsList[i][j][4])) {
-        variantSelector = document.createElement('select')
-        for (var yy = 0; yy < sectionsList[i][j][4].length; yy++) {
-          var newOption2 = document.createElement('option')
-          newOption2.innerHTML = [sectionsList[i][j][4][yy]]
-          variantSelector.appendChild(newOption2)
+        if (sizeSelector != null) {
+          newDivContainer.appendChild(sizeSelector)
         }
-      }
-      if (variantSelector != null) {
-        newDivContainer.appendChild(variantSelector)
-      }
-
-      var vrbSelector = document.createElement('div')
-      if (sectionsList[i][j][5]) {
-        vrbSelector = document.createElement('select')
-        var newOption3 = document.createElement('option')
-        var newOption4 = document.createElement('option')
-        newOption3.innerHTML = 'Replace'
-        newOption4.innerHTML = 'Repair'
-
-        vrbSelector.appendChild(newOption3)
-        vrbSelector.appendChild(newOption4)
-      }
-      if (vrbSelector != null) {
-        newDivContainer.appendChild(vrbSelector)
-      }
-
-      var customValue = document.createElement('div')
-      if (Array.isArray(sectionsList[i][j][2])) {
-        if ((sectionsList[i][j][2][0] === 'custom') && (sectionsList[i][j][2][1] === 'custom')) {
-          customValue = document.createElement('input')
-          customValue.setAttribute('name', 'al-input-price' + customPriceCount)
-          customValue.setAttribute('placeholder', 'Input Price')
-          $(customValue).addClass('grid-col')
-          customPriceCount++
-        } else if (sectionsList[i][j][2][0] === 'custom') {
-          customValue = document.createElement('input')
-          customValue.setAttribute('name', 'al-input-price' + customPriceCount)
-          customValue.setAttribute('placeholder', 'Replace Price')
-          $(customValue).addClass('grid-col')
-          customPriceCount++
-        } else if (sectionsList[i][j][2][1] === 'custom') {
-          customValue = document.createElement('input')
-          customValue.setAttribute('name', 'al-input-price' + customPriceCount)
-          customValue.setAttribute('placeholder', 'Repair Price')
-          $(customValue).addClass('grid-col')
-          customPriceCount++
-        } else {
-          customValue = document.createElement('input')
-          customValue.setAttribute('name', 'al-input-price' + customPriceCount)
-          customValue.setAttribute('placeholder', 'Input Price')
-          $(customValue).addClass('grid-col')
-          $(customValue).addClass('hidden-vis')
-          customPriceCount++
+        var variantSelector = document.createElement('div')
+        if (Array.isArray(sectionsList[i][j][4])) {
+          variantSelector = document.createElement('select')
+          for (var yy = 0; yy < sectionsList[i][j][4].length; yy++) {
+            var newOption2 = document.createElement('option')
+            newOption2.innerHTML = [sectionsList[i][j][4][yy]]
+            variantSelector.appendChild(newOption2)
+          }
         }
-      }
+        if (variantSelector != null) {
+          newDivContainer.appendChild(variantSelector)
+        }
 
-      newDivContainer.appendChild(newInput)
+        var vrbSelector = document.createElement('div')
+        if (sectionsList[i][j][5]) {
+          vrbSelector = document.createElement('select')
+          var newOption3 = document.createElement('option')
+          var newOption4 = document.createElement('option')
+          newOption3.innerHTML = 'Replace'
+          newOption4.innerHTML = 'Repair'
 
-      if (customValue != null) {
-        newDivContainer.appendChild(customValue)
+          vrbSelector.appendChild(newOption3)
+          vrbSelector.appendChild(newOption4)
+        }
+        if (vrbSelector != null) {
+          newDivContainer.appendChild(vrbSelector)
+        }
+
+        var customValue = document.createElement('div')
+        if (Array.isArray(sectionsList[i][j][2])) {
+          if ((sectionsList[i][j][2][0] === 'custom') && (sectionsList[i][j][2][1] === 'custom')) {
+            customValue = document.createElement('input')
+            customValue.setAttribute('name', 'al-input-price' + customPriceCount)
+            customValue.setAttribute('placeholder', 'Input Price')
+            $(customValue).addClass('grid-col')
+            customPriceCount++
+          } else if (sectionsList[i][j][2][0] === 'custom') {
+            customValue = document.createElement('input')
+            customValue.setAttribute('name', 'al-input-price' + customPriceCount)
+            customValue.setAttribute('placeholder', 'Replace Price')
+            $(customValue).addClass('grid-col')
+            customPriceCount++
+          } else if (sectionsList[i][j][2][1] === 'custom') {
+            customValue = document.createElement('input')
+            customValue.setAttribute('name', 'al-input-price' + customPriceCount)
+            customValue.setAttribute('placeholder', 'Repair Price')
+            $(customValue).addClass('grid-col')
+            customPriceCount++
+          } else {
+            customValue = document.createElement('input')
+            customValue.setAttribute('name', 'al-input-price' + customPriceCount)
+            customValue.setAttribute('placeholder', 'Input Price')
+            $(customValue).addClass('grid-col')
+            $(customValue).addClass('hidden-vis')
+            customPriceCount++
+          }
+        }
+
+        newDivContainer.appendChild(newInput)
+
+        if (customValue != null) {
+          newDivContainer.appendChild(customValue)
+        }
+
+        topDiv = document.createElement('div')
+        $(topDiv).addClass('overflow-hidden')
+        middleDiv = document.createElement('div')
+        middleDiv.appendChild(newDivContainer)
+        middleDiv.appendChild(hRule)
+        middleDiv.setAttribute('name', 'al-grid-item' + alGridItemCount)
+        topDiv.appendChild(middleDiv)
+
+        if (z > 0) {
+          tempArray.push(sectionsList[i][j])
+          $(middleDiv).addClass('display-none')
+          addVariantRowDiv = document.createElement('div')
+          addVariantRowDiv.innerHTML += "+"
+          $(addVariantRowDiv).addClass('add-row')
+          addVariantRowDiv.setAttribute('name', j)
+
+          topDiv.appendChild(addVariantRowDiv)
+          if (z < maxVariants) {
+            $(addVariantRowDiv).addClass('display-none')
+          }
+        }
+        alGridItemCount++
+        newDiv.appendChild(topDiv)
+
       }
-      newDiv.appendChild(newDivContainer)
-      newDiv.appendChild(hRule)
+      for (var p = 0; p < tempArray.length; p++){
+        sectionsList[i].splice(j,0,tempArray[p])
+      }
+      j += tempArray.length
+
     }
-
     innerPage.appendChild(newTitle)
     innerPage.appendChild(newDiv)
   }
@@ -406,32 +448,33 @@ function jsonCreation () {
   var jsonString = '{ '
   var sectionCount = 0
   var k = 0
+  console.log(sectionsList)
   for (var i = 0; i < sectionsList.length; i++) {
     jsonString += '"list' + i + '": { "name": "' + sectionsList[i][0] + '", "rowList": ['
     for (var j = 1; j < sectionsList[i].length; j++) {
-      jsonString += '{ "rowName": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].innerHTML.replace(/"/g, '\\"') + '",'
+      jsonString += '{ "rowName": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].childNodes[0].innerHTML.replace(/"/g, '\\"') + '",'
       try {
-        for (k = 0; k < document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[1].length; k++) {
-          if (document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[1].childNodes[k].selected) {
-            jsonString += '"size": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[1].childNodes[k].innerHTML.replace(/"/g, '\\"') + '",'
+        for (k = 0; k < document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].childNodes[1].length; k++) {
+          if (document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].childNodes[1].childNodes[k].selected) {
+            jsonString += '"size": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].childNodes[1].childNodes[k].innerHTML.replace(/"/g, '\\"') + '",'
           }
         }
       } catch (err) { console.log(err) }
       try {
-        for (k = 0; k < document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[2].length; k++) {
-          if (document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[2].childNodes[k].selected) {
-            jsonString += '"variant": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[2].childNodes[k].innerHTML.replace(/"/g, '\\"') + '",'
+        for (k = 0; k < document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].childNodes[2].length; k++) {
+          if (document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].childNodes[2].childNodes[k].selected) {
+            jsonString += '"variant": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].childNodes[2].childNodes[k].innerHTML.replace(/"/g, '\\"') + '",'
           }
         }
       } catch (err) { console.log(err) }
       try {
-        for (k = 0; k < document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[3].length; k++) {
-          if (document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[3].childNodes[k].selected) {
-            jsonString += '"variable": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[3].childNodes[k].innerHTML.replace(/"/g, '\\"') + '",'
+        for (k = 0; k < document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].childNodes[3].length; k++) {
+          if (document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].childNodes[3].childNodes[k].selected) {
+            jsonString += '"variable": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].childNodes[3].childNodes[k].innerHTML.replace(/"/g, '\\"') + '",'
           }
         }
       } catch (err) { console.log(err) }
-      jsonString += '"quantity": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[4].value + '",'
+      jsonString += '"quantity": "' + document.getElementsByName('al-grid-item' + sectionCount)[0].childNodes[0].childNodes[4].value + '",'
 
       if (j === sectionsList[i].length - 1) {
         jsonString += '"price": "' + multiplierList[sectionCount] + '" }'
@@ -457,7 +500,20 @@ $('#al-button').on('click', function () {
   doMultiplication()
   finalJsonOutput = JSON.parse(jsonCreation())
   console.log(finalJsonOutput)
+  jsonSearcher('list0','RAM')
+
 })
+
+$('.add-row').on('click', function (event) {
+  $($(document.getElementsByName($(event.target).attr('name'))).siblings()).toggleClass('display-none')
+  $($(document.getElementsByName($(event.target).attr('name'))).siblings()).addClass('highlight-color')
+
+   if(event.target.innerHTML == "+") {
+    event.target.innerHTML = "-"
+   } else {
+    event.target.innerHTML = "+"
+   }
+ })
 
 $('#al-pdf-button').on('click', function () {
   console.log(rollOfRamBoard())
@@ -628,6 +684,20 @@ function printFormatter (list) {
 //   // plPremium295mlWaterProof(),
 //   // tubSurroundAdhesive()
 // ]
+
+function jsonSearcher(list, term) {
+  var quantity = 0
+  var sku = "#"
+
+  console.log(finalJsonOutput.list0.rowList)
+  for (var i = 0; i < finalJsonOutput.list0.rowList.length; i++) {
+    console.log(JSON.stringify(finalJsonOutput.list0.rowList[i].rowName))
+    if (JSON.stringify(finalJsonOutput.list0.rowList[i].rowName).includes(term)){
+      finalJsonOutput.list0.rowList[i].rowName
+    }
+  return [quantity, sku]
+  }
+}
 
 function rollOfRamBoard () {
   var quantity = 0

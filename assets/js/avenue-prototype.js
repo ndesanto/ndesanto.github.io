@@ -205,9 +205,11 @@ function createHTML () {
 
 
       if ((Array.isArray(sectionsList[i][j][2]) || Array.isArray(sectionsList[i][j][3]) || Array.isArray(sectionsList[i][j][4]) || sectionsList[i][j][5])) { 
-        maxVariants += sectionsList[i][j][2].length - 1 || 0
-        maxVariants += sectionsList[i][j][3].length - 1 || 0
-        maxVariants += sectionsList[i][j][4].length - 1 || 0 
+        maxVariants += (sectionsList[i][j][2].length || 1) * (sectionsList[i][j][3].length || 1) * (sectionsList[i][j][4].length || 1 )
+
+      }
+      if (maxVariants >= 1) {
+        maxVariants -= 1
       }
       for (var z = 0 ; z <= maxVariants; z++) {
 
@@ -355,8 +357,8 @@ newFinalDiv.appendChild(newFinalDivHST)
 innerPage.appendChild(newFinalDiv)
 
 function updateFinal (final) {
-  newFinalDivPre.innerHTML = 'Total Price: ' + final
-  newFinalDivHST.innerHTML = 'Total Price (Including HST): ' + (final * 1.13)
+  newFinalDivPre.innerHTML = 'Total Price: ' + final.toFixed(2)
+  newFinalDivHST.innerHTML = 'Total Price (Including HST): ' + (final * 1.13).toFixed(2)
   // print(final)
 }
 
@@ -515,7 +517,7 @@ $('.add-row').on('click', function (event) {
    }
  })
 
-$('#al-pdf-button').on('click', function () {
+$('#al-pdf-button1').on('click', function () {
   console.log(rollOfRamBoard())
   console.log(blueTape())
   console.log(whiteSilicone())
@@ -628,6 +630,65 @@ function printFormatter (list) {
   }
 }
 
+$('#al-pdf-button2').on('click', function () {
+
+  let scopeDocument = new jsPDF()
+  scopeDocument.setFontSize(11)
+  scopeDocument.setTextColor(100)
+
+  var pageSize = scopeDocument.internal.pageSize
+  var pageWidth = pageSize.width ? pageSize.width : pageSize.getWidth()
+  var text = scopeDocument.splitTextToSize("Customer Name: " + $('#al-customer-name').val(), pageWidth - 40, {})
+  scopeDocument.text(text, 14, 25)
+  var text = scopeDocument.splitTextToSize("Address: " + $('#al-customer-address').val(), pageWidth - 40, {})
+  scopeDocument.text(text, 14, 30)
+  var text = scopeDocument.splitTextToSize("Lead Number: " + $('#al-customer-lead').val(), pageWidth - 40, {})
+  scopeDocument.text(text, 14, 35)
+
+  var listNum = 35
+  var returnScopeList = []
+
+  for (var x in finalJsonOutput) {
+    scopeTitle = finalJsonOutput[x].name
+
+    returnScopeList = [[scopeTitle,'','','','']]
+    for (var y  = 0; y < finalJsonOutput[x].rowList.length; y++) {
+      scopeDocument.setFontStyle('normal')
+      if (finalJsonOutput[x].rowList[y].quantity) {
+        console.log(finalJsonOutput[x].rowList[y])
+        var size = ""
+        var variable = ""
+        var variant = ""
+        if (finalJsonOutput[x].rowList[y].size) {
+          size = finalJsonOutput[x].rowList[y].size
+        }
+        if (finalJsonOutput[x].rowList[y].variable) {
+          variable = finalJsonOutput[x].rowList[y].variable
+        }
+        if (finalJsonOutput[x].rowList[y].variant) {
+          variant = finalJsonOutput[x].rowList[y].variant
+        }
+
+        returnScopeList.push([finalJsonOutput[x].rowList[y].rowName,size,variable,variant, finalJsonOutput[x].rowList[y].quantity])
+
+
+      }
+    }
+    listNum += 15
+    scopeDocument.autoTable({
+      head: [['NAME', 'SIZE', 'VARIABLE', 'VARIANT', 'QUANTITY']],
+      body: returnScopeList,
+      startY: listNum
+    })
+    listNum += (returnScopeList.length*5)
+}
+
+  var today = new Date()
+  var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + '_'
+  var time = today.getHours() + '' + today.getMinutes() + '' + today.getSeconds()
+  scopeDocument.save('CeraStoneLtd-SCOPE-' + date + time + '.pdf')
+
+})
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----

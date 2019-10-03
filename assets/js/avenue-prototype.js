@@ -356,9 +356,11 @@ newFinalDiv.appendChild(newFinalDivHST)
 
 innerPage.appendChild(newFinalDiv)
 
+finalPriceWithTax = 0
 function updateFinal (final) {
   newFinalDivPre.innerHTML = 'Total Price: ' + final.toFixed(2)
   newFinalDivHST.innerHTML = 'Total Price (Including HST): ' + (final * 1.13).toFixed(2)
+  finalPriceWithTax = (final * 1.13).toFixed(2)
   // print(final)
 }
 
@@ -676,17 +678,78 @@ $('#al-pdf-button2').on('click', function () {
     }
     listNum += 15
     scopeDocument.autoTable({
-      head: [['NAME', 'SIZE', 'VARIABLE', 'VARIANT', 'QUANTITY']],
+      head: [['NAME ', 'SIZE ', 'VARIABLE ', 'VARIANT ', 'QUANTITY ']],
       body: returnScopeList,
       startY: listNum
     })
-    listNum += (returnScopeList.length*5)
+    listNum += (returnScopeList.length*5) + 30
 }
 
   var today = new Date()
   var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + '_'
   var time = today.getHours() + '' + today.getMinutes() + '' + today.getSeconds()
   scopeDocument.save('CeraStoneLtd-SCOPE-' + date + time + '.pdf')
+
+})
+
+$('#al-pdf-button3').on('click', function () {
+
+  let contractorScopeDocument = new jsPDF()
+  contractorScopeDocument.setFontSize(11)
+  contractorScopeDocument.setTextColor(100)
+
+  var pageSize = contractorScopeDocument.internal.pageSize
+  var pageWidth = pageSize.width ? pageSize.width : pageSize.getWidth()
+  var text = contractorScopeDocument.splitTextToSize("Customer Name: " + $('#al-customer-name').val(), pageWidth - 40, {})
+  contractorScopeDocument.text(text, 14, 25)
+  var text = contractorScopeDocument.splitTextToSize("Address: " + $('#al-customer-address').val(), pageWidth - 40, {})
+  contractorScopeDocument.text(text, 14, 30)
+  var text = contractorScopeDocument.splitTextToSize("Lead Number: " + $('#al-customer-lead').val(), pageWidth - 40, {})
+  contractorScopeDocument.text(text, 14, 35)
+  var text = contractorScopeDocument.splitTextToSize("Total Payout: " + finalPriceWithTax, pageWidth - 40, {})
+  contractorScopeDocument.text(text, 14, 40)
+
+  var listNum = 35
+  var returnScopeList = []
+
+  for (var x in finalJsonOutput) {
+    scopeTitle = finalJsonOutput[x].name
+
+    returnScopeList = [[scopeTitle,'','','','']]
+    for (var y  = 0; y < finalJsonOutput[x].rowList.length; y++) {
+      contractorScopeDocument.setFontStyle('normal')
+      if (finalJsonOutput[x].rowList[y].quantity) {
+        console.log(finalJsonOutput[x].rowList[y])
+        var size = ""
+        var variable = ""
+        var variant = ""
+        if (finalJsonOutput[x].rowList[y].size) {
+          size = finalJsonOutput[x].rowList[y].size
+        }
+        if (finalJsonOutput[x].rowList[y].variable) {
+          variable = finalJsonOutput[x].rowList[y].variable
+        }
+        if (finalJsonOutput[x].rowList[y].variant) {
+          variant = finalJsonOutput[x].rowList[y].variant
+        }
+
+        returnScopeList.push([finalJsonOutput[x].rowList[y].rowName,size,variable,variant])
+
+
+      }
+    }
+    listNum += 15
+    contractorScopeDocument.autoTable({
+      head: [['NAME ', 'SIZE ', 'VARIABLE ', 'VARIANT ']],
+      body: returnScopeList,
+      startY: listNum
+    })
+    listNum += (returnScopeList.length*5) + 30
+}
+  var today = new Date()
+  var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + '_'
+  var time = today.getHours() + '' + today.getMinutes() + '' + today.getSeconds()
+  contractorScopeDocument.save('CeraStoneLtd-CONTRACTOR-SCOPE-' + date + time + '.pdf')
 
 })
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----

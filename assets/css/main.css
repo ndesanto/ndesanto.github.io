@@ -169,3 +169,7 @@ body {
 		grid-gap: 5px;
 	}
 }
+.inline {
+	display: inline-block;
+}
+

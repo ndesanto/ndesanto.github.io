@@ -1,9 +1,100 @@
 ---
 #
+title: Welcome
 ---
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-{%- include header.html -%}
+<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body>
+
+
+<body class="font">
+    <nav id="navbar" class="navbar sticky-top nav-custom ">
+        <a class="sp navbar-brand nav-name" style="margin-left: 20px" href="#">nick de santo</a>
+        <span class="navbar-text">
+            <a class="sp2 side-font nav-inner-text" target="_blank" href="https://github.com/ndesanto">github</a>
+            <div class="nav-inner-text">&nbsp;|&nbsp;</div>
+            <a class="sp2 side-font nav-inner-text" target="_blank" href="https://www.linkedin.com/in/ndesanto/">linkedin</a>
+        </span>
+    </nav>
+    <br> <br>
+    <div class="outer-margins">
+        <div class="grid-container">
+            <div class="grid side-font">
+                <ul class="list-group">
+                    <li class="list-group-item-custom"><a class="sp" href="#about">about</a></li>
+                    <li class="list-group-item-custom"><a class="sp" href="#projects">projects</a></li>
+                </ul>
+            </div>
+            <div id="about" class="grid">
+                    this is all placeholder text from my linkedin, <u>will 100% be changed.</u><br><br>
+
+                    I'm someone who likes to get things to work and to be working well. <br><br>
+
+                    From taking care of a software bug, fixing a broken speaker, making an Android app, helping peers to use and understand programs, using a more efficient data structure, to making a nice and intuitive designed UI. <br><br>
+                    
+                    <u>Full-stack Web Development</u> is also an interest of mine. I have experience and love perfecting a webpage stylistically and functionally. I also have experience making features for web apps.<br><br>
+                    
+                    I excel in Software Development. I do most of my work using Python, Java, or C but I have experience using many languages and IDEs.<br><br>
+                    
+                    I was a Computer Science student in my fourth year at Ryerson University in the Co-op program. <br><br>
+                    
+                    Ryerson has given me the opportunity to work in teams to create websites, databases, and many applications to great effect. <u>I graduated in April 2020.</u> <br><br>
+                    
+                    In my spare time, I have also succeeded in creating personal projects such as my JavaScript GPA Calculator which was made so I wouldn't have to think when calculating what mark I need during stressful exam weeks. I also attend hackathons and other computer science related events.   <br><br>                
+            </div>
+            <div class="grid">
+            </div>
+        </div>
+        <div class="grid-container">
+                <div class="grid">
+                </div>
+                <div id="projects" class="grid">         <br><br><hr>
+
+                    <ul class="list-group">
+                        <li class="list-group-item-custom project-item">
+                            <a class="sp" href="#">project1</a><br>
+                            <a class="desc-font" href="#">project1 description. This is a description of the project outlined above, this will maybe be bullet points or just a short 2-3 line description of the item</a>
+                            <a href="#"><div><img src="https://i.stack.imgur.com/mHK1y.png" class="img-fluid" alt="image of project"></div></a>
+                        </li>
+                        <li class="list-group-item-custom project-item">
+                            <a class="sp" href="#">project2</a><br>
+                            <a class="desc-font" href="#">project2 description. This is a description of the project outlined above, this will maybe be bullet points or just a short 2-3 line description of the item</a>
+                            <a href="#"></a><div><img src="https://i.stack.imgur.com/mHK1y.png" class="img-fluid" alt="image of project"></div></a>
+                        </li>
+                        <li class="list-group-item-custom project-item">
+                            <a class="sp" href="#">project3</a><br>
+                            <a class="desc-font" href="#">project3 description. This is a description of the project outlined above, this will maybe be bullet points or just a short 2-3 line description of the item</a>
+                            <a href="#"><div><img src="https://i.stack.imgur.com/mHK1y.png" class="img-fluid" alt="image of project"></div></a>
+                        </li>
+                        <li class="list-group-item-custom project-item">
+                            <a class="sp" href="#">project4</a><br>
+                            <a class="desc-font" href="#">project4 description. This is a description of the project outlined above, this will maybe be bullet points or just a short 2-3 line description of the item</a>
+                            <a href="#"></a><div><img src="https://i.stack.imgur.com/mHK1y.png" class="img-fluid" alt="image of project"></div></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid">
+                </div>
+            </div>
+    </div>
 
 </body>
+
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            $("#navbar").addClass("nav-scroll");
+        } else {
+        $("#navbar").removeClass("nav-scroll");
+        }
+    }
+</script>

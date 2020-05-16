@@ -1,0 +1,135 @@
+a.sp {
+    color: black !important;
+    position: relative;
+}
+a.sp:hover {
+    text-decoration: underline !important;
+    text-decoration-skip-ink: auto;
+}
+
+a.sp2 {
+    color: #1e7e34 !important;
+    position: relative;
+}
+@media (max-width: 600px) {
+    a.sp2 {
+        text-decoration: underline !important;
+        text-decoration-skip-ink: auto;
+    }
+}
+a.sp2:hover {
+    text-decoration: none !important;
+    text-decoration-skip-ink: auto;
+}
+
+
+a.sp::before {
+    content: "";
+    position: absolute;
+    width: 104%;
+    height: 35%;
+    right: -5%;
+    top: 53%;
+    background: #1e7e3469;
+    z-index: -1;
+}
+
+u {
+    text-decoration: none;
+    border-bottom: 2px solid #1e7e34;
+}
+.font {
+    font-family: 'Asap', sans-serif;
+}
+.side-font {
+    font-family: 'courier-std' ,monospace;
+    font-size: 1.50rem;
+}
+.nav-custom {
+    background-color: white;
+    padding: 0 !important;
+}
+.nav-scroll {
+    box-shadow: -1px 1px 20px 0px #8888881f;
+}
+.nav-name {
+    font-weight: 900;
+    font-size: 3rem !important;
+}
+.nav-inner-text {
+    display: inline;
+    margin-right: 15px;
+}
+@media (max-width: 650px) {
+    .nav-inner-text {
+        display: inline;
+        margin-left: 20px;
+    }
+}
+@media (max-width: 400px) {
+    .nav-name {
+        font-size: 2rem !important;
+    }
+    .nav-inner-text{
+        margin-right: 0px;
+     }
+}
+
+.list-group-item-custom {
+    list-style-type: none;
+}
+
+.outer-margins {
+    margin: 40px 40px;
+}
+@media (max-width: 450px) {
+    .outer-margins {
+        margin: 3px;
+        padding: 12px;
+    }
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px 20px;
+    grid-template-areas: ". . .";
+}
+@media (max-width: 1024px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 0.5fr 1.5fr 0.1fr;
+        grid-template-rows: 1fr;
+        gap: 10px 20px;
+        grid-template-areas: ". . .";
+    }
+} 
+@media (max-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: unset;
+    }
+}
+
+
+.project-item {
+    padding: 15px;
+    margin-bottom: 40px;
+    font-size: 1.50rem;
+}
+
+.project-item div {
+    margin-top: 15px;
+    border: solid 1px #1e7e3469;
+}
+
+.desc-font {
+    color: black !important;
+    font-family: 'courier-std' ,monospace;
+    font-size: 1rem;
+}
+.desc-font:hover {
+    text-decoration: none !important;
+}

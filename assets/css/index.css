@@ -120,20 +120,23 @@ u {
 
 
 .project-item {
-    padding: 15px;
+    
     margin-bottom: 40px;
     font-size: 1.50rem;
 }
 
 .project-item div {
-    margin-top: 15px;
     border: solid 1px #1e7e3469;
 }
 
 .desc-font {
+
     color: black !important;
     font-family: 'courier-std' ,monospace;
     font-size: 1rem;
+}
+.desc-font p{
+    padding-left: 15px;
 }
 .desc-font:hover {
     text-decoration: none !important;

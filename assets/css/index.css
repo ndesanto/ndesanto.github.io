@@ -1,3 +1,7 @@
+body {
+    background-color: #fffff8 !important;
+}
+
 a.sp {
     color: black !important;
     position: relative;
@@ -18,10 +22,8 @@ a.sp2 {
     }
 }
 a.sp2:hover {
-    text-decoration: none !important;
     text-decoration-skip-ink: auto;
 }
-
 
 a.sp::before {
     content: "";
@@ -46,7 +48,7 @@ u {
     font-size: 1.50rem;
 }
 .nav-custom {
-    background-color: white;
+    background-color: #fffff8;
     padding: 0 !important;
 }
 .nav-scroll {
@@ -59,6 +61,7 @@ u {
 .nav-inner-text {
     display: inline;
     margin-right: 15px;
+
 }
 @media (max-width: 650px) {
     .nav-inner-text {
@@ -74,7 +77,9 @@ u {
         margin-right: 0px;
      }
 }
-
+.navbar-text {
+    padding-right: 20px;
+}
 .list-group-item-custom {
     list-style-type: none;
 }

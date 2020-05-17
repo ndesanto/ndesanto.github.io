@@ -2,9 +2,15 @@ body {
     background-color: #fffff8 !important;
 }
 
+
+
 a.sp {
     color: black !important;
     position: relative;
+}
+
+.nolink {
+    cursor: initial;
 }
 a.sp:hover {
     text-decoration: underline !important;

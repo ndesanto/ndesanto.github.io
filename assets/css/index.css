@@ -203,7 +203,6 @@ u {
 }
 
 .desc-font {
-
     color: #222 !important;
     font-size: 1rem;
 }
@@ -213,8 +212,6 @@ u {
 .desc-font:hover {
     text-decoration: none !important;
 }
-
-.parent-blur
 
 .blur-img {
     border-radius: 6px;

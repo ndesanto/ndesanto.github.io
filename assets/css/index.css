@@ -1,12 +1,57 @@
 body {
+    color: #222;
     background-color: #fffff8 !important;
 }
 
-
-
 a.sp {
-    color: black !important;
+    color: #222 !important;
     position: relative;
+}
+
+a.sp::before {
+    content: "";
+    position: absolute;
+    width: 104%;
+    height: 35%;
+    right: -5%;
+    top: 53%;
+    background: #1e7e3469;
+    z-index: -1;
+}
+
+.sp {
+    color: #222 !important;
+    position: relative;
+    width: max-content;
+}
+
+.sp::before {
+    content: "";
+    position: absolute;
+    width: 104%;
+    height: 35%;
+    right: -5%;
+    top: 53%;
+    background: #1e7e3469;
+    z-index: -1;
+}
+
+.inner-link {
+    color: #222;
+    transition: color .2s ease-in-out,border-color .2s ease-in-out;
+}
+.inner-link:hover {
+    color: #1e7e34;
+    text-decoration: none;
+}
+.inner-link:active {
+    color: #1e7e34;
+}
+
+.inner-link i {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
 }
 
 .nolink {
@@ -31,16 +76,7 @@ a.sp2:hover {
     text-decoration-skip-ink: auto;
 }
 
-a.sp::before {
-    content: "";
-    position: absolute;
-    width: 104%;
-    height: 35%;
-    right: -5%;
-    top: 53%;
-    background: #1e7e3469;
-    z-index: -1;
-}
+
 
 u {
     text-decoration: none;
@@ -124,6 +160,26 @@ u {
     }
 }
 
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px 20px;
+    grid-template-areas: ". . .";
+}
+
+.btn-outline-primary {
+    color: #1e7e34 !important;
+    background-color: transparent;
+    background-image: none;
+    border-color: #1e7e34 !important;
+}
+.btn-outline-primary:hover {
+    color: white !important;
+    background-color: #1e7e34 !important;
+    background-image: none;
+    border-color: #007bff !important;
+}
 
 .project-item {
     
@@ -132,13 +188,14 @@ u {
 }
 
 .project-item div {
-    border: solid 1px #1e7e3469;
+    border-radius: 6px;
+    -webkit-box-shadow: -1px 2px 4px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: -1px 2px 4px 2px rgba(0, 0, 0, 0.5);
 }
 
 .desc-font {
 
-    color: black !important;
-    font-family: 'courier-std' ,monospace;
+    color: #222 !important;
     font-size: 1rem;
 }
 .desc-font p{
@@ -146,4 +203,15 @@ u {
 }
 .desc-font:hover {
     text-decoration: none !important;
+}
+
+.blur-img {
+    border-radius: 6px;
+    background-image: url("/assets/images/gpacalc.png");
+    filter: blur(8px);
+    -webkit-filter: blur(1px);
+    height: 300px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }

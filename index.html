@@ -18,16 +18,19 @@
 <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#0d310d">
 <meta name="msapplication-TileColor" content="#0d310d">
 <meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
 <title>portfolio->Nick De Santo</title>
 
 
-<body class="font">
+<body id="about" class="font">
     <nav id="navbar" class="navbar sticky-top nav-custom ">
         <a class="sp navbar-brand nav-name" style="margin-left: 20px" href="#">nick de santo</a>
         <span class="navbar-text">
-            <a class="sp2 side-font nav-inner-text" target="_blank" href="https://github.com/ndesanto">github</a>
-            <div class="nav-inner-text">&nbsp;|&nbsp;</div>
-            <a class="sp2 side-font nav-inner-text" target="_blank" href="https://www.linkedin.com/in/ndesanto/">linkedin</a>
+            <a class="inner-link nav-inner-text" href="#about">about</a>
+            <a class="inner-link nav-inner-text" href="#projects">projects</a>
+
+            <a class="inner-link nav-inner-text" target="_blank" href="https://www.linkedin.com/in/ndesanto/"><span><i class="fab fa-linkedin fa-lg"></i></a>
+            <a class="inner-link nav-inner-text" target="_blank" href="https://github.com/ndesanto"><i class="fab fa-github fa-lg"></i></a>
         </span>
     </nav>
     <br> <br>
@@ -35,54 +38,52 @@
         <div class="grid-container">
             <div class="grid side-font">
                 <ul class="list-group">
-                    <li class="list-group-item-custom"><a class="sp nolink">about</a></li>
+                    <li class="list-group-item-custom"><p class="sp nolink">about</p></li>
                 </ul>
             </div>
-            <div id="about" class="grid pt-3">
-                    this is all placeholder text from my linkedin, <u>will 100% be changed.</u><br><br>
+            <div class="grid pt-3">
+                    I am a <u>Toronto</u> based Developer who loves to <u>problem solve</u> and have a great <u>desire to learn</u> more and more. <br><br>
+                    I graduated from <u>Ryerson University</u> for <u>Computer Science</u> in April 2020. I gained knowledge on <u>Algorithms</u>, <u>Databases</u>, <u>AI</u>, and much more.
+                    Within that time I was able to gain experience as a <u>Full-Stack Developer</u>, <u>Dev Ops Analyst</u>, <u>Mobile app developer</u>, and <u>Consultant</u>. <br><br>
+                    Outside of strictly programming I am interested in <u>design</u>, <u>automation</u>, and <u>application architecture</u>. <br><br>
 
-                    I'm someone who likes to get things to work and to be working well. <br><br>
-
-                    From taking care of a software bug, fixing a broken speaker, making an Android app, helping peers to use and understand programs, using a more efficient data structure, to making a nice and intuitive designed UI. <br><br>
-                    
-                    <u>Full-stack Web Development</u> is also an interest of mine. I have experience and love perfecting a webpage stylistically and functionally. I also have experience making features for web apps.<br><br>
-                    
-                    I excel in Software Development. I do most of my work using Python, Java, or C but I have experience using many languages and IDEs.<br><br>
-                    
-                    I was a Computer Science student in my fourth year at Ryerson University in the Co-op program. <br><br>
-                    
-                    Ryerson has given me the opportunity to work in teams to create websites, databases, and many applications to great effect. <u>I graduated in April 2020.</u> <br><br>
-                    
-                    In my spare time, I have also succeeded in creating personal projects such as my JavaScript GPA Calculator which was made so I wouldn't have to think when calculating what mark I need during stressful exam weeks. I also attend hackathons and other computer science related events.   <br><br>                
+                    <div class="grid-container2">
+                        <a class="btn btn-outline-primary" target="_blank" href="/assets/files/NickDeSanto_resume2020.pdf" download="NickDeSanto_resume2020.pdf"><i class="far fa-file"></i> &nbsp Download my Resume</a>
+                        <a class="btn btn-outline-primary" target="_blank" href="https://www.linkedin.com/in/ndesanto/"><span><i class="fas fa-arrow-right"></i><i class="fab fa-linkedin fa-lg"></i> &nbsp View my LinkedIn</a>
+                        <a class="btn btn-outline-primary" target="_blank" href="https://github.com/ndesanto"><i class="fas fa-arrow-right"></i><i class="fab fa-github fa-lg"></i> &nbsp View my GitHub</a>
+                    </div>
                     <br><br><hr></div>
-            <div class="grid">
+
+                    
+
+            <div id="projects" class="grid">
             </div>
         </div>
         <div class="grid-container">
                 <div class="grid side-font">
                     <ul class="list-group">
-                        <li class="list-group-item-custom"><a class="sp nolink">projects</a></li>
+                        <li class="list-group-item-custom"><p class="sp nolink">projects</p></li>
                     </ul>
                 </div>
                 <div class="grid pt-3">         
                     <ul class="list-group">
                         <li class="list-group-item-custom project-item">
-                            <a class="sp" href="#">project1</a><br>
-                            <a class="desc-font" href="#"><p>project1 description. This is a description of the project outlined above, this will maybe be bullet points or just a short 2-3 line description of the item</p></a>
-                            <a href="#"><div><img src="https://i.stack.imgur.com/mHK1y.png" class="img-fluid" alt="image of project"></div></a>
+                            <p class="sp" href="https://desanto.ca/gpa-calculator">Ryerson GPA Calculator</p><br>
+                            <a class="desc-font" href="https://desanto.ca/gpa-calculator"><p>JavaScript, HTML, CSS, and Bootstrap website which helps Ryerson students to calculate what mark they need on the remaining assignments/exams to obtain a certain GPA based on the marks they have attained so far in a course.</p></a>
+                            <a href="https://desanto.ca/gpa-calculator"><div class="blur-img"></div></a>
                         </li>
-                        <li class="list-group-item-custom project-item">
-                            <a class="sp" href="#">project2</a><br>
+                        <li class="d-none list-group-item-custom project-item">
+                            <p class="sp" href="#">project2</p><br>
                             <a class="desc-font" href="#"><p>project2 description. This is a description of the project outlined above, this will maybe be bullet points or just a short 2-3 line description of the item</p></a>
                             <a href="#"></a><div><img src="https://i.stack.imgur.com/mHK1y.png" class="img-fluid" alt="image of project"></div></a>
                         </li>
-                        <li class="list-group-item-custom project-item">
-                            <a class="sp" href="#">project3</a><br>
+                        <li class=" d-none list-group-item-custom project-item">
+                            <p class="sp" href="#">project3</p><br>
                             <a class="desc-font" href="#"><p>project3 description. This is a description of the project outlined above, this will maybe be bullet points or just a short 2-3 line description of the item</p></a>
                             <a href="#"><div><img src="https://i.stack.imgur.com/mHK1y.png" class="img-fluid" alt="image of project"></div></a>
                         </li>
-                        <li class="list-group-item-custom project-item">
-                            <a class="sp" href="#">project4</a><br>
+                        <li class="d-none list-group-item-custom project-item">
+                            <p class="sp" href="#">project4</p><br>
                             <a class="desc-font" href="#"><p>project4 description. This is a description of the project outlined above, this will maybe be bullet points or just a short 2-3 line description of the item</p></a>
                             <a href="#"></a><div><img src="https://i.stack.imgur.com/mHK1y.png" class="img-fluid" alt="image of project"></div></a>
                         </li>

@@ -203,6 +203,7 @@ u {
 }
 
 .desc-font {
+
     color: #222 !important;
     font-size: 1rem;
 }
@@ -216,10 +217,14 @@ u {
 .blur-img {
     border-radius: 6px;
     background-image: url("/assets/images/gpacalc.png");
-    filter: blur(1px);
+    filter: blur(8px);
     -webkit-filter: blur(1px);
-    height: 300px; 
+    height: inherit;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+}
+
+.proj-img {
+    height: 10em;
 }

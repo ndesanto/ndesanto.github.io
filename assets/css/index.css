@@ -214,10 +214,12 @@ u {
     text-decoration: none !important;
 }
 
+.parent-blur
+
 .blur-img {
     border-radius: 6px;
     background-image: url("/assets/images/gpacalc.png");
-    filter: blur(8px);
+    filter: blur(1px);
     -webkit-filter: blur(1px);
     height: 300px; 
     background-position: center;

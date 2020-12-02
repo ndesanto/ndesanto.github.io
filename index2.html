@@ -1,0 +1,58 @@
+<script>
+        if (window.location.host.indexOf('desanto.ca') > -1 && window.location.protocol != "https:"){
+            window.location.protocol = "https";
+        }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="assets/css/index2.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- favicon-->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="assets/favicons/site.webmanifest">
+<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#0d310d">
+<meta name="msapplication-TileColor" content="#0d310d">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+<title>portfolio->Nick De Santo</title>
+
+
+<body id="about" class="font">
+    <nav id="navbar" class="navbar sticky-top nav-custom ">
+        <a class="sp navbar-brand nav-name" style="margin-left: 20px" href="#">nick de santo</a>
+        <span class="navbar-text">
+            <a class="inner-link nav-inner-text" href="#about">about</a>
+            <a class="inner-link nav-inner-text" href="#projects">projects</a>
+            <a class="inner-link nav-inner-text" href="#portfolio">portfolio</a>
+            <a class="inner-link nav-inner-text" target="_blank" href="https://www.linkedin.com/in/ndesanto/"><span><i class="fab fa-linkedin fa-lg"></i></a>
+            <a class="inner-link nav-inner-text" target="_blank" href="https://github.com/ndesanto"><i class="fab fa-github fa-lg"></i></a>
+        </span>
+    </nav>
+    <div class="navy-rectangle-bg">
+        <div id="div-intro">
+            <div class="sp div-intro-b1">Hi, I'm Nick De Santo</div>
+            <div class="sp div-intro-b2">I am a Toronto based Developer</br>
+                    and a problem solver. 
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            $("#navbar").addClass("nav-scroll");
+        } else {
+            $("#navbar").removeClass("nav-scroll");
+        }
+    }
+</script>

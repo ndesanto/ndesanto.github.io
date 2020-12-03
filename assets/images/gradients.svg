@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2539.577" height="3212.383" viewBox="0 0 2539.577 3212.383">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.975" y1="0.817" x2="0.208" y2="0.691" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e6d5d5"/>
+      <stop offset="1" stop-color="#f4ef7b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.685" y1="0.768" x2="0.184" y2="0.142" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#9175ed"/>
+      <stop offset="1" stop-color="#ed8b43"/>
+    </linearGradient>
+    <filter id="Rectangle_14" x="80.82" y="1175.859" width="2458.757" height="1388.985" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6.5" result="blur"/>
+      <feFlood flood-opacity="0.757"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-4" x1="0.156" y1="0.217" x2="0.835" y2="0.78" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#75ed90"/>
+      <stop offset="1" stop-color="#6aa8ba"/>
+    </linearGradient>
+    <filter id="Rectangle_12" x="0" y="420.453" width="2453.756" height="1266.153" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6.5" result="blur-2"/>
+      <feFlood flood-opacity="0.729"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect id="Rectangle_15" data-name="Rectangle 15" width="2316" height="952" transform="matrix(0.985, 0.174, -0.174, 0.985, 249.127, 1872.677)" fill="url(#linear-gradient)"/>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_14)">
+    <rect id="Rectangle_14-2" data-name="Rectangle 14" width="2316" height="1114" transform="matrix(0.99, -0.1, 0.1, 0.99, 100.32, 1434.45)" fill="url(#linear-gradient-2)"/>
+  </g>
+  <rect id="Rectangle_13" data-name="Rectangle 13" width="2316" height="952" transform="translate(93.901 322.325) rotate(-8)" fill="url(#linear-gradient)"/>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_12)">
+    <rect id="Rectangle_12-2" data-name="Rectangle 12" width="2316" height="952" transform="translate(135.52 436.95) rotate(7)" fill="url(#linear-gradient-4)"/>
+  </g>
+</svg>

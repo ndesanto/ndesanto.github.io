@@ -22,7 +22,8 @@
 <title>portfolio->Nick De Santo</title>
 
 
-<body id="about" class="font">
+<body class="font">
+<!-- navbar -->
     <nav id="navbar" class="navbar sticky-top nav-custom ">
         <a class="sp navbar-brand nav-name" style="margin-left: 20px" href="#">nick de santo</a>
         <span class="navbar-text">
@@ -34,19 +35,22 @@
         </span>
     </nav>
 
+<!-- intro -->
     <div class="navy-rectangle-bg">
         <div id="div-intro" class="div-intro">
-            <div class="sp div-intro-b1">Hi,&nbsp;I'm&nbsp;Nick</div>
             <div class="div-intro-b3">
-                <div class="div-intro-b3-text">For the most up to date info, check out my&nbsp;resume!</div>
-                <a class="btn btn-outline-primary-intro" target="_blank" href="/assets/files/NickDeSanto_resume2020.pdf" download="NickDeSanto_resume2020.pdf"><i class="far fa-file"></i> &nbsp Download my Resume</a>
+                <div class="div-intro-b3-container">
+                    <div class="div-intro-b3-text">For the most up to date info, check out my&nbsp;resume!</div>
+                    <a class="btn btn-outline-primary-intro" target="_blank" href="/assets/files/NickDeSanto_resume2020.pdf"><i class="far fa-file"></i> &nbsp Download my Resume</a>
+                </div>
             </div>
-            <div class="sp div-intro-b2">I am a Toronto based&nbsp;Developer</br> and a problem&nbsp;solver. 
+            <div class="sp div-intro-b2">Hello! &#x1F44B; <br><br>I am a Toronto based&nbsp;Developer</br> and a problem&nbsp;solver. 
             </div>
         </div>
     </div>
 
-    <div class="section-about">
+<!-- about -->
+    <div id="about" class="section-about">
         <div class="section-about-svg"> <object data="assets/images/about.svg"> </object></div>
         <div class="section-about-text">
             <div>
@@ -78,13 +82,39 @@
             <div>
                 <div class="about-title-text">Outside of strictly programming I am interested in&nbsp;web&nbsp;design</div>
                 <div class="about-rectangle"></div>
-                <div class="about-body-text">Check out my web designs and graphics&nbsp;portfolio</div>
+                <div id="projects" class="about-body-text">Check out my web designs and graphics&nbsp;portfolio</div>
             </div>          
         </div>
     </div>
 
+<!-- projects -->
     <div class="section-project-background">
+        <div class="section-project-container">
+            <div class="section-projects">
+                <ul class="projects-list">
+                    <li class="projects-indv">
+                        <a class="projects-indv-link" href="https://desanto.ca/gpa-calculator"></a>
+                        <p>Ryerson GPA Calculator</p><br>
+                        <a href="https://desanto.ca/gpa-calculator"><p>JavaScript, HTML, CSS, and Bootstrap website which helps Ryerson students to calculate what mark they need on the remaining assignments/exams to obtain a certain GPA based on the marks they have attained so far in a course.</p></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="section-project-svg"> <object data="assets/images/projects.svg"> </object></div>
+        </div>
+    </div>
+
+<!-- portfolio -->
+    <div id="portfolio" class="section-portfolio">
+        <div class="section-portfolio-svg"> <object data="assets/images/portfolio.svg"> </object></div>
         
+        <div class="portfolio-container">
+            <div class="portfolio-indv"></div>
+            <div class="portfolio-indv-alt"></div>
+            <div class="portfolio-indv"></div>
+            <div class="portfolio-indv-alt"></div>
+            <div class="portfolio-indv"></div>
+            <div class="portfolio-indv-alt"></div>
+        </div>
     </div>
 </body>
 

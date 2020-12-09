@@ -1,0 +1,20 @@
+// --- BEGIN: crop images --- //
+// Optional CSS for cropping images that aren't all the same size.
+
+// Use Bootstrap breakpoints for consistency.
+$bootstrap-sm: 576px;
+$bootstrap-md: 768px;
+$bootstrap-lg: 992px;
+$bootstrap-xl: 1200px;
+
+
+.carousel-item {
+}
+
+
+.carousel-control-next {
+    right: -13% !important;
+}
+.carousel-control-prev {
+    left: -13% !important;
+}

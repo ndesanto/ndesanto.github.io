@@ -1,26 +1,12 @@
-<script>
-        if (window.location.host.indexOf('desanto.ca') > -1 && window.location.protocol != "https:"){
-            window.location.protocol = "https";
-        }
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+---
+title: portfolio->Nick De Santo
+---
+<head>
 
-<link rel="stylesheet" type="text/css" href="assets/css/index2.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        {% include header.html %}
+        <link rel="stylesheet" type="text/css" href="assets/css/index2.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- favicon-->
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-<link rel="manifest" href="assets/favicons/site.webmanifest">
-<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#0d310d">
-<meta name="msapplication-TileColor" content="#0d310d">
-<meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-<title>portfolio->Nick De Santo</title>
-
+</head>
 
 <body class="font">
 <!-- navbar -->
@@ -89,6 +75,8 @@
 
 <!-- projects -->
     <div class="section-project-background">
+        <div class="section-project-sm-svg"> <object data="assets/images/projects-sm.svg"> </object></div>
+
         <div class="section-project-container">
             <div class="section-projects">
                 <ul class="projects-list">
@@ -106,14 +94,51 @@
 <!-- portfolio -->
     <div id="portfolio" class="section-portfolio">
         <div class="section-portfolio-svg"> <object data="assets/images/portfolio.svg"> </object></div>
-        
         <div class="portfolio-container">
-            <div class="portfolio-indv"></div>
-            <div class="portfolio-indv-alt"></div>
-            <div class="portfolio-indv"></div>
-            <div class="portfolio-indv-alt"></div>
-            <div class="portfolio-indv"></div>
-            <div class="portfolio-indv-alt"></div>
+            <div class="portfolio-indv">
+                <img class="" src="/assets/images/designs/desanto-design1.png" alt="First slide">
+                <label>Original desanto.ca design with a 60s/70s twist</label>
+            </div>
+            <div class="portfolio-indv">
+                <img class="" src="/assets/images/designs/desanto-design2.png" alt="First slide">
+                <label>Original desanto.ca design with a 60s/70s twist</label>
+
+            </div>
+            <div class="portfolio-indv">
+                <img class="" src="/assets/images/designs/desanto-design3.png" alt="First slide"> 
+                <label>Original desanto.ca design with a 60s/70s twist</label>
+
+            </div>
+            <div class="portfolio-indv">
+                <img class="" src="/assets/images/designs/desanto-design4.png" alt="First slide"> 
+                <label>Original desanto.ca design with a 60s/70s twist</label>
+
+            </div>
+            <div class="portfolio-indv">                
+                <img class="" src="/assets/images/designs/desanto-design5.png" alt="First slide"> 
+                <label>Original desanto.ca design with a 60s/70s twist</label>
+
+            </div>
+            <div class="portfolio-indv">
+                <img class="" src="/assets/images/designs/desanto-design6.png" alt="First slide"> 
+                <label>Original desanto.ca design with a 60s/70s twist</label>
+
+            </div>
+        </div>
+
+        <div class="portfolio-container-logos">
+            <div class="portfolio-indv">
+                <img class="" src="/assets/images/designs/cs-logo.png" alt="First slide"> 
+            </div>
+            <div class="portfolio-indv">                
+                <img class="" src="/assets/images/designs/gifford-logo.png" alt="First slide"> 
+            </div>
+            <div class="portfolio-indv">
+                <img class="" src="/assets/images/designs/ts-logo.svg" alt="First slide"> 
+            </div>
+            <div class="portfolio-indv">
+                    <img class="" src="/assets/images/designs/ts-logo2.svg" alt="First slide"> 
+                </div>
         </div>
     </div>
 </body>

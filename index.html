@@ -1,99 +1,247 @@
-<script>
-        if (window.location.host.indexOf('desanto.ca') > -1 && window.location.protocol != "https:"){
-            window.location.protocol = "https";
-        }
-        </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="assets/css/index.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- favicon-->
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-<link rel="manifest" href="assets/favicons/site.webmanifest">
-<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#0d310d">
-<meta name="msapplication-TileColor" content="#0d310d">
-<meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-<title>portfolio->Nick De Santo</title>
+---
+###
+---
+<head>
+    {% include header.html %}
+    <link rel="stylesheet" type="text/css" href="assets/css/index2.css">
+    <title>portfolio->Nick De Santo</title>
+</head>
 
 
-<body id="about" class="font">
+<body class="font">
+<!-- navbar -->
     <nav id="navbar" class="navbar sticky-top nav-custom ">
         <a class="sp navbar-brand nav-name" style="margin-left: 20px" href="#">nick de santo</a>
         <span class="navbar-text">
             <a class="inner-link nav-inner-text" href="#about">about</a>
             <a class="inner-link nav-inner-text" href="#projects">projects</a>
-
+            <a class="inner-link nav-inner-text" href="#portfolio">portfolio</a>
             <a class="inner-link nav-inner-text" target="_blank" href="https://www.linkedin.com/in/ndesanto/"><span><i class="fab fa-linkedin fa-lg"></i></a>
             <a class="inner-link nav-inner-text" target="_blank" href="https://github.com/ndesanto"><i class="fab fa-github fa-lg"></i></a>
         </span>
     </nav>
-    <br> <br>
-    <div class="outer-margins">
-        <div class="grid-container">
-            <div class="grid side-font">
-                <ul class="list-group">
-                    <li class="list-group-item-custom"><p class="sp nolink">about</p></li>
-                </ul>
+
+<!-- intro -->
+    <div class="navy-rectangle-bg">
+        <div id="div-intro" class="div-intro">
+            <div class="div-intro-b3">
+                <div class="div-intro-b3-container">
+                    <div class="div-intro-b3-text">For the most up to date info, check out my&nbsp;resume!</div>
+                    <a class="btn btn-outline-primary-intro" target="_blank" href="/assets/files/NickDeSanto_resume2020.pdf"><i class="far fa-file"></i> &nbsp Download my Resume</a>
+                </div>
             </div>
-            <div class="grid pt-3">
-                    I am a <u>Toronto</u> based Developer who loves to <u>problem solve</u> and have a great <u>desire to learn</u> more and more. <br><br>
-                    I graduated from <u>Ryerson University</u> for <u>Computer Science</u> in April 2020. I gained knowledge on <u>Algorithms</u>, <u>Databases</u>, <u>AI</u>, and much more.
-                    Within that time I was able to gain experience as a <u>Full-Stack Developer</u>, <u>Dev Ops Analyst</u>, <u>Mobile app developer</u>, and <u>Consultant</u>. <br><br>
-                    Outside of strictly programming I am interested in <u>design</u>, <u>automation</u>, and <u>application architecture</u>. <br><br>
-
-                    <div class="grid-container2">
-                        <a class="btn btn-outline-primary" target="_blank" href="/assets/files/NickDeSanto_resume2020.pdf" download="NickDeSanto_resume2020.pdf"><i class="far fa-file"></i> &nbsp Download my Resume</a>
-                        <a class="btn btn-outline-primary" target="_blank" href="https://www.linkedin.com/in/ndesanto/"><span><i class="fas fa-arrow-right"></i><i class="fab fa-linkedin fa-lg"></i> &nbsp View my LinkedIn</a>
-                        <a class="btn btn-outline-primary" target="_blank" href="https://github.com/ndesanto"><i class="fas fa-arrow-right"></i><i class="fab fa-github fa-lg"></i> &nbsp View my GitHub</a>
-                    </div>
-                    <br><br><hr></div>
-
-                    
-
-            <div id="projects" class="grid">
+            <div class="sp div-intro-b2">Hello! &#x1F44B; <br><br>I am a Toronto based&nbsp;Developer</br> and a problem&nbsp;solver. 
             </div>
         </div>
-        <div class="grid-container">
-                <div class="grid side-font">
-                    <ul class="list-group">
-                        <li class="list-group-item-custom"><p class="sp nolink">projects</p></li>
-                    </ul>
-                </div>
-                <div class="grid pt-3">         
-                    <ul class="list-group">
-                        <li class="list-group-item-custom project-item">
-                            <p class="sp" href="https://desanto.ca/gpa-calculator">Ryerson GPA Calculator</p><br>
-                            <a class="desc-font" href="https://desanto.ca/gpa-calculator"><p>JavaScript, HTML, CSS, and Bootstrap website which helps Ryerson students to calculate what mark they need on the remaining assignments/exams to obtain a certain GPA based on the marks they have attained so far in a course.</p></a>
-                            <a class="proj-img" href="https://desanto.ca/gpa-calculator"><div class="blur-img"></div></a>
-                        </li>
-                        <li class="d-none list-group-item-custom project-item">
-                            <p class="sp" href="#">project2</p><br>
-                            <a class="desc-font" href="#"><p>project2 description. This is a description of the project outlined above, this will maybe be bullet points or just a short 2-3 line description of the item</p></a>
-                            <a href="#"></a><div><img src="https://i.stack.imgur.com/mHK1y.png" class="img-fluid" alt="image of project"></div></a>
-                        </li>
-                        <li class=" d-none list-group-item-custom project-item">
-                            <p class="sp" href="#">project3</p><br>
-                            <a class="desc-font" href="#"><p>project3 description. This is a description of the project outlined above, this will maybe be bullet points or just a short 2-3 line description of the item</p></a>
-                            <a href="#"><div><img src="https://i.stack.imgur.com/mHK1y.png" class="img-fluid" alt="image of project"></div></a>
-                        </li>
-                        <li class="d-none list-group-item-custom project-item">
-                            <p class="sp" href="#">project4</p><br>
-                            <a class="desc-font" href="#"><p>project4 description. This is a description of the project outlined above, this will maybe be bullet points or just a short 2-3 line description of the item</p></a>
-                            <a href="#"></a><div><img src="https://i.stack.imgur.com/mHK1y.png" class="img-fluid" alt="image of project"></div></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="grid">
-                </div>
-            </div>
     </div>
 
+<!-- about -->
+    <div id="about" class="section-about">
+        <div class="section-about-svg"> <object data="assets/images/about.svg"> </object></div>
+        <div class="section-about-text">
+            <div>
+                <div class="about-title-text">I graduated from Ryerson University for Computer Science in&nbsp;April&nbsp;2020 </div>
+                <div class="about-rectangle"></div>
+                <div class="about-body-text">I gained knowledge on Algorithms, Databases, AI, and much, much&nbsp;more. </div>
+            </div>
+            <br><br><br>
+            <div>
+                <div class="about-title-text">I have 2 years of&nbsp;experience.</div>
+                <div class="about-rectangle"></div>
+                <div class="about-body-text">
+                    <div>I was able to gain experience&nbsp;as&nbsp;a: </div>
+                    <div class="about-list">
+                        <ul class="about-body-text">
+                            <li>Full-Stack&nbsp;Developer</li>
+                            <li>Dev&nbsp;Ops&nbsp;Analyst</li>
+                            <li>Web&nbsp;Designer</li>
+                        </ul>
+                        <ul class="about-body-text">
+                            <li>Development&nbsp;Team&nbsp;Lead</li>
+                            <li>Mobile&nbsp;app&nbsp;developer</li>
+                            <li>Consultant</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div>
+                <div class="about-title-text">Outside of strictly programming I am interested in&nbsp;web&nbsp;design</div>
+                <div class="about-rectangle"></div>
+                <div id="projects" class="about-body-text">Check out my web designs and graphics&nbsp;portfolio</div>
+            </div>          
+        </div>
+    </div>
+
+<!-- projects -->
+    <div class="section-project-background">
+        <div class="section-project-sm-svg"> <object data="assets/images/projects-sm.svg"> </object></div>
+        <div class="section-project-container">
+            <div class="section-projects">
+                <ul class="projects-list">
+                    <li class="projects-indv">
+                        <a class="projects-indv-link" href="https://desanto.ca/gpa-calculator"></a>
+                        <p>Ryerson GPA Calculator</p><br>
+                        <a href="https://desanto.ca/gpa-calculator"><p>JavaScript, HTML, CSS, and Bootstrap website which helps Ryerson students to calculate what mark they need on the remaining assignments/exams to obtain a certain GPA based on the marks they have attained so far in a course.</p></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="section-project-svg"> <object data="assets/images/projects.svg"> </object></div>
+        </div>
+    </div>
+
+<!-- portfolio -->
+    <div id="portfolio" class="section-portfolio">
+        <div class="section-portfolio-sm-svg"> <object data="assets/images/portfolio-sm.svg"> </object></div>
+
+        <div class="section-portfolio-svg"> <object data="assets/images/portfolio.svg"> </object></div>
+        <div class="album py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top long-img" src="assets/images/designs/desanto-design1.png" alt="desanto.ca web design concept" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Slight 60s/70s twist on the original desanto.ca website design. Colorful addition to a minimalistic design.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Website Design</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top long-img" src="assets/images/designs/desanto-design2.png" alt="desanto.ca web design concept" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Early concept for desanto.ca using colorful gradients. Tests for how to section areas (about, projects, etc).</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Website Design</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top long-img" src="assets/images/designs/desanto-design3.png" alt="desanto.ca web design concept" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Early concept for desanto.ca using mountains and orbiting bodies. Notably to play with mountain layers as sections.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Website Design</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top long-img" src="assets/images/designs/desanto-design4.png" alt="desanto.ca web design concept" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Concept for desanto.ca reminiscent of a modern SaaS website. Created to gain experience with more modern web-design approaches.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Website Design</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top long-img" src="assets/images/designs/desanto-design5.png" alt="desanto.ca web design concept" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Concept for desanto.ca using more modern web-design practices. A precursor to the current site, practice for modern web-design.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Website Design</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top long-img" src="assets/images/designs/desanto-design6.png" alt="desanto.ca web design concept" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Concept for desanto.ca using modern web-design practices. Using personal design-sense with monochrome + splash of colors. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Website Design</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="assets/images/designs/gifford-logo.png" alt="logo design" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Company logo for client</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Logo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="assets/images/designs/ts-logo2.svg" alt="logo design" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Turn-Suite, web-app logo for client</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Logo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img src="assets/images/designs/ts-logo.svg" class="card-img-top" alt="logo design" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Turn Suite, web-app logo for client</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Logo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img src="assets/images/designs/golf-design.png" class="card-img-top" alt="logo design" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Golf Invitational logo for client</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Logo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img src="assets/images/designs/cs-logo.png" class="card-img-top" alt="logo design" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Cera Stone logo revamp test</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Logo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img src="assets/images/designs/gcm-project.png" class="card-img-top" alt="university project" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Ryerson 2019 GCM Project submission</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Graphics Design Course Project</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+          
+    <div id="img-modal" class="w3-modal" onclick="this.style.display='none'">
+        <span class="top-x">&times;</span>
+        <div class="w3-modal-content w3-animate-zoom">
+            <img id="zoomed-img" style="width:100%">
+        </div>
+    </div>
 </body>
 
 
@@ -107,4 +255,9 @@
             $("#navbar").removeClass("nav-scroll");
         }
     }
+
+    function onClick(element) {
+            document.getElementById("zoomed-img").src = element.src;
+            document.getElementById("img-modal").style.display = "block";
+          }
 </script>

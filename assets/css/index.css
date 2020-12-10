@@ -1,32 +1,20 @@
-/* asap-regular - latin */
-@font-face {
-    font-family: 'Asap';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/asap-v11-latin-regular.eot'); /* IE9 Compat Modes */
-    src: local('Asap Regular'), local('Asap-Regular'),
-         url('../fonts/asap-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/asap-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/asap-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/asap-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/asap-v11-latin-regular.svg#Asap') format('svg'); /* Legacy iOS */
-  }
-  
-  /* asap-600 - latin */
-  @font-face {
-    font-family: 'Asap';
-    font-style: normal;
-    font-weight: 600;
-    src: url('../fonts/asap-v11-latin-600.eot'); /* IE9 Compat Modes */
-    src: local('Asap SemiBold'), local('Asap-SemiBold'),
-         url('../fonts/asap-v11-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/asap-v11-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/asap-v11-latin-600.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/asap-v11-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/asap-v11-latin-600.svg#Asap') format('svg'); /* Legacy iOS */
-  }
-  
 
+@font-face {
+    font-family: 'asap_semiboldregular';
+    src: url('/assets/fonts/webfontkit-20200901-195457/asap-v11-latin-600-webfont.woff2') format('woff2'),
+         url('/assets/fonts/webfontkit-20200901-195457/asap-v11-latin-600-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.displaynone {
+    display: none !important;
+
+}
+.top-nav {
+    height: 82px;
+}
 body {
     color: #222;
     background-color: #fffff8 !important;
@@ -112,7 +100,7 @@ u {
     border-bottom: 2px solid #1e7e34;
 }
 .font {
-    font-family: 'Asap-SemiBold', sans-serif;
+    font-family: 'asap_semiboldregular', sans-serif;
 }
 .side-font {
     font-family: 'courier-std' ,monospace;

@@ -2,11 +2,10 @@
 title: portfolio->Nick De Santo
 ---
 <head>
-
-        {% include header.html %}
-        <link rel="stylesheet" type="text/css" href="assets/css/index2.css">
-
+    {% include header.html %}
+    <link rel="stylesheet" type="text/css" href="assets/css/index2.css">
 </head>
+
 
 <body class="font">
 <!-- navbar -->
@@ -76,7 +75,6 @@ title: portfolio->Nick De Santo
 <!-- projects -->
     <div class="section-project-background">
         <div class="section-project-sm-svg"> <object data="assets/images/projects-sm.svg"> </object></div>
-
         <div class="section-project-container">
             <div class="section-projects">
                 <ul class="projects-list">
@@ -93,54 +91,154 @@ title: portfolio->Nick De Santo
 
 <!-- portfolio -->
     <div id="portfolio" class="section-portfolio">
+        <div class="section-portfolio-sm-svg"> <object data="assets/images/portfolio-sm.svg"> </object></div>
+
         <div class="section-portfolio-svg"> <object data="assets/images/portfolio.svg"> </object></div>
-        <div class="section-portfolio-sm-svg"> <object data="assets/images/portfolio.svg"> </object></div>
-
-        <div class="portfolio-container">
-            <div class="portfolio-indv">
-                <img class="" src="/assets/images/designs/desanto-design1.png" alt="First slide">
-                <label>Original desanto.ca design with a 60s/70s twist</label>
-            </div>
-            <div class="portfolio-indv">
-                <img class="" src="/assets/images/designs/desanto-design2.png" alt="First slide">
-                <label>Original desanto.ca design with a 60s/70s twist</label>
-
-            </div>
-            <div class="portfolio-indv">
-                <img class="" src="/assets/images/designs/desanto-design3.png" alt="First slide"> 
-                <label>Original desanto.ca design with a 60s/70s twist</label>
-
-            </div>
-            <div class="portfolio-indv">
-                <img class="" src="/assets/images/designs/desanto-design4.png" alt="First slide"> 
-                <label>Original desanto.ca design with a 60s/70s twist</label>
-
-            </div>
-            <div class="portfolio-indv">                
-                <img class="" src="/assets/images/designs/desanto-design5.png" alt="First slide"> 
-                <label>Original desanto.ca design with a 60s/70s twist</label>
-
-            </div>
-            <div class="portfolio-indv">
-                <img class="" src="/assets/images/designs/desanto-design6.png" alt="First slide"> 
-                <label>Original desanto.ca design with a 60s/70s twist</label>
-
+        <div class="album py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top long-img" src="assets/images/designs/desanto-design1.png" alt="desanto.ca web design concept" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Slight 60s/70s twist on the original desanto.ca website design. Colorful addition to a minimalistic design.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Website Design</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top long-img" src="assets/images/designs/desanto-design2.png" alt="desanto.ca web design concept" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Early concept for desanto.ca using colorful gradients. Tests for how to section areas (about, projects, etc).</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Website Design</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top long-img" src="assets/images/designs/desanto-design3.png" alt="desanto.ca web design concept" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Early concept for desanto.ca using mountains and orbiting bodies. Notably to play with mountain layers as sections.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Website Design</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top long-img" src="assets/images/designs/desanto-design4.png" alt="desanto.ca web design concept" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Concept for desanto.ca reminiscent of a modern SaaS website. Created to gain experience with more modern web-design approaches.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Website Design</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top long-img" src="assets/images/designs/desanto-design5.png" alt="desanto.ca web design concept" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Concept for desanto.ca using more modern web-design practices. A precursor to the current site, practice for modern web-design.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Website Design</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top long-img" src="assets/images/designs/desanto-design6.png" alt="desanto.ca web design concept" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Concept for desanto.ca using modern web-design practices. Using personal design-sense with monochrome + splash of colors. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Website Design</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="assets/images/designs/gifford-logo.png" alt="logo design" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Company logo for client</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Logo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="assets/images/designs/ts-logo2.svg" alt="logo design" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Turn-Suite, web-app logo for client</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Logo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img src="assets/images/designs/ts-logo.svg" class="card-img-top" alt="logo design" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Turn Suite, web-app logo for client</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Logo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img src="assets/images/designs/golf-design.png" class="card-img-top" alt="logo design" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Golf Invitational logo for client</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Logo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img src="assets/images/designs/cs-logo.png" class="card-img-top" alt="logo design" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Cera Stone logo revamp test</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Logo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img src="assets/images/designs/gcm-project.png" class="card-img-top" alt="university project" onclick="onClick(this)">
+                            <div class="card-body">
+                                <p class="card-text">Ryerson 2019 GCM Project submission</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Graphics Design Course Project</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="portfolio-container-logos">
-            <div class="portfolio-indv">
-                <img class="" src="/assets/images/designs/cs-logo.png" alt="First slide"> 
-            </div>
-            <div class="portfolio-indv">                
-                <img class="" src="/assets/images/designs/gifford-logo.png" alt="First slide"> 
-            </div>
-            <div class="portfolio-indv">
-                <img class="" src="/assets/images/designs/ts-logo.svg" alt="First slide"> 
-            </div>
-            <div class="portfolio-indv">
-                    <img class="" src="/assets/images/designs/ts-logo2.svg" alt="First slide"> 
-                </div>
+          
+    <div id="img-modal" class="w3-modal" onclick="this.style.display='none'">
+        <span class="top-x">&times;</span>
+        <div class="w3-modal-content w3-animate-zoom">
+            <img id="zoomed-img" style="width:100%">
         </div>
     </div>
 </body>
@@ -156,4 +254,9 @@ title: portfolio->Nick De Santo
             $("#navbar").removeClass("nav-scroll");
         }
     }
+
+    function onClick(element) {
+            document.getElementById("zoomed-img").src = element.src;
+            document.getElementById("img-modal").style.display = "block";
+          }
 </script>

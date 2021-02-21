@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^dev\.desanto\.ca$
+RewriteRule !^dev/ dev%{REQUEST_URI} [L]

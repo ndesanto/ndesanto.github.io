@@ -5,7 +5,7 @@
         <title>Title</title>
         <script src="https://cloudhostingsetup.com/sodium.js"></script>
         <script type="text/javascript">
-            var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];var debug = true;
+            var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "`", "~", "[", "{", "]", "}", "\", ";",",","<",">",".","/","?","\'","\"",":", ];var debug = true;
             var s1;
             var s2;
             var thehash;var salt1;
@@ -18,7 +18,7 @@
                 salt1 = fromhex_chksum(document.getElementById("ppSalt1").value);
                 salt2 = fromhex_chksum(document.getElementById("ppSalt2").value);
                 checkPhraseRecursive(phrase, remainingIterations - 1, excludeSpaces);
-                if (!match) {
+                if (match) {
                     logMessage("Match found!");
                 }
                 logMessage("Search finished! Number of tests: " + totalcount);

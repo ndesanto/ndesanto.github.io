@@ -242,6 +242,50 @@ u {
     background-size: cover;
 }
 
+.blur-img2 {
+    border-radius: 6px;
+    background-image: url("/assets/images/ws-yh.jpg");
+    filter: blur(8px);
+    -webkit-filter: blur(1px);
+    height: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blur-img3 {
+    border-radius: 6px;
+    background-image: url("/assets/images/oldindex.jpg");
+    filter: blur(8px);
+    -webkit-filter: blur(1px);
+    height: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blur-img4 {
+    border-radius: 6px;
+    background-image: url("/assets/images/urinals.jpg");
+    filter: blur(8px);
+    -webkit-filter: blur(1px);
+    height: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blur-img5 {
+    border-radius: 6px;
+    background-image: url("/assets/images/thing-prototype.jpg");
+    filter: blur(8px);
+    -webkit-filter: blur(1px);
+    height: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .proj-img {
     height: 10em;
 }

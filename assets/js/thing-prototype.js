@@ -532,16 +532,16 @@ $('#al-pdf-button1').on('click', function () {
 
   var pageSize = doc.internal.pageSize
   var pageWidth = pageSize.width ? pageSize.width : pageSize.getWidth()
-  var text = doc.splitTextToSize('Cera Stone Ltd.', pageWidth - 40, {})
+  var text = doc.splitTextToSize('company-name Ltd.', pageWidth - 40, {})
   doc.text(text, 14, 25)
 
-  text = doc.splitTextToSize('10 - Abacus Road', pageWidth - 40, {})
+  text = doc.splitTextToSize('address', pageWidth - 40, {})
   doc.text(text, 14, 30)
-  text = doc.splitTextToSize('Brampton, ON', pageWidth - 40, {})
+  text = doc.splitTextToSize('somewhere ontario', pageWidth - 40, {})
   doc.text(text, 14, 35)
-  text = doc.splitTextToSize('L6T 5J6', pageWidth - 40, {})
+  text = doc.splitTextToSize('mmm mmm', pageWidth - 40, {})
   doc.text(text, 14, 40)
-  text = doc.splitTextToSize('905-669-7298', pageWidth - 40, {})
+  text = doc.splitTextToSize('555-555-5555', pageWidth - 40, {})
   doc.text(text, 14, 45)
 
   doc.setTextColor(0)
@@ -550,7 +550,7 @@ $('#al-pdf-button1').on('click', function () {
   doc.text(text, 14, 55)
   
   doc.setFontStyle('normal')
-  text = doc.splitTextToSize('HOME DEPOT - Store -----', pageWidth - 40, {})
+  text = doc.splitTextToSize('H - Store -----', pageWidth - 40, {})
   doc.text(text, 14, 65)
   text = doc.splitTextToSize('CITY', pageWidth - 40, {})
   doc.text(text, 14, 70)
@@ -574,7 +574,7 @@ $('#al-pdf-button1').on('click', function () {
   doc.text(text, 190, 40, 'right')
 
   doc.setFontSize(11)
-  text = doc.splitTextToSize('Job Number: AVENUE', pageWidth - 6, {})
+  text = doc.splitTextToSize('Job Number: 4', pageWidth - 6, {})
   doc.text(text, 190, 45, 'right')
   text = doc.splitTextToSize('Order Date: 00/00/00', pageWidth - 6, {})
   doc.text(text, 190, 50, 'right')
@@ -585,18 +585,18 @@ $('#al-pdf-button1').on('click', function () {
   doc.text(text, 100, 55)
 
   doc.setFontStyle('normal')
-  text = doc.splitTextToSize('Cera Stone Ltd', pageWidth - 4, {})
+  text = doc.splitTextToSize('company-name Ltd', pageWidth - 4, {})
   doc.text(text, 100, 65)
-  text = doc.splitTextToSize('10 - Abacus Road', pageWidth - 4, {})
+  text = doc.splitTextToSize('street', pageWidth - 4, {})
   doc.text(text, 100, 70)
-  text = doc.splitTextToSize('Brampton, ON', pageWidth - 4, {})
+  text = doc.splitTextToSize('somewhere ontario', pageWidth - 4, {})
   doc.text(text, 100, 75)
-  text = doc.splitTextToSize('L6T 5J6', pageWidth - 4, {})
+  text = doc.splitTextToSize('mmm mmm', pageWidth - 4, {})
   doc.text(text, 100, 80)
 
 
   doc.autoTable({
-    head: [['By', 'On Site Date', 'Via:', 'FOB: Avenue Living - ADDRESS', 'Terms']],
+    head: [['By', 'On Site Date', 'Via:', 'FOB: thing - ADDRESS', 'Terms']],
     body: [
       ['NAME', '00/00/00', 'DELIVERY', '#00', '']
     ],
@@ -616,12 +616,12 @@ $('#al-pdf-button1').on('click', function () {
     startY: 110
 
   })
-  doc.text('Cera Stone Ltd', 14, doc.autoTable.previous.finalY + 10)
+  doc.text('company-name Ltd', 14, doc.autoTable.previous.finalY + 10)
 
   var today = new Date()
   var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + '_'
   var time = today.getHours() + '' + today.getMinutes() + '' + today.getSeconds()
-  doc.save('CeraStoneLtd-' + date + time + '.pdf')
+  doc.save('company-nameLtd-' + date + time + '.pdf')
 })
 
 function printFormatter (list) {
@@ -688,7 +688,7 @@ $('#al-pdf-button2').on('click', function () {
   var today = new Date()
   var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + '_'
   var time = today.getHours() + '' + today.getMinutes() + '' + today.getSeconds()
-  scopeDocument.save('CeraStoneLtd-SCOPE-' + date + time + '.pdf')
+  scopeDocument.save('company-nameLtd-SCOPE-' + date + time + '.pdf')
 
 })
 
@@ -749,7 +749,7 @@ $('#al-pdf-button3').on('click', function () {
   var today = new Date()
   var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + '_'
   var time = today.getHours() + '' + today.getMinutes() + '' + today.getSeconds()
-  contractorScopeDocument.save('CeraStoneLtd-CONTRACTOR-SCOPE-' + date + time + '.pdf')
+  contractorScopeDocument.save('company-nameLtd-CONTRACTOR-SCOPE-' + date + time + '.pdf')
 
 })
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
@@ -1563,14 +1563,14 @@ function bathroomFaucet () {
   return ['Moen Zarina 1 H Bathroom Faucet', placeholder, price, '#1000714404', placeholder * price]
 }
 function bathtubx () {
-  // 'MAAX Avenue 60-inch Alcove Bathtub in White with Left-Hand Drain'
+  // 'MAAX thing 60-inch Alcove Bathtub in White with Left-Hand Drain'
   var price = 309
   var quantity = 0
 
   if (finalJsonOutput.list5.rowList[3].quantity > 0) {
     quantity = quantity + parseFloat(finalJsonOutput.list5.rowList[3].quantity)
   }
-  return ['MAAX Avenue 60-inch Alcove Bathtub in White with Right-Hand Drain', placeholder, price, sku, placeholder * price]
+  return ['MAAX thing 60-inch Alcove Bathtub in White with Right-Hand Drain', placeholder, price, sku, placeholder * price]
 }
 function tubWallKit () {
   var price = 162
